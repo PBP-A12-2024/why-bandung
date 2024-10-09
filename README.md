@@ -10,6 +10,11 @@ Tim A12SITEK memilih Kota Bandung karena dikenal sebagai kota wisata yang popule
 
 <details>
   <summary>ii. Deskripsi Dataset</summary>
+Dalam pembuatan web aplikasi WhyBandung, kami membutuhkan database yang memiliki data mengenai informasi seputar produk kuliner yang berada di kota Bandung. Data ini kami dapatkan melalui pencarian di internet. Data yang akan kami gunakan ini berfungsi untuk mempermudah pengguna aplikasi WhyBandung untuk menemukan makanan ataupun minuman berdasarkan lokasi, kategori produk, harga produk, dan toko yang menyediakan produk tersebut. Pada dataset kami terdapat kolom Kode Produk, Nama Produk, Kategori, Toko, Harga Retail, dan Lokasi untuk memberikan informasi detail yang dibutuhkan pengguna nanti.
+  <br><br>
+Kolom Kode Produk digunakan sebagai kode unik untuk setiap item produk, sehingga aplikasi dapat dengan mudah membedakan satu produk dengan produk lainnya. Kolom Nama Produk digunakan untuk memberikan informasi nama produk spesifik yang dapat dicari oleh pengguna. Lalu, terdapat kolom Kategori yang digunakan untuk mengelompokkan produk berdasarkan kategorinya yang seusai contohnya seperti kategori kue, minuman, makanan berat, dan lain-lain. Selain mengelompokkan produk, Kolom Kategori dapat membantu pengguna untuk mencari suatu produk berdasarkan kategori produk tersebut. Kolom Toko digunakan untuk memberikan informasi mengenai tempat atau kedai apa yang menjual produk tersebut sehingga pengguna dapat mengetahui dimana pengguna dapat membeli produk yang diinginkan.
+  <br><br>
+Kolom Harga Retail memberikan informasi mengenai harga suatu produk sehingga pengguna dapat memilih produk yang mereka inginkan sesuai dengan budget yang mereka miliki. Sedangkan kolom Lokasi digunakan untuk memberikan informasi pada daerah mana produk tersebut berada. Pengguna juga dapat mencari produk sesuai dengan lokasi yang diinginkan.
 
 </details>
 
