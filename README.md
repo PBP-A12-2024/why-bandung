@@ -252,12 +252,13 @@ Developer:
 
 <details>
   <summary>v. Tautan deployment aplikasi</summary>
-  <a href="http://karina-maharani31-whybandung.pbp.cs.ui.ac.id/">http://karina-maharani31-whybandung.pbp.cs.ui.ac.id/</a>
+  <a href="http://karina-maharani31-whybandung.pbp.cs.ui.ac.id/">http://karina-maharani31-whybandung.pbp.cs.ui.ac.id/</a><br>
   Berikut adalah tambahan hasil unit test yang dilakukan :
   
-  ![image](https://github.com/user-attachments/assets/0092aacc-b73b-469d-97a2-bc53f8aa0985)
+  ![image](https://github.com/user-attachments/assets/0092aacc-b73b-469d-97a2-bc53f8aa0985)<br>
   dengan kode :
   <p>
+    
     from django.test import TestCase, Client
 
     class mainTest(TestCase):
