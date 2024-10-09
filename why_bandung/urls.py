@@ -16,7 +16,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from geomapping.views import show_geomap
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', show_geomap, name='show_geomap'),
 ]
