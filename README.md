@@ -1,12 +1,12 @@
 <h2>WhyBandung</h2>
 <p>
-  WhyBandung
+  Daftar Anggota
   <ul>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
+    <li>Farrel Dharmawan Dwiyudanto - 2306275506</li>
+    <li> Najya Johara Robby - 2306245674/li>
+    <li>Hubban Syadid - 2306165830</li>
+    <li>Muhammad Fadhil Nur Aziz - 2306275531</li>
+    <li>Karina Maharani - 2306165736</li>
   </ul>
 </p>
 
