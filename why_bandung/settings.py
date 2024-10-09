@@ -37,6 +37,12 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'dashboard',
+    'explore',
+    'geomapping',
+    'product_page',
+    'search_system',
+    'why_bandung'
 ]
 
 MIDDLEWARE = [
