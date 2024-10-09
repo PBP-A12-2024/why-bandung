@@ -220,8 +220,8 @@ User Biasa:
 - Bisa mengisi form untuk melihat rekomendasi makanan.
 - User bisa gacha makanan untuk seru-seruan atau jika tidak tahu mau makan apa.
 Developer:
-- Developer dapat memodifikasi algoritma rekomendasi, termasuk bagaimana tag makanan digunakan untuk mencocokkan makanan dengan preferensi pengguna.
-- Developer memiliki akses ke alat admin lanjutan, seperti mengelola tag makanan, kategori, dan memonitor aktivitas pengguna terkait rekomendasi.
+- Developer dapat memodifikasi algoritma rekomendasi, termasuk bagaimana tag makanan digunakan untuk mencocokkan makanan dengan preferensi pengguna via database.
+- Developer memiliki akses ke alat admin lanjutan, seperti mengelola tag makanan, kategori, dan memonitor aktivitas pengguna terkait rekomendasi via database.
    
 
 3. Product Page
@@ -230,7 +230,7 @@ User Biasa:
 - Bisa memberikan ulasan dan rating pada produk atau restoran, dengan menambahkan hashtag untuk memudahkan pencarian.
 - Akses ke produk terkait yang difilter berdasarkan tag atau rating.
 Developer:
-- Sama dengan User Biasa, tetapi developer bisa mengedit dan menghapus produk atau ulasan.
+- Sama dengan User Biasa, tetapi developer bisa mengedit dan menghapus ulasan.
 - Bisa melakukan moderasi pada ulasan yang diberikan user.
   
 4. Location Homepage / Geomapping Interface
@@ -240,7 +240,7 @@ User Biasa:
 - Akses terbatas hanya untuk data restoran yang sudah dipublikasikan atau tersedia untuk umum.
 - Developer:
 - Selain semua fitur yang dimiliki User Biasa, developer bisa mengelola data lokasi restoran.
-- Bisa menambah atau memperbarui informasi lokasi langsung dari peta interaktif.
+- Bisa menambah atau memperbarui informasi lokasi langsung dari peta interaktif via database.
 
 5. Penambahan Toko
 User Biasa:
