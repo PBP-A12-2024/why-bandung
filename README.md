@@ -17,7 +17,6 @@ Pernahkah Anda kesulitan untuk menemukan restoran yang anda inginkan selama berj
 WhyBandung hadir untuk membantu baik wisatawan maupun warga lokal dalam menemukan kuliner terbaik di Bandung. Situs ini dilengkapi dengan sistem navigasi berbasis peta yang unik dan intuitif, sehingga memudahkan pengguna mencari makanan dan minuman yang diinginkan. WhyBandung memungkinkan pengguna untuk mengeksplorasi kuliner di berbagai wilayah berdasarkan lokasi atau kategori makanan. Selain itu, WhyBandung akan terus mengembangkan dan memperbarui daftar lokasi kuliner secara berkala.\
   <br><br>
 Tim A12SITEK memilih Kota Bandung karena dikenal sebagai kota wisata yang populer dengan ragam kuliner yang khas. Namun, terdapat kekurangan dalam sistem navigasi kuliner di Bandung. Wisatawan sering kali tidak mengetahui kuliner khas di suatu daerah karena sistem pencarian aplikasi seperti Google Maps mengharuskan pengguna untuk mencari makanan secara spesifik. Akibatnya, wisatawan cenderung mengunjungi tempat-tempat kuliner yang sudah terkenal, sehingga melewatkan kedai-kedai lokal yang lebih autentik. Padahal, kuliner lokal memberikan pengalaman yang lebih khas dan mendalam terhadap budaya suatu daerah. Inilah yang mendorong kami untuk mengembangkan WhyBandung.
-
 </details>
 
 <details>
@@ -203,7 +202,7 @@ DATABASE DAPAT DIAKSES MELALUI LINK INI : https://docs.google.com/spreadsheets/d
 </details>
 
 <details>
-  <summary>iv. Deskripsi Jenis User dan Wewenang</summary>
+  <summary>iv. Deskripsi role-role User dan Wewenang</summary>
 1. Dashboard
 User Biasa:
 - Bisa melihat recent activity seperti pencarian terbaru atau ulasan yang pernah dibuat.
@@ -249,4 +248,8 @@ Developer:
 - Dapat menambah, melihat, memodifikasi dan menghapus toko
 
 
+</details>
+
+<details>
+  <summary>v. Tautan deployment aplikasi</summary>
 </details>
