@@ -148,7 +148,7 @@ CRUD
 - UPDATE : Mengubah toko dan produk yang sudah ada.
 - DELETE : Menghapus toko dan produk yang sudah ada.
 
-NON CRUD FEATURES YANG MUNGKIN DIIMPLEMENTASIKAN JIKA WKAKTU MEMUNGKINKAN<br>
+NON CRUD FEATURES<br>
 1. Search System<br>
 Features:
 - Search system agar user dapat menelusuri berdasarkan filter yang bisa diatur, mungkin dari lokasi, menu spesifik, dll.
@@ -168,7 +168,7 @@ Rincian regulasi aturan khusus:
 Gambaran:
 ![Screenshot 2024-10-06 222203](https://github.com/user-attachments/assets/aa58c763-961f-4377-b1d5-6a9b50a6947b)
 
-2. Explore and Discover<br>
+2. Explore and Discover AKAN DIIMPLEMENTASIKAN SEBAGAI FITUR TAMBAHAN<br>
 Features:
 Memberikan suggestion kepada user terkait  restaurants atau menu yang baru ataupun trending berdasarkan user history dan rating di website.
 Recommendations bisa diambil dari history user sering berinteraksi dengan tipe menu apa ataupun lokasi mana.
@@ -197,7 +197,7 @@ Kolom Kode Produk digunakan sebagai kode unik untuk setiap item produk, sehingga
   <br><br>
 Kolom Harga Retail memberikan informasi mengenai harga suatu produk sehingga pengguna dapat memilih produk yang mereka inginkan sesuai dengan budget yang mereka miliki. Sedangkan kolom Lokasi digunakan untuk memberikan informasi pada daerah mana produk tersebut berada. Pengguna juga dapat mencari produk sesuai dengan lokasi yang diinginkan.
 <br><br>
-DATABASE DAPAT DIAKSES MELALUI LINK INI : https://docs.google.com/spreadsheets/d/1peBfLmwdaHBPClgn3gGGbBMKNjFn44a-ky20q7FM3h8/edit?usp=sharing 
+DATABASE DAPAT DIAKSES MELALUI LINK INI : <a href="https://docs.google.com/spreadsheets/d/1peBfLmwdaHBPClgn3gGGbBMKNjFn44a-ky20q7FM3h8/edit?usp=sharing ">https://docs.google.com/spreadsheets/d/1peBfLmwdaHBPClgn3gGGbBMKNjFn44a-ky20q7FM3h8/edit?usp=sharing </a>
 
 </details>
 
@@ -252,4 +252,5 @@ Developer:
 
 <details>
   <summary>v. Tautan deployment aplikasi</summary>
+  <a href="http://karina-maharani31-whybandung.pbp.cs.ui.ac.id/">http://karina-maharani31-whybandung.pbp.cs.ui.ac.id/</a>
 </details>
