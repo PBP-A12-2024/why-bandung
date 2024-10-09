@@ -204,5 +204,49 @@ DATABASE DAPAT DIAKSES MELALUI LINK INI : https://docs.google.com/spreadsheets/d
 
 <details>
   <summary>iv. Deskripsi Jenis User dan Wewenang</summary>
+1. Dashboard
+User Biasa:
+- Bisa melihat recent activity seperti pencarian terbaru atau ulasan yang pernah dibuat.
+- Melihat favorite products atau restoran yang sudah pernah di-review atau diberi rating.
+- Akses ke link highly-rated products berdasarkan preferensi mereka.
+- Gunakan search bar untuk menelusuri produk atau restoran.
+Developer:
+- Sama seperti User Biasa, tapi ditambah kemampuan untuk melihat data terkait produk atau restoran seperti tren, statistik rating, dan aktivitas user lainnya.
+- Akses ke modul developer untuk pengelolaan produk dan restoran.
+- Bisa menambah link ke fitur lain yang hanya diakses oleh developer, seperti manajemen user, monitoring ulasan, dan pengelolaan sistem.
+  
+2. What to Eat?
+User Biasa:
+- Bisa mengisi form untuk melihat rekomendasi makanan.
+- User bisa gacha makanan untuk seru-seruan atau jika tidak tahu mau makan apa.
+Developer:
+- Developer dapat memodifikasi algoritma rekomendasi, termasuk bagaimana tag makanan digunakan untuk mencocokkan makanan dengan preferensi pengguna.
+- Developer memiliki akses ke alat admin lanjutan, seperti mengelola tag makanan, kategori, dan memonitor aktivitas pengguna terkait rekomendasi.
+   
+
+3. Product Page
+User Biasa:
+- Bisa melihat detail produk atau restoran, seperti nama restoran, menu yang tersedia, dan ulasan dari user lain.
+- Bisa memberikan ulasan dan rating pada produk atau restoran, dengan menambahkan hashtag untuk memudahkan pencarian.
+- Akses ke produk terkait yang difilter berdasarkan tag atau rating.
+Developer:
+- Sama dengan User Biasa, tetapi developer bisa mengedit dan menghapus produk atau ulasan.
+- Bisa melakukan moderasi pada ulasan yang diberikan user.
+  
+4. Location Homepage / Geomapping Interface
+User Biasa:
+- Bisa melihat peta interaktif yang menunjukkan lokasi restoran atau menu berdasarkan filter seperti lokasi atau jenis masakan.
+- Dapat melakukan pencarian berbasis lokasi geografis dan filter sesuai preferensi mereka.
+- Akses terbatas hanya untuk data restoran yang sudah dipublikasikan atau tersedia untuk umum.
+- Developer:
+- Selain semua fitur yang dimiliki User Biasa, developer bisa mengelola data lokasi restoran.
+- Bisa menambah atau memperbarui informasi lokasi langsung dari peta interaktif.
+
+5. Penambahan Toko
+User Biasa:
+- Tidak bisa Akses
+Developer:
+- Dapat menambah, melihat, memodifikasi dan menghapus toko
+
 
 </details>
