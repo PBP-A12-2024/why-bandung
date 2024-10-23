@@ -15,10 +15,12 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 from geomapping.views import show_geomap
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', show_geomap, name='show_geomap'),
+    path('whatToEat/', include('whatToEat.urls')),
 ]
