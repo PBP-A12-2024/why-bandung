@@ -1,0 +1,81 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>Tes</h1>
+
+<h5>NPM: </h5>
+<p>{{ npm }}<p>
+
+<h5>Name:</h5>
+<p>{{ name }}</p>
+
+<h5>Class:</h5>
+<p>{{ class }}</p>
+
+{% if not toko_entries %}
+<p>Belum ada data toko pada database.</p>
+{% else %}
+<table>
+  <tr>
+    <th>Restaurant</th>
+    <th>Location</th>
+    <th>Product Name</th>
+    <th>Description</th>
+    <th>Price</th>
+    <th>Image</th>
+    <th>Actions</th> <!-- Tambahkan kolom untuk aksi (edit) -->
+  </tr>
+
+  {% comment %} Menampilkan data toko dan produk-produk yang terkait {% endcomment %}
+  {% for toko_entry in toko_entries %}
+    {% for product_entry in toko_entry.products.all %}
+    <tr>
+      <td>{{ toko_entry.name }}</td>
+      <td>{{ toko_entry.location }}</td>
+      <td>{{ product_entry.p_name }}</td>
+      <td>{{ product_entry.p_description }}</td>
+      <td>{{ product_entry.p_price }}</td>
+      <td>
+        {% if product_entry.p_image %}
+          <img src="{{ product_entry.p_image.url }}" alt="{{ product_entry.p_name }}" style="width: 100px; height: auto;">
+        {% else %}
+          <p>No Image</p>
+        {% endif %}
+      </td>
+      <td>
+        <!-- Tombol edit toko, menggunakan id toko -->
+        <a href="{% url 'dashboard_admin:edit_toko' id=toko_entry.id %}">
+          <button>Edit Restaurant</button>
+        </a>
+
+        <a href="{% url 'dashboard_admin:delete_toko' id=toko_entry.id%}">
+          <button>Hapus Restaurant</button>
+        </a>
+
+        <!-- Tombol edit produk, menggunakan id produk -->
+        <a href="{% url 'dashboard_admin:edit_product' id=product_entry.id %}">
+          <button>Edit Product</button>
+        </a>
+
+        <a href="{% url 'dashboard_admin:delete_product' id=product_entry.id %}">
+          <button>Delete Product</button>
+        </a>
+      </td>
+    </tr>
+    {% endfor %}
+  {% endfor %}
+</table>
+{% endif %}
+
+<br />
+
+<a href="{% url 'dashboard_admin:create_toko_entry' %}">
+  <button>Add New Restaurant</button>
+</a>
+
+<br />
+
+<a href="{% url 'dashboard_admin:create_product_entry' %}">
+    <button>Add New Product</button>
+  </a>
+
+{% endblock content %}
