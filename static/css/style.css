@@ -60,6 +60,7 @@ transform: translateZ(calc(-30px * var(--i))) translateY(calc(-20px * var(--i)))
 filter: drop-shadow(2px 2px 20px rgba(0, 0, 0, 0.5));
 cursor: pointer;
 user-select: none;
+transition: transform 0.3s;
 }
 
 .card img{
@@ -88,29 +89,9 @@ object-position: center;
 }
 
 .containerLike, .containerDislike{
-  animation-name: animationIcon;
-  animation-duration: 1s;
-  animation-timing-function: ease-in-out;
-  animation-fill-mode: both;
-  animation-play-state: paused;
-  animation-iteration-count: unset;
-}
-
-@keyframes animationIcon {
-  0%,
-  100%  {
-    opacity: 0.2;
-  }
-  50% {
-    opacity: 1;
-  }
-
-}
-
-.containerSwipe{
-
-}
-
+  opacity: 0.2;
+  transition: 1s;
+ }
 
 /* whatToEat draw */
 :root {
@@ -154,11 +135,12 @@ object-position: center;
     height: 90%;
     perspective: 1200px;
     transform: rotateY(0deg) rotateX(60deg);
-    background: var(--table-color);  
-    box-shadow: 0 0 100px 100px var(--table-color);  
+    background: #ecf0f1;  
+    box-shadow: 0 0 100px 100px #ecf0f1;  
 }
 
 .cardBackground {
+  overflow: hidden;
     position: absolute;
     display: flex;
     align-items: center;
@@ -166,23 +148,6 @@ object-position: center;
     width: 100px;
     height: 150px;
     border-radius: 10px;
-    background: #f9f9f9;
     box-shadow: 1px 1px 5px 1px rgba(150, 150, 150, 0.15);
-}
-
-.card__symbol {
-    font-size: 60px;
-    color: var(--card-black);
-    user-select: none;
-}
-
-.card__symbol--red {
-    color: var(--card-red);
-}
-
-.card--sample {  
-    top: 40%;
-    left: 45%;   
-    transform: rotate(45deg);
 }
 
