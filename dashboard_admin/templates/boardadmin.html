@@ -33,7 +33,7 @@
               <p class="text-lg font-semibold">{{ product_entry.name }}</p>
               <p class="text-gray-700">{{ product_entry.description }}</p>
               {% if product_entry.image %}
-              <img src="{{ product_entry.image }}" alt="{{ product_entry.name }}" class="w-16 h-16 rounded-lg mt-2">
+              <img src="{{ product_entry.image.url }}" alt="{{ product_entry.name }}" class="w-16 h-16 rounded-lg mt-2">
               {% else %}
               <p class="text-sm text-gray-500">No Image</p>
               {% endif %}
