@@ -19,9 +19,12 @@ from django.urls import path, include, include
 from django.conf import settings
 from django.conf.urls.static import static
 
+from django.urls import path, include
+from geomapping.views import show_geomap
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', include('product_page.urls')),
     path('', include('dashboard_admin.urls')),
     path('whatToEat/', include('whatToEat.urls')),
 ]

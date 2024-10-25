@@ -1,0 +1,101 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page</title>
+    <!-- Link to Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}"> <!-- Link to your custom CSS file if needed -->
+</head>
+<body class="bg-gray-100 text-gray-900">
+
+    <header class="text-center p-6 bg-blue-600 text-white">
+        <h1 class="text-3xl font-semibold">Product List</h1>
+    </header>
+
+    <main class="container mx-auto p-6">
+        {% if products %}
+            <!-- Display list of products -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {% for product in products %}
+                    <div class="product-card bg-white shadow-lg rounded-lg p-4">
+                        <div class="product-image mb-4">
+                            {% if product.image %}
+                                <img src="{{ product.image.url }}" alt="{{ product.name }}" class="w-full h-48 object-cover rounded">
+                            {% else %}
+                                <div class="w-full h-48 flex items-center justify-center bg-gray-200 text-gray-500 rounded">Gambar tidak tersedia</div>
+                            {% endif %}
+                        </div>
+                        <div class="product-info mb-4">
+                            <h2 class="text-2xl font-bold">{{ product.name }}</h2>
+                            <p class="text-gray-700">{{ product.description }}</p>
+                            <p class="text-gray-800"><strong>Toko:</strong> {{ product.toko.name }}</p>
+                            <p class="text-green-600 font-semibold"><strong>Price:</strong> Rp. {{ product.price }}</p>
+                        </div>
+
+                        <!-- Reviews Section for each product -->
+                        <div class="reviews mb-4">
+                            <h3 class="text-lg font-semibold">Reviews:</h3>
+                            <ul class="text-sm text-gray-600 space-y-2 mt-2">
+                                {% if product.reviews.all %}
+                                    {% for review in product.reviews.all %}
+                                        <li class="border-t pt-2">
+                                            <strong>{{ review.user.username }}</strong> rated it {{ review.rating }}/5
+                                            <p>{{ review.comment }}</p>
+                                            <p class="text-xs text-gray-500">Posted on {{ review.created_at|date:"F j, Y, g:i a" }}</p>
+                                        </li>
+                                    {% endfor %}
+                                {% else %}
+                                    <p class="text-gray-500">No reviews yet. Be the first to review!</p>
+                                {% endif %}
+                            </ul>
+                        </div>
+
+                        <!-- Review Form for each product -->
+                        {% if user.is_authenticated %}
+                            <div class="mt-4">
+                                <h4 class="text-lg font-semibold mb-2">Add Your Review</h4>
+                                <form id="ajax-review-form-{{ product.id }}" method="post" action="{% url 'main:add_review' product.id %}" class="space-y-4">
+                                    {% csrf_token %}
+                                    {{ form.as_p }}
+                                    <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Submit Review</button>
+                                </form>
+                            </div>
+                        {% else %}
+                            <p class="text-sm text-blue-600"><a href="{% url 'main:product_page' %}" class="underline">Login</a> to leave a review.</p>
+                        {% endif %}
+                    </div>
+                {% endfor %}
+            </div>
+        {% else %}
+            <p class="text-center text-gray-500">{{ message }}</p> <!-- Message if no products are available -->
+        {% endif %}
+    </main>
+
+    <!-- JavaScript for AJAX -->
+    <script>
+        // Loop through each review form and attach event listeners for AJAX
+        document.querySelectorAll('[id^="ajax-review-form-"]').forEach(function(form) {
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                var xhr = new XMLHttpRequest();
+                xhr.open('POST', form.action, true);
+                xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+                xhr.onreadystatechange = function() {
+                    if (xhr.readyState == 4 && xhr.status == 200) {
+                        alert('Review submitted successfully!');
+                        location.reload(); // Optionally reload the page to display the new review
+                    } else if (xhr.status != 200) {
+                        alert('An error occurred. Please try again.');
+                    }
+                };
+                var formData = new FormData(form);
+                xhr.send(new URLSearchParams(formData).toString());
+            });
+        });
+    </script>
+</body>
+</html>
