@@ -151,3 +151,77 @@ object-position: center;
     box-shadow: 1px 1px 5px 1px rgba(150, 150, 150, 0.15);
 }
 
+/* Tombol Add New Restaurant dan Add New Product */
+/* Container untuk menempatkan tombol di tengah */
+.button-container {
+  display: flex;
+  justify-content: center; /* Untuk posisi horizontal di tengah */
+  margin-top: 20px; /* Jarak dari atas layar */
+  gap: 20px; /* Jarak antara kedua tombol */
+}
+
+/* Styling untuk tombol Add New Restaurant */
+.btn-add {
+  padding: 10px 20px; /* Menambah ruang di dalam tombol */
+  border-radius: 10px; /* Membuat sudut lebih membulat */
+  border: 2px solid #ccc; /* Menambah border abu-abu */
+  background-color: rgb(253, 113, 113); /* merah untuk Add New Restaurant */
+  color: white; /* Teks putih */
+  font-size: 16px; /* Ukuran font lebih besar */
+  margin: 10px 5px; /* Jarak antara tombol dan elemen sekitarnya */
+  cursor: pointer; /* Menunjukkan bahwa tombol bisa diklik */
+  transition: background-color 0.3s ease; /* Animasi perubahan warna saat di hover */
+}
+
+.btn-add:hover {
+  background-color: #ff5757ff; /* Warna merah lebih gelap saat di hover */
+}
+
+/* Styling untuk tombol Add New Product */
+.btn-add-product {
+  background-color: rgb(253, 113, 113); /* Hijau untuk Add New Product */
+  border: 2px solid #ccc; /* Border abu-abu */
+  color: white;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-size: 16px;
+  margin: 10px 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-add-product:hover {
+  background-color: #ff5757ff; /* Warna hijau lebih gelap saat di hover */
+}
+
+/* Ukuran lebih kecil untuk tombol Edit dan Delete */
+.tombol-icon {
+  width: 40px; /* Lebar tombol */
+  height: 40px; /* Tinggi tombol */
+  padding: 6px; /* Mengurangi padding agar lebih kompak */
+  border-radius: 50%; /* Membuat tombol tetap bulat */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tombol-icon svg {
+  width: 20px; /* Ukuran ikon SVG */
+  height: 20px; /* Ukuran ikon SVG */
+}
+
+.custom-border{
+  border-color: #ff5757;
+}
+
+.form-style form input, form textarea, form select {
+  width: 100%;
+  padding: 0.5rem;
+  border: 2px solid #bcbcbc;
+  border-radius: 0.375rem;
+}
+.form-style form input:focus, form textarea:focus, form select:focus {
+  outline: none;
+  border-color: #ff5757;
+  box-shadow: 0 0 0 3px #ff5757;
+}

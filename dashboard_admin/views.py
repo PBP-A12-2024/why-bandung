@@ -12,9 +12,6 @@ def show_main(request):
     product_entries = ProductEntry.objects.all()
     
     context = {
-        'npm' : '2306123456',
-        'name': 'Pak Bepe',
-        'class': 'PBP E',
         'toko_entries': toko_entries,
         'product_entries': product_entries,
     }

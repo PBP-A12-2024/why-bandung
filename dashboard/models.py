@@ -9,5 +9,5 @@ class JournalEntry(models.Model):
     location = models.CharField(max_length=255)
     last_modified = models.DateField(auto_now_add=True)
     description = models.TextField()
-    ratings = models.DecimalField(max_digits=2, decimal_places=1, min=0, max=5)
+    ratings = models.DecimalField(max_digits=2, decimal_places=1)
 
