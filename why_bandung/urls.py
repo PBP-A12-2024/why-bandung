@@ -16,6 +16,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from django.conf import settings
+from django.conf.urls.static import static
+from django.urls import path, include
 from geomapping.views import show_geomap
 
 urlpatterns = [
@@ -23,3 +26,6 @@ urlpatterns = [
     path('', show_geomap, name='show_geomap'),
     path('', include('product_page.urls')),
 ]
+
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
