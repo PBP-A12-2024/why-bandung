@@ -165,7 +165,7 @@ object-position: center;
   padding: 10px 20px; /* Menambah ruang di dalam tombol */
   border-radius: 10px; /* Membuat sudut lebih membulat */
   border: 2px solid #ccc; /* Menambah border abu-abu */
-  background-color: rgb(253, 113, 113); /* merah untuk Add New Restaurant */
+  background-color: #ff5757; /* merah untuk Add New Restaurant */
   color: white; /* Teks putih */
   font-size: 16px; /* Ukuran font lebih besar */
   margin: 10px 5px; /* Jarak antara tombol dan elemen sekitarnya */
@@ -174,12 +174,12 @@ object-position: center;
 }
 
 .btn-add:hover {
-  background-color: #ff5757ff; /* Warna merah lebih gelap saat di hover */
+  background-color: #fa4444; /* Warna merah lebih gelap saat di hover */
 }
 
 /* Styling untuk tombol Add New Product */
 .btn-add-product {
-  background-color: rgb(253, 113, 113); /* Hijau untuk Add New Product */
+  background-color: #ff5757; /* Hijau untuk Add New Product */
   border: 2px solid #ccc; /* Border abu-abu */
   color: white;
   padding: 10px 20px;
@@ -191,7 +191,7 @@ object-position: center;
 }
 
 .btn-add-product:hover {
-  background-color: #ff5757ff; /* Warna hijau lebih gelap saat di hover */
+  background-color: #fa4444; /* Warna hijau lebih gelap saat di hover */
 }
 
 /* Ukuran lebih kecil untuk tombol Edit dan Delete */
