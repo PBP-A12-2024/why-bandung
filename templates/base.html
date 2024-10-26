@@ -12,6 +12,9 @@
     <link rel="stylesheet" href="{% static 'css/style.css' %}"/>
   </head>
   <body>
-    {% block content %} {% endblock content %}
+    {% include 'navbar.html' %}
+    <div>
+      {% block content %} {% endblock content %}
+    </div>
   </body>
 </html>
