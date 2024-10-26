@@ -11,23 +11,52 @@ from .models import Product
 from django.contrib import messages
 
 def product_page(request):
-    # Mengambil semua produk dan menampilkan toko terkait
+    # Ambil parameter filter dari request
+    name_filter = request.GET.get('name', '')
+    min_price = request.GET.get('min_price')
+    max_price = request.GET.get('max_price')
+    toko_filter = request.GET.get('toko')
+    category = request.GET.get('category')  # Ambil kategori dari request
+    location = request.GET.get('location')  # Ini untuk filter lokasi
+
+    # Mulai query dasar untuk semua produk
     products = ProductEntry.objects.all()
-    if products:
-        return render(request, 'product_page.html', {
-            'products': products
-        })
-    else:
-        # Jika tidak ada produk
-        return render(request, 'product_page.html', {
-            'message': 'Tidak ada produk yang tersedia.'
-        })
+
+    # Filter berdasarkan nama jika diisi
+    if name_filter:
+        products = products.filter(name__icontains=name_filter)
+
+    # Filter berdasarkan harga minimal dan maksimal
+    if min_price:
+        products = products.filter(price__gte=min_price)
+    if max_price:
+        products = products.filter(price__lte=max_price)
+
+    # Filter berdasarkan toko jika diisi
+    if toko_filter:
+        products = products.filter(toko__id=toko_filter)
+    if category:
+        products = products.filter(description__iexact=category)
+    if location:
+        products = products.filter(toko__location__icontains=location)
+    all_categories = ProductEntry.objects.values_list('description', flat=True).distinct()
+    all_locations = TokoEntry.objects.values_list('location', flat=True).distinct()
+
+    # Dapatkan daftar semua toko untuk dropdown filter
+    all_toko = TokoEntry.objects.all()
+
+    return render(request, 'product_page.html', {
+        'products': products,
+        'all_toko': all_toko,
+        'all_categories': all_categories,  # Data kategori
+        'all_locations': all_locations,  # Data lokasi
+
+    })
 
 @login_required
 @csrf_exempt
 def add_review(request, product_id):
-    # Mengambil produk berdasarkan id menggunakan model ProductEntry
-    product = get_object_or_404(ProductEntry, id=product_id)
+    product = get_object_or_404(Product, id=product_id)  # Pastikan ini mengacu pada model yang benar
     if request.method == 'POST':
         form = ReviewForm(request.POST)
         if form.is_valid():
@@ -39,6 +68,7 @@ def add_review(request, product_id):
         else:
             return JsonResponse({'message': 'Form data is invalid'}, status=400)
     return JsonResponse({'message': 'Invalid request method'}, status=405)
+
 
 
 def import_csv(request):

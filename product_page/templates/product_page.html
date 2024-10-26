@@ -6,9 +6,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product Page</title>
-    <!-- Link to Tailwind CSS -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="{% static 'css/styles.css' %}"> <!-- Link to your custom CSS file if needed -->
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
 </head>
 <body class="bg-gray-100 text-gray-900">
 
@@ -16,86 +15,170 @@
         <h1 class="text-3xl font-semibold">Product List</h1>
     </header>
 
-    <main class="container mx-auto p-6">
-        {% if products %}
-            <!-- Display list of products -->
+    <!-- Container untuk konten utama dan sidebar -->
+    <main class="container mx-auto p-6 flex space-x-6">
+
+        <!-- Sidebar Filter -->
+        <aside class="w-64 bg-white shadow-lg rounded-lg p-4 fixed top-24 left-6 h-fit z-10">
+            <h2 class="text-lg font-semibold mb-4">Filter Products</h2>
+            <form method="get" action="{% url 'main:product_page' %}" class="space-y-4">
+                
+                <!-- Filter Nama Produk -->
+                <div>
+                    <label for="name" class="block text-sm font-medium text-gray-700">Product Name:</label>
+                    <input type="text" name="name" id="name" value="{{ request.GET.name }}" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm">
+                </div>
+        
+                <!-- Filter Harga Minimum -->
+                <div>
+                    <label for="min_price" class="block text-sm font-medium text-gray-700">Min Price:</label>
+                    <input type="number" name="min_price" id="min_price" value="{{ request.GET.min_price }}" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm">
+                </div>
+        
+                <!-- Filter Harga Maksimum -->
+                <div>
+                    <label for="max_price" class="block text-sm font-medium text-gray-700">Max Price:</label>
+                    <input type="number" name="max_price" id="max_price" value="{{ request.GET.max_price }}" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm">
+                </div>
+                
+                <!-- Filter Kategori -->
+                <div>
+                    <label for="category" class="block text-sm font-medium text-gray-700">Category:</label>
+                    <select name="category" id="category" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm">
+                        <option value="">All Categories</option>
+                        {% for category in all_categories %}
+                            <option value="{{ category }}" {% if category == request.GET.category %}selected{% endif %}>{{ category }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <!-- Filter Lokasi -->
+                <div>
+                    <label for="location" class="block text-sm font-medium text-gray-700">Location:</label>
+                    <select name="location" id="location" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm">
+                        <option value="">All Locations</option>
+                        {% for loc in all_locations %}
+                            <option value="{{ loc }}" {% if loc == request.GET.location %}selected{% endif %}>{{ loc }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+        
+                <!-- Filter Toko -->
+                <div>
+                    <label for="toko" class="block text-sm font-medium text-gray-700">Store:</label>
+                    <select name="toko" id="toko" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm">
+                        <option value="">All Stores</option>
+                        {% for toko in all_toko %}
+                            <option value="{{ toko.id }}" {% if toko.id|stringformat:"s" == request.GET.toko %}selected{% endif %}>{{ toko.name }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+        
+                
+        
+                <!-- Tombol Submit Filter -->
+                <div class="col-span-full">
+                    <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 w-full">Apply Filters</button>
+                </div>
+            </form>
+        </aside>
+        
+
+        <!-- Konten produk utama dengan penyesuaian margin kiri dan grid yang lebih fleksibel -->
+        <section class="w-full md:w-3/4 ml-auto pl-72">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {% for product in products %}
-                    <div class="product-card bg-white shadow-lg rounded-lg p-4">
-                        <div class="product-image mb-4">
-                            {% if product.image %}
-                                <img src="{{ product.image.url }}" alt="{{ product.name }}" class="w-full h-48 object-cover rounded">
+                {% if products %}
+                    {% for product in products %}
+                        <div class="product-card bg-white shadow-lg rounded-lg p-4">
+                            <div class="product-image mb-4">
+                                {% if product.image %}
+                                    <img src="{{ product.image.url }}" alt="{{ product.name }}" class="w-full h-48 object-cover rounded">
+                                {% else %}
+                                    <div class="w-full h-48 flex items-center justify-center bg-gray-200 text-gray-500 rounded">Gambar tidak tersedia</div>
+                                {% endif %}
+                            </div>
+                            <div class="product-info mb-4">
+                                <h2 class="text-2xl font-bold">{{ product.name }}</h2>
+                                <p class="text-gray-700">{{ product.description }}</p>
+                                <p class="text-gray-800"><strong>Toko:</strong> {{ product.toko.name }}</p>
+                                <p class="text-green-600 font-semibold"><strong>Price:</strong> Rp. {{ product.price }}</p>
+                            </div>
+        
+                            <!-- Ulasan Produk -->
+                            <div class="reviews mb-4">
+                                <h3 class="text-lg font-semibold">Reviews:</h3>
+                                <ul class="text-sm text-gray-600 space-y-2 mt-2">
+                                    {% if product.reviews.all %}
+                                        {% for review in product.reviews.all %}
+                                            <li class="border-t pt-2">
+                                                <strong>{{ review.user.username }}</strong> rated it {{ review.rating }}/5
+                                                <p>{{ review.comment }}</p>
+                                                <p class="text-xs text-gray-500">Posted on {{ review.created_at|date:"F j, Y, g:i a" }}</p>
+                                            </li>
+                                        {% endfor %}
+                                    {% else %}
+                                        <p class="text-gray-500">No reviews yet. Be the first to review!</p>
+                                    {% endif %}
+                                </ul>
+                            </div>
+        
+                            <!-- Formulir Ulasan -->
+                            {% if user.is_authenticated %}
+                                <div class="mt-4">
+                                    <h4 class="text-lg font-semibold mb-2">Add Your Review</h4>
+                                    <form id="ajax-review-form-{{ product.id }}" method="post" action="{% url 'main:add_review' product.id %}" class="space-y-4">
+                                        {% csrf_token %}
+                                        <div>
+                                            <label for="rating" class="block text-sm font-medium text-gray-700">Rating:</label>
+                                            <select name="rating" id="rating" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm">
+                                                <option value="">Select Rating</option>
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                                <option value="5">5</option>
+                                            </select>
+                                        </div>
+                                        <div>
+                                            <label for="comment" class="block text-sm font-medium text-gray-700">Comment:</label>
+                                            <textarea name="comment" id="comment" rows="3" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm" placeholder="Write your review here..."></textarea>
+                                        </div>
+                                        <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Submit Review</button>
+                                    </form>
+                                </div>
                             {% else %}
-                                <div class="w-full h-48 flex items-center justify-center bg-gray-200 text-gray-500 rounded">Gambar tidak tersedia</div>
+                                <p class="text-sm text-blue-600"><a href="{% url 'main:product_page' %}" class="underline">Login</a> to leave a review.</p>
                             {% endif %}
                         </div>
-                        <div class="product-info mb-4">
-                            <h2 class="text-2xl font-bold">{{ product.name }}</h2>
-                            <p class="text-gray-700">{{ product.description }}</p>
-                            <p class="text-gray-800"><strong>Toko:</strong> {{ product.toko.name }}</p>
-                            <p class="text-green-600 font-semibold"><strong>Price:</strong> Rp. {{ product.price }}</p>
-                        </div>
-
-                        <!-- Reviews Section for each product -->
-                        <div class="reviews mb-4">
-                            <h3 class="text-lg font-semibold">Reviews:</h3>
-                            <ul class="text-sm text-gray-600 space-y-2 mt-2">
-                                {% if product.reviews.all %}
-                                    {% for review in product.reviews.all %}
-                                        <li class="border-t pt-2">
-                                            <strong>{{ review.user.username }}</strong> rated it {{ review.rating }}/5
-                                            <p>{{ review.comment }}</p>
-                                            <p class="text-xs text-gray-500">Posted on {{ review.created_at|date:"F j, Y, g:i a" }}</p>
-                                        </li>
-                                    {% endfor %}
-                                {% else %}
-                                    <p class="text-gray-500">No reviews yet. Be the first to review!</p>
-                                {% endif %}
-                            </ul>
-                        </div>
-
-                        <!-- Review Form for each product -->
-                        {% if user.is_authenticated %}
-                            <div class="mt-4">
-                                <h4 class="text-lg font-semibold mb-2">Add Your Review</h4>
-                                <form id="ajax-review-form-{{ product.id }}" method="post" action="{% url 'main:add_review' product.id %}" class="space-y-4">
-                                    {% csrf_token %}
-                                    {{ form.as_p }}
-                                    <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Submit Review</button>
-                                </form>
-                            </div>
-                        {% else %}
-                            <p class="text-sm text-blue-600"><a href="{% url 'main:product_page' %}" class="underline">Login</a> to leave a review.</p>
-                        {% endif %}
-                    </div>
-                {% endfor %}
+                    {% endfor %}
+                {% else %}
+                    <p class="text-center text-gray-500">{{ message }}</p>
+                {% endif %}
             </div>
-        {% else %}
-            <p class="text-center text-gray-500">{{ message }}</p> <!-- Message if no products are available -->
-        {% endif %}
-    </main>
-
-    <!-- JavaScript for AJAX -->
-    <script>
-        // Loop through each review form and attach event listeners for AJAX
-        document.querySelectorAll('[id^="ajax-review-form-"]').forEach(function(form) {
-            form.addEventListener('submit', function(e) {
-                e.preventDefault();
-                var xhr = new XMLHttpRequest();
-                xhr.open('POST', form.action, true);
-                xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-                xhr.onreadystatechange = function() {
-                    if (xhr.readyState == 4 && xhr.status == 200) {
-                        alert('Review submitted successfully!');
-                        location.reload(); // Optionally reload the page to display the new review
-                    } else if (xhr.status != 200) {
-                        alert('An error occurred. Please try again.');
-                    }
-                };
-                var formData = new FormData(form);
-                xhr.send(new URLSearchParams(formData).toString());
+        </section>
+        <script>
+            // Loop through each review form and attach event listeners for AJAX
+            document.querySelectorAll('[id^="ajax-review-form-"]').forEach(function(form) {
+                form.addEventListener('submit', function(e) {
+                    e.preventDefault(); // Mencegah pengiriman formulir default
+                    var xhr = new XMLHttpRequest();
+                    xhr.open('POST', form.action, true);
+                    xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+                    
+                    xhr.onreadystatechange = function() {
+                        if (xhr.readyState == 4 && xhr.status == 200) {
+                            var response = JSON.parse(xhr.responseText);
+                            document.querySelector('.ajax-response').innerText = response.message; // Tampilkan pesan sukses
+                            form.reset(); // Reset formulir setelah sukses
+                            location.reload(); // Reload halaman untuk menampilkan ulasan baru
+                        } else if (xhr.readyState == 4) {
+                            var response = JSON.parse(xhr.responseText);
+                            document.querySelector('.ajax-response').innerText = response.message; // Tampilkan pesan kesalahan
+                        }
+                    };
+        
+                    var formData = new FormData(form);
+                    xhr.send(new URLSearchParams(formData).toString());
+                });
             });
-        });
-    </script>
-</body>
-</html>
+        </script>
+        
