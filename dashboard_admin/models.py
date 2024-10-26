@@ -1,4 +1,5 @@
 from django.db import models
+from django.core.validators import MinValueValidator
 import uuid
 
 # Create your models here.
@@ -12,8 +13,8 @@ class TokoEntry(models.Model):
 
 class ProductEntry(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
-    p_name = models.CharField(max_length=255)
-    p_price = models.IntegerField()
-    p_description = models.TextField()
-    p_image = models.ImageField(upload_to='product_images/', blank=True, null=True)
-    p_toko = models.ForeignKey(TokoEntry, on_delete=models.CASCADE, related_name='products')
+    name = models.CharField(max_length=255)
+    price = models.IntegerField(validators=[MinValueValidator(1)])
+    description = models.TextField()
+    image = models.ImageField(upload_to='product_images/', blank=True, null=True)
+    toko = models.ForeignKey(TokoEntry, on_delete=models.CASCADE, related_name='products')
