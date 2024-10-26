@@ -23,9 +23,10 @@ from django.urls import path, include
 from geomapping.views import show_geomap
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('admintab/', admin.site.urls),
+    path('', include('dashboard.urls')),
     path('', include('product_page.urls')),
-    path('', include('dashboard_admin.urls')),
+    path('admin/', include('dashboard_admin.urls')),
     path('whatToEat/', include('whatToEat.urls')),
 ]
 

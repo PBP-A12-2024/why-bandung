@@ -14,4 +14,6 @@ urlpatterns = [
     path('edit-product/<uuid:id>', edit_product, name="edit_product"),
     path('delete-toko/<uuid:id>/', delete_toko, name="delete_toko"),
     path('delete-product/<uuid:id>', delete_product, name="delete_product")
+
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
