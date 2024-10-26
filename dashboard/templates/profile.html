@@ -11,11 +11,7 @@
     <div class="container mx-auto px-4 py-4 mt-16">
         <div class="container-fluid">
             <div class="bg-gray-200 relative rounded flex flex-col items-center justify-center text-center py-6">
-<<<<<<< HEAD
-                <img src="https://www.svgrepo.com/show/355933/user-circle.svg" class="w-32 h-32 rounded-full -mt-12" />
-=======
-                <img src="https://www.svgrepo.com/show/355933/user-circle.svg" class="w-32 h-32 rounded-full -mt-12 bg-gray-200" />
->>>>>>> e86ec1cace4efcff4cf9576bbf84ec945e04d328
+                <img src="https://www.svgrepo.com/show/355933/user-circle.svg" class="w-32 h-32 rounded-full mt-12 bg-gray-200" />
                 <div class="py-4">
                     <h4 class="text-gray-800 text-base font-extrabold">{{ user.username }}</h4>
                     <p class="text-gray-800 text-xs mt-1">Food Enthusiast</p>
@@ -30,10 +26,7 @@
     </div>
     <div class="overflow-x-auto">
         <div class="flex flex-col items-center justify-center min-h-[24rem] p-6 w-full">
-<<<<<<< HEAD
-=======
             <div id="exist_entry_cards"></div>
->>>>>>> e86ec1cace4efcff4cf9576bbf84ec945e04d328
             <div id="journal_entry_cards" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-6xl mx-auto">
             </div>
             <!-- Modal Structure -->
@@ -182,11 +175,8 @@
     // Function to refresh journal entries
     async function refreshJournalEntries() {
         const journalEntryCards = document.getElementById("journal_entry_cards");
-<<<<<<< HEAD
-=======
         const missingEntryCards = document.getElementById("exist_entry_cards");
         missingEntryCards.innerHTML = ""; // Clear current entries
->>>>>>> e86ec1cace4efcff4cf9576bbf84ec945e04d328
         journalEntryCards.innerHTML = ""; // Clear current entries
 
         try {
@@ -194,17 +184,10 @@
             console.log(journalEntries); // Add this line to see the data
 
             if (journalEntries.length === 0) {
-<<<<<<< HEAD
-                journalEntryCards.innerHTML = `
-                    <div class="flex flex-col items-center justify-center min-h-[24rem] p-6">
-                        <img src="https://www.svgrepo.com/show/525569/upload-minimalistic.svg" alt="No Journal Entry Added" class="w-32 h-32 mb-4"/>
-                        <p class="text-center text-gray-600 mt-4">Please, add at least one Entry.</p>
-=======
                 missingEntryCards.innerHTML = `
                     <div class="flex flex-col items-center justify-center min-h-[24rem] w-full text-center">
                         <img src="https://www.svgrepo.com/show/525569/upload-minimalistic.svg" alt="No Journal Entry Added" class="w-32 h-32 mb-4" />
                         <p class="text-gray-600 mt-4">Please, add at least one Entry.</p>
->>>>>>> e86ec1cace4efcff4cf9576bbf84ec945e04d328
                     </div>
                 `;
             } else {
@@ -220,8 +203,6 @@
                         `
                         <div>
                             <div class="bg-white cursor-pointer rounded overflow-hidden shadow-[0_2px_10px_-3px_rgba(6,81,237,0.3)] relative top-0 hover:-top-2 transition-all duration-300">
-                                <img src="" alt="${title}" class="w-full h-60 object-cover" />
-                                
                                 <div class="p-6">
                                     <span class="text-sm block text-gray-400 mb-2">Created ${time}</span>
                                     <h3 class="text-xl font-bold text-gray-800">${title}</h3>

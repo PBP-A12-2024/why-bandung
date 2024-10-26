@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from dashboard_admin.models import ProductEntry, TokoEntry
+from product_page.views import import_csv
 from dashboard.models import JournalEntry
 from dashboard.forms import journalEntryForm
 from django.http import JsonResponse
@@ -28,6 +29,8 @@ def get_stores(request):
     return JsonResponse(store_list, safe=False)
 
 def show_main(request):
+    import_csv(request)
+
     products = ProductEntry.objects.all()
     product_chunks = chunked(products, 3)
 
