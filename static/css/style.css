@@ -225,3 +225,11 @@ object-position: center;
   border-color: #ff5757;
   box-shadow: 0 0 0 3px #ff5757;
 }
+
+.location-text {
+  max-width: 25ch; /* Batasi tampilan teks menjadi maksimal 29 karakter */
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  display: block;
+  white-space: normal; /* Pastikan teks dapat terpotong jika terlalu panjang */
+}
