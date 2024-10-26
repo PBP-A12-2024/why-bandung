@@ -7,7 +7,7 @@ class TokoEntryForm(ModelForm):
         model = TokoEntry
         fields = ['name', "location"]
 
-    def clean_nama_toko(self):
+    def clean_name(self):
         name = self.cleaned_data.get('name')
         if TokoEntry.objects.filter(name=name).exists():
             raise forms.ValidationError("Nama toko sudah digunakan, silahkan gunakan nama lain")
@@ -22,10 +22,11 @@ class ProductEntryForm(ModelForm):
     def clean(self):
         cleaned_data = super().clean()
         toko = TokoEntry.objects.all()
-        
+
         # Cek apakah ada toko yang sudah terdaftar
-        if not toko.exists():
+        if not TokoEntry.objects.exists():
             raise forms.ValidationError("Tidak ada toko yang tersedia. Anda harus menambahkan toko sebelum menambahkan produk.")
         
         return cleaned_data
+
 

@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+from dashboard_admin.models import ProductEntry
 import uuid
 
 class Store(models.Model):
@@ -28,7 +29,7 @@ class Hashtag(models.Model):
         return f'#{self.tag}'
 
 class Review(models.Model):
-    product = models.ForeignKey(Product, on_delete=models.CASCADE, related_name='reviews')
+    product = models.ForeignKey(ProductEntry, on_delete=models.CASCADE, related_name='reviews')
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     rating = models.PositiveSmallIntegerField()
     comment = models.TextField(blank=True, null=True)

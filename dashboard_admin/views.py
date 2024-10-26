@@ -4,16 +4,22 @@ from .models import TokoEntry, ProductEntry
 from django.http import HttpResponse, JsonResponse, HttpResponseRedirect
 from django.core import serializers
 from django.urls import reverse
+from django.core.exceptions import ValidationError
 import re
 import json
 
 def show_main(request):
     toko_entries = TokoEntry.objects.all()
     product_entries = ProductEntry.objects.all()
+
+    unique_locations = set(toko_entry.location.lower() for toko_entry in toko_entries)
+    unique_locations_display = {location: toko_entry.location for toko_entry in toko_entries for location in unique_locations if location == toko_entry.location.lower()}
+
     
     context = {
         'toko_entries': toko_entries,
         'product_entries': product_entries,
+        'unique_locations': unique_locations_display.values(),
     }
 
     return render(request, "boardadmin.html", context)
@@ -32,8 +38,11 @@ def create_product_entry(request):
     if request.method == "POST":
         form = ProductEntryForm(request.POST, request.FILES)  # Tambahkan request.FILES untuk menangani file
         if form.is_valid():
-            form.save()
-            return redirect('dashboard_admin:show_main')
+            try:
+                form.save()
+                return redirect('dashboard_admin:show_main')
+            except ValidationError as e:
+                form.add_error('name', e)
     else:
         form = ProductEntryForm()
 
