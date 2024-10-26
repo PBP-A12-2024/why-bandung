@@ -12,3 +12,7 @@ class JournalEntry(models.Model):
     description = models.TextField()
     ratings = models.DecimalField(max_digits=2, decimal_places=1)
 
+class UserHistory(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+    product = models.ForeignKey(ProductEntry, on_delete=models.CASCADE)

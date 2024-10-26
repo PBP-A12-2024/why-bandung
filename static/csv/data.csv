@@ -1,0 +1,123 @@
+KODE_PRODUK,NAMA_PRODUK,KATEGORI,TOKO,HARGA_RETAIL,LOKASI,URL
+BSL01,Bolu Susu Original,Kue,Bolu Susu Lembang,37000,Lembang,https://bolulembang.co.id/wp-content/uploads/2019/08/Original.webp
+BSL02,Pancake Susu Lembang Cokelat,Kue,Bolu Susu Lembang,25000,Lembang,https://bolulembang.co.id/wp-content/uploads/2021/12/Pancake-Cokelat.webp
+BSL03,Bolu Susu Tiramisu,Kue,Bolu Susu Lembang,37000,Lembang,https://bolulembang.co.id/wp-content/uploads/2023/03/Tiramisu.webp
+BSL04,Bolu Susu Original Mini Pack,Kue,Bolu Susu Lembang,19000,Lembang,https://bolulembang.co.id/wp-content/uploads/2022/08/Mini-Pack-Original-768x768.jpg
+BSL05,Bolu Susu Red Velvet,Kue,Bolu Susu Lembang,37000,Lembang,https://bolulembang.co.id/wp-content/uploads/2021/12/Redvelvet.webp
+KRS01,Pisang Bolen Isi 6 Bollen Pisang Keju Spesial,Kue,Kartika Sari,42000,Babakan Ciamis,https://thumbor.sirclocdn.com/unsafe/960x1120/filters:format(webp):quality(60)/web-order.kartikasari.com/media/catalog/product/cache/bf089eb7f3ac5b3c4dae87511e80451a/e/7/e7f0d13e-d061-4d78-b4e1-b04b83ffc0df.jpg
+KRS02,Pisang Bolen Isi 6 Bollen Pisang Keju Coklat,Kue,Kartika Sari,45000,Babakan Ciamis,https://thumbor.sirclocdn.com/unsafe/960x1120/filters:format(webp):quality(60)/web-order.kartikasari.com/media/catalog/product/cache/bf089eb7f3ac5b3c4dae87511e80451a/1/4/142ef302-c7c7-4995-adae-0ee9d68af3a1.jpg
+KRS03,Bagelen Butter Toples,Snack,Kartika Sari,60000,Babakan Ciamis,https://thumbor.sirclocdn.com/unsafe/960x1120/filters:format(webp):quality(60)/web-order.kartikasari.com/media/catalog/product/cache/bf089eb7f3ac5b3c4dae87511e80451a/b/a/bagelen-butter-ples-160-gr.jpg
+KRS04,Brownies Panggang Original,Kue,Kartika Sari,92000,Babakan Ciamis,https://thumbor.sirclocdn.com/unsafe/600x600/filters:format(webp):quality(60)/web-order.kartikasari.com/media/catalog/product/cache/bf089eb7f3ac5b3c4dae87511e80451a/k/s/ks_mp_brownies_almond.jpg
+KRS05,Kartika Toast Marchies Chocolate Stick,Snack,Kartika Sari,15000,Babakan Ciamis,https://thumbor.sirclocdn.com/unsafe/960x1120/filters:format(webp):quality(60)/web-order.kartikasari.com/media/catalog/product/cache/bf089eb7f3ac5b3c4dae87511e80451a/m/a/marchies_new_1.jpg
+KRS06,Bagelen Mocha,Snack,Kartika Sari,70000,Babakan Ciamis,https://thumbor.sirclocdn.com/unsafe/960x1120/filters:format(webp):quality(60)/web-order.kartikasari.com/media/catalog/product/cache/bf089eb7f3ac5b3c4dae87511e80451a/m/p/mp_bagelen_mocha_ks_180g-04-04.jpg
+KRS07,Bagelen Cheese,Snack,Kartika Sari,65000,Babakan Ciamis,https://thumbor.sirclocdn.com/unsafe/960x1120/filters:format(webp):quality(60)/web-order.kartikasari.com/media/catalog/product/cache/bf089eb7f3ac5b3c4dae87511e80451a/b/a/bagelen-keju-273-gr.jpg
+BHK01,Bandrek,Minuman,Bandrek Bajigur H Kodir,5000,Bandung Wetan,https://lh3.googleusercontent.com/p/AF1QipNn6EQMm6WGB_pPp41TQ450CCb5L2BMJV9uRKGM=s1360-w1360-h1020 
+BHK02,Bajigur,Minuman,Bandrek Bajigur H Kodir,5000,Bandung Wetan,https://lh3.googleusercontent.com/p/AF1QipM5oqhgRd6Ikxm8HgoztxNqvIme9g16-3HNoyUN=s1360-w1360-h1020 
+BHK03,Aneka Gorengan,Snack,Bandrek Bajigur H Kodir,1500,Bandung Wetan,https://lh3.googleusercontent.com/p/AF1QipOGLvyrV0zMQxhiG9GpBny4AJmcYTGXjYyuH4u0=s1360-w1360-h1020
+GNK01,Sidat/Unagi Asap Gulai,Makanan Berat,Gang Nikmat,45000,Bandung Wetan,https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRw3-ggKR9Qcr0xCULoQ1sbw_yhfSltgXjJRw&s
+GNK02,Air Kelapa,Minuman,Gang Nikmat,10000,Bandung Wetan,https://lh3.googleusercontent.com/p/AF1QipNVhN5C-JIDEmhEMKY0l4PVPXcSBVoD_2-vBlI7=s1360-w1360-h1020
+MCK01,Mie Kocok Polos,Makanan Berat,Mie Kocok Cepay,26000,Cicendo,https://lh3.googleusercontent.com/p/AF1QipOpG53RszceFIG34fHyPCewO8XcvGaJIqV31D0N=s1360-w1360-h1020
+MCK02,Mie Kocok Spesial Tulang,Makanan Berat,Mie Kocok Cepay,44000,Cicendo,https://lh3.googleusercontent.com/p/AF1QipNGMKg6FcDYHR9yMJHvrSNz3prguQWuOrwPVdpE=s1360-w1360-h1020
+MCK03,Kerupuk Kulit,Snack,Mie Kocok Cepay,20000,Cicendo,https://i0.wp.com/halalmui.org/wp-content/uploads/2022/09/2022-09-01-Kerupuk-Kulit-Kenali-Bahaya-dan-Potensi-Haramnya.jpg
+BBT01,Bolu Bakar Roombutter,Kue,Bolu Bakar Tunggal,54000,Buahbatu,https://images.tokopedia.net/img/cache/900/VqbcmM/2024/2/15/da402d4e-0441-4c20-afa6-37adbb31049e.jpg
+BBT02,Bolu Bakar Keju,Kue,Bolu Bakar Tunggal,54000,Buahbatu,https://images.tokopedia.net/img/cache/900/VqbcmM/2022/10/3/ce70e51d-03b3-4da2-8151-d4b71a6b734b.jpg
+BBT03,Bolu Bakar Coklat,Kue,Bolu Bakara Tunggal,54000,Buahbatu,https://images.tokopedia.net/img/cache/900/VqbcmM/2022/10/3/cf8d8d02-1cb3-47fe-a738-fcc1865f7ac1.jpg
+BBT04,Bolu Bakar Kacang Coklat,Kue,Bolu Bakar Tunggl,54000,Buahbatu,https://images.tokopedia.net/img/cache/900/VqbcmM/2022/10/3/ac0f8ff1-b09f-4764-be75-e90a12bba3d4.jpg
+BBT05,Bolu Bakar Strawberry,Kue,Bolu Bakar Tunggal,47000,Buahbatu,https://images.tokopedia.net/img/cache/900/VqbcmM/2022/10/3/8037389d-3a46-4db8-91fc-a0a24986a9ef.jpg
+DSA01,Hakau Udang,Appetizer,Dimsum 9 Ayam,23000,Cicendo,https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSxb51o8r3Idcm_4EXViHmDI3GEVD5A-rE2g&s
+DSA02,Bakpao 9 Ayam,Snack,Dimsum 9 Ayam,21000,Cicendo,https://lh3.googleusercontent.com/p/AF1QipPRaDo1TQe0Drh3oq1ARduL7BH3d4IbHNTssXkN=s1360-w1360-h1020
+DSA03,Siu Mai 9 Ayam,Appetizer,Dimsum 9 Ayam,22000,CIcendo,https://lh3.googleusercontent.com/p/AF1QipOLncAn2z70uZy9XgZqgscZLwr_QbYPE46i5j_w=s1360-w1360-h1020
+GNO01,Gepuk Daging,Makanan Berat,Gepuk Nyonya Ong,20000,Sukajadi,https://images.tokopedia.net/img/cache/900/VqbcmM/2023/2/14/a4dd2d36-588c-4051-9640-7d9443c618aa.jpg
+GNO02,Gepuk Daging Pedas,Makanan Berat,Gepuk Nyonya Ong,20000,Sukajadi,https://images.tokopedia.net/img/cache/900/VqbcmM/2023/2/14/0e94b392-394b-4fc6-9c5b-6fba3cd8e1ea.jpg
+GNO03,Gepuk Ayam Original,Makanan Berat,Gepuk Nyonya Ong,17500,Sukajadi,https://images.tokopedia.net/img/cache/900/VqbcmM/2023/2/14/6ccf1892-830f-4582-9a22-64c00a5fbaba.jpg
+GNO04,Gepuk Ayam Pedas,Makanan Berat,Gepuk Nyonya Ong,17500,Sukajadi,https://images.tokopedia.net/img/cache/900/VqbcmM/2023/2/14/8219b3fc-6e70-4705-8963-6edeae93c409.jpg
+GNO05,Gepuk Daging Asin,Makanan Berat,Gepuk Nyonya Ong,20000,Sukajadi,https://images.tokopedia.net/img/cache/700/VqbcmM/2022/7/16/539b3268-9556-415d-9246-67ee1e37f362.jpg
+KBJ01,Kue Balok Original,Kue,Kue Balok Jayagiri,2000,Coblong,https://awsimages.detik.net.id/community/media/visual/2018/11/24/7295f3be-d0b8-4524-bebf-eb1a3937a4c5.jpeg?w=554
+KBJ02,Kue Balok Cokelat,Kue,Kue Balok Jayagiri,5000,Coblong,https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTK3TdlzFKNTtW6zXM68a1m7IMR0Z2ZjCyhRQ&s
+KBJ03,Kue Balok Nutella,Kue,Kue Balok Jayagiri,5000,Coblong,https://i.gojekapi.com/darkroom/gofood-indonesia/v2/images/uploads/71d71db0-e927-42bf-9ba1-e73b3b0786d0_c81d4125-4513-4ad6-a67c-0f8df09b7ec3_Go-Resto_20181030_140011.jpg
+KBJ04,Kue Balok Strawberry,Kue,Kue Balok Jayagiri,3000,Coblong,https://id-test-11.slatic.net/p/aa58400d49c1e1dd7593f889af6e541f.jpg
+MBA01,Mie Ayam Polos,Makanan berat,Mie Baso Akung,16000,Lengkong,https://assets-pergikuliner.com/yxByF8HNlaFQCptpQWaxu15c-ng=/312x0/smart/https://assets-pergikuliner.com/uploads/image/picture/2432281/picture-1645356758.jpg
+MBA02,Mie Ayam Baso,Makanan Berat,Mie Baso Akung,31000,Lengkong,https://cdn.linkumkm.id/library/1/1/3/6/2/0/113620_512x351.jpeg
+WEO01,Nasi Tutug Kriuk,Makanan Berat,Waroeng Ethnic,42000,Cidadap,https://radarlebong.disway.id/upload/1717fa9a8a0aa408569693ad95d1167b.jpeg
+WOE02,Nasi Tutug Oncom,Makanan Berat,Waroeng Ethnic,42000,Cidadap,https://img.okezone.com/content/2023/08/13/298/2863568/resep-nasi-tutug-oncom-ala-chef-devina-cocok-untuk-perayaan-hut-ke-78-ri-Z2HEhnyLNO.jpg
+WOE03,Nasi Timbel Ayam,Makanan Berat,Waroeng Ethnic,69600,Cidadap,https://asset-a.grid.id/crop/0x0:0x0/x/photo/2022/08/04/jangan-sampai-ketinggalan-mengha-20220804075607.jpg
+CSC01,Paket Oseng Baso,Makanan Berat,Coop Space,20000,Cidadap,https://i.gojekapi.com/darkroom/gofood-indonesia/v2/images/uploads/a3ab48ce-9ea5-4fe0-8d51-ba58336270b8_8fce0fac-5118-4204-9362-7bc03a893572.jpg?auto=format
+CSC02,Paket Bento Tori Ball,Makanan Berat,Coop Space,18500,Cidadap,https://i.gojekapi.com/darkroom/gofood-indonesia/v2/images/uploads/2065e227-c7eb-4474-858f-42ff476d24a6_e6f8754d-57fa-45aa-a910-26ad64a7183b.jpg?auto=format
+KLM01,Lontong Telor,Makanan Berat,Kedai Lontong Medan Ka' Zahra,22000,Coblong,https://awsimages.detik.net.id/community/media/visual/2023/08/29/resep-lontong-sayur-sederhana.jpeg?w=1200
+KLM02,Kopi Susu Sidikalang,Minuman ,Kedai Lontong Medan Ka' Zahra,15000,Coblong,"https://blue.kumparan.com/image/upload/fl_progressive,fl_lossy,c_fill,q_auto:best,w_640/v1539761402/f0bfrgrnhkfmjxgtsfzx.jpg"
+KLM03,Lontong Medan biasa,Makanan Berat,Kedai Lontong Medan Ka' Zahra,18000,Coblong,https://assets-pergikuliner.com/6cPtqzeMZcRy4CAVNEX0Vs1ht8A=/624x0/smart/filters:no_upscale()/https://assets-pergikuliner.com/uploads/image/picture/878402/picture-1523071032.jpg
+RBB01,Roti Bakar Keju Serut,Makanan Ringan,Roti Bakar Big Boss,31000,Coblong,https://i.gojekapi.com/darkroom/gofood-indonesia/v2/images/uploads/41bad697-9478-4279-b7ed-32c3ad301c33_Go-Biz_20240131_000840.jpeg
+RBB02,Pisang bakar,Makanan Ringan,Roti Bakar Big Boss,15000,Coblong,https://i.gojekapi.com/darkroom/gofood-indonesia/v2/images/uploads/d49ee1ff-730e-4ebe-8f5f-190f2000cfdd_Go-Biz_20230303_082828.jpeg?auto=format
+WNS01,Baso Aci Jando,Makanan Ringan,Warung Na Sabiya,24000,Mandajalita,https://i.gojekapi.com/darkroom/gofood-indonesia/v2/images/uploads/b77bc965-6d9a-4ef1-b467-349e85be76f0_Go-Biz_20220712_181458.jpeg?auto=format
+WNS02,Nasi bento asin cumi,Makanan Berat,Warung Na Sabiya,33000,Mandajalita,https://i.gojekapi.com/darkroom/gofood-indonesia/v2/images/uploads/d1d5f1ff-38a8-4839-a20c-77631a6ea4f8_Go-Biz_20221022_165519.jpeg?auto=format
+WNS03,Nasi Goreng Jando,Makanan Berat,Warung Na Sabiya,27000,Mandajalita,https://i.gojekapi.com/darkroom/gofood-indonesia/v2/images/uploads/df369c14-8ba0-446d-a3d0-08b7a4411f83_Go-Biz_20221214_181446.jpeg?auto=format
+DNJ01,Juice Alpukat,Minuman,Dunia Juice,21000,Mandajalita,https://i.gojekapi.com/darkroom/gofood-indonesia/v2/images/uploads/2ed72c8a-dd15-4976-8ed8-77ce01069006_Go-Biz_20210826_043650.jpeg?auto=format
+DNJ02,Cappucino Cincau,Minuman,Dunia Juice,9000,Mandajalita,https://i0.wp.com/resepkoki.id/wp-content/uploads/2021/04/Resep-Cappuccino-Cincau.jpg?fit=500%2C624&ssl=1
+KLK01,Tropical Peach Ice,Minuman ,Kolaseu Koffie,30000,Buah Batu,https://i.gojekapi.com/darkroom/gofood-indonesia/v2/images/uploads/3ddcf786-c716-4e25-920e-83ae81d0a5c5_Go-Biz_20210203_133412.jpeg?auto=format
+KLK02,Raspberry tea,Minuman ,Kolaseu Koffie,27000,Buah Batu,https://i.gojekapi.com/darkroom/gofood-indonesia/v2/images/uploads/36a21e20-a53c-4088-a3e7-bec8dc5da7d7_Go-Biz_20210203_133532.jpeg?auto=format
+KLK03,Flat white,Minuman ,Kolaseu Koffie,25000,Buah Batu,https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEiNyVGza4Rzru7I1umTxxUpUMrjMWq-20gw&s
+SNC01,Chocolate Naan,Snack,Snack Attack & Coffee by Hangry,27000,Buah Batu,https://i.gojekapi.com/darkroom/gofood-indonesia/v2/images/uploads/39e6e659-9cfb-4bd5-8b85-1e8a15dc9229_20220411235141-s58y4a3o.jpg?auto=format
+SNC02,"Chicken Kofta Bites
+",Snack,Snack Attack & Coffee by Hangry,19000,Buah Batu,https://i.gojekapi.com/darkroom/gofood-indonesia/v2/images/uploads/8c22b248-ad1b-4449-8864-7ee5c981dd7c_20220411235138-nerrsd8u.jpg?auto=format
+SNC03,Bite Size Chicken Samosa,Snack,Snack Attack & Coffee by Hangry,18000,Buah Batu,https://i.gojekapi.com/darkroom/gofood-indonesia/v2/images/uploads/bd8ccf20-d62c-4243-b9c7-bd37a876f856_1729064240587_Bite%20Size%20Chicken%20Samosa%203%20pcs%20%20tebus%20murah1.png?auto=format
+SR01,Tofu Ramen,Makanan Berat,Shifu Ramen,16000,Cibiru,
+SR02,Sausage Ramen,Makanan Berat,Shifu Ramen,19000,Cibiru,
+SR03,Ekado Ramen,Makanan Berat,Shifu Ramen,20000,Cibiru,
+SR04,Chikhua Long,Makanan Ringan,Shifu Ramen,8000,Cibiru,
+SR05,Crabstick,Makanan Ringan,Shifu Ramen,6000,Cibiru,
+SB01,Nasi Timbel,Makanan Berat,Sambal Balaraja,5000,Cileunyu,
+SB02,Nasi Bakar,Makanan Berat,Sambal Balaraja,6000,Cileunyu,
+SB03,Ekoran Jantan,Makanan Berat,Sambal Balaraja,70000,Cileunyu,
+SB04,Bebek,Makanan Berat,Sambal Balaraja,25000,Cileunyu,
+SB05,Pepes Ayam Muda,Makanan Berat,Sambal Balaraja,15000,Cileunyu,
+TQ01,"Tahu Kuning Stick/panjang Susu
+",Makanan Ringan,Tahu Qeju,7000,Bandung Kulon,
+TQ02,Tahu Kotak Kuning Qeju,Makanan Ringan,Tahu Qeju,5000,Bandung Kulon,
+TQ03,Basreng Goreng,Makanan Ringan,Tahu Qeju,6000,Bandung Kulon,
+TQ04,Karedok Basreng,Makanan Ringan,Tahu Qeju,8000,Bandung Kulon,
+TQ05,Pop Ice Drink,Minuman,Tahu Qeju,5000,Bandung Kulon,
+MNK01,Martabak Kacang Cokelat Keju,Makanan Ringan,Martabak Nikmat Andir,115000,Andir,
+MNK02,Martabak Tipis Kacang,Makanan Ringan,Martabak Nikmat Andir,60000,Andir,
+MNK03,Martabak Pandan Jagung Keju,Makanan Ringan,Martabak Nikmat Andir,175000,Andir,
+MNK04,Martabak Nutella,Makanan Ringan,Martabak Nikmat Andir,160000,Andir,
+MNK05,Martabak Tiramisu Keju,Makanan Ringan,Martabak Nikmat Andir,150000,Andir,
+CH01,Mie Char Siu,Makanan Berat,Cafe Hongkonger,37000,Bojongloa Kidul,
+CH02,Samcan Panggang,Appetizer,Cafe Hongkonger,54000,Bojongloa Kidul,
+CH03,Mie Samcan,Makanan Berat,Cafe Hongkonger,39000,Bojongloa Kidul,
+CH04,Nasi Goreng Yangzhou,Makanan Berat,Cafe Hongkonger,40000,Bojongloa Kidul,
+TC01,Vietnam Drip,Coffee,Teduh Coffee,20000,Cinambo ,
+TC02,Coffee Beer,Coffee,Teduh Coffee,30000,Cinambo ,
+TC03,Japanese Iced Coffee,Coffee,Teduh Coffee,23000,Cinambo ,
+TC04,Ice Matcha,Minuman,Teduh Coffee,28000,Cinambo ,
+CB01,Paket Crisbar,Makanan Berat,Ayam Crisbar,23000,Rancasari,
+CB02,Paket Crisbee,Makanan Berat,Ayam Crisbar,23000,Rancasari,
+CB03,Paket Spicy,Makanan Berat,Ayam Crisbar,23000,Rancasari,
+JB01,Cranberry Cheese Bread,Kue,Jess Bakery,20000,Gedebage,
+JB02,Ubee Bread,Kue,Jess Bakery,17000,Gedebage,
+JB03,Spaghetti Brulee,Makanan Berat,Jess Bakery,45000,Gedebage,
+DA01,Nasi Goreng Hongkong,Makanan Berat,Daoci,20000,Arcamanik,
+DA02,Bakmie Super Komplit,Makanan Berat,Daoci,30000,Arcamanik,
+DA03,Kwetiau Goreng Spesial,Makanan Berat,Daoci,24000,Arcamanik,
+MO01,Sirloin Steak,Makanan Berat,Mokopi Cafè,24000,Kiaracondong,
+MO02,Brown Sugar Coffee,Coffee,Mokopi Cafè,16000,Kiaracondong,
+MO03,Mazagran,Coffee,Mokopi Cafè,21000,Kiaracondong,
+MGC01,Ice Caramel Machiato,Coffee,Morning Glory Coffee,35000,Antapani,
+MGC02,Frapuccino Mocha,Coffee,Morning Glory Coffee,35000,Antapani,
+MGC03,Hazelnut Cremebulee,Coffee,Morning Glory Coffee,35000,Antapani,
+MGC04,Magic,Coffee,Morning Glory Coffee,30000,Antapani,
+RL01,"Stockyard Sirloin Angus 200 Days Grain fed, 200g",Makanan Berat,The 18th Restaurant and Lounge,350000,Batununggal,
+RL02,"Grass Fed Mulwarra Ribeye, 200g",Makanan Berat,The 18th Restaurant and Lounge,275000,Batununggal,
+RL03,Prime Tomahawk 550g,Makanan Berat,The 18th Restaurant and Lounge,595000,Batununggal,
+RL04,"Mulwarra Lamb Rack, 350g",Makanan Berat,The 18th Restaurant and Lounge,250000,Batununggal,https://scontent.fcgk27-1.fna.fbcdn.net/v/t39.30808-6/206069295_1949681975232130_4700844874941486319_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=3a1ebe&_nc_ohc=jzgOZfQVW_AQ7kNvgGpS-Lp&_nc_zt=23&_nc_ht=scontent.fcgk27-1.fna&_nc_gid=AFz5cbOS0sY_GGl6f2_4aWx&oh=00_AYCkwx_TqADk95GI2h2ljjm8lYRBljFubj3KLkx-AOzE5w&oe=6722DDA8
+RL05,"Grilled Chicken Sashlik, 400g",Makanan Berat,The 18th Restaurant and Lounge,210000,Batununggal,https://i.ytimg.com/vi/VIuRZRftGbA/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLCwNjBH_xhB3m5BKk-QzSN-Olw3nA
+FB01,Vitello Tonnato,Appetizer,Fresco Bandung,125000,Cicendo,https://www.fattoincasadabenedetta.it/wp-content/uploads/2022/02/Vitello-tonnato_step-32.png
+FB02,Beef Carpaccio,Appetizer,Fresco Bandung,115000,Cicendo,https://www.seriouseats.com/thmb/VgVaMsNZog6fWU79Ottu-iw3CLc=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/SEA-italian-easy-beef-carpaccio-recipe-hero-01-e4153bc58c19429085be0e525888a37a.jpg
+FB03,Bruschetta,Appetizer,Fresco Bandung,85000,Cicendo,https://natashaskitchen.com/wp-content/uploads/2020/07/Tomato-Bruschetta-Recipe-7.jpg
+VSH01,Triple Decker,Makanan Berat,Vincero Social House,50000,Sumur Bandung,https://bigycloud.relationshop.net/RSData/recipe/20231004134851_soblavski2s_smashburger400x400.jpg
+VSH02,Burger Ayam Geprek,Makanan Berat,Vincero Social House,48000,Sumur Bandung,https://www.recipetineats.com/uploads/2017/07/Chicken-Burgers-4.jpg
+VSH03,Cumi ala Vincero,Makanan Berat,Vincero Social House,170000,Sumur Bandung,https://images.squarespace-cdn.com/content/v1/5e97657484a38d5d61649b09/1595537456393-X5KZ1FYRDM304SNMPNUX/20200430_162358-2.jpg
+VSH04,Beef ala Vincero,Makanan Berat,Vincero Social House,195000,Sumur Bandung,https://jacquisfoodfetish.com.au/wp-content/uploads/2016/08/048.jpg
+SKM01,Magic,Coffee,Sukma Coffee,25000,Regol,https://glamadelaide.com.au/wp-content/uploads/2023/05/Magic-Coffee.jpg
+SKM02,Coffee Beer,Coffee,Sukma Coffee,20000,Regol,https://mastheadbrewingco.com/wp-content/uploads/2017/01/Coffee-Stout.jpg
+SKM03,Long Black,Coffee,Sukma Coffee,23000,Regol,https://cookpad.com/id/recipe/images/3d673f9738097a4f?image_region_id=26
+SKM04,Affogato,Coffee,Sukma Coffee,28000,Regol,https://www.lotusbiscoff.com/sites/default/files/styles/image_style_1_1_square_xl/public/2023-01/BISCOFF%20AFFOGATO-340%201x1.jpg?h=b044a8f9&itok=5MjUt1wh

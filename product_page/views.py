@@ -6,7 +6,7 @@ from .forms import ReviewForm
 from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 import csv
-import csv
+import os
 from django.shortcuts import render, redirect
 from .models import Product, Review
 from django.contrib import messages
@@ -128,38 +128,39 @@ def add_review(request, product_id):
 
 
 def import_csv(request):
-    if request.method == 'POST' and request.FILES['csv_file']:
-        csv_file = request.FILES['csv_file']
-        
-        # Periksa apakah file yang diunggah adalah CSV
-        if not csv_file.name.endswith('.csv'):
-            messages.error(request, 'File yang diunggah bukan CSV')
-            return redirect('import_csv')
-        
-        # Membaca file CSV
-        decoded_file = csv_file.read().decode('utf-8').splitlines()
-        reader = csv.DictReader(decoded_file)
-
-        for row in reader:
-            # Menemukan atau membuat TokoEntry berdasarkan nama toko di CSV
-            toko, created = TokoEntry.objects.get_or_create(
-                name=row['TOKO'],
-                defaults={'location': row['LOKASI']}
-            )
-            
-            # Menyimpan atau memperbarui data ProductEntry menggunakan toko yang ditemukan/dibuat
-            ProductEntry.objects.update_or_create(
-                name=row['NAMA_PRODUK'],
-                defaults={
-                    'price': row['HARGA_RETAIL'],
-                    'description': row['KATEGORI'],
-                    'toko': toko
-                }
-            )
-        
-        messages.success(request, 'Data CSV berhasil diimpor ke database.')
-        return redirect('import_csv')
+    # Define the path to the CSV file
+    csv_file_path = "static/csv/data.csv"  # Adjust this to the correct path of your CSV file
     
+    # Check if the file exists
+    if not os.path.exists(csv_file_path):
+        messages.error(request, 'CSV file not found.')
+        return render(request, 'import_csv.html')
+
+    # Read and process the CSV file
+    try:
+        with open(csv_file_path, mode='r', encoding='utf-8') as file:
+            reader = csv.DictReader(file)
+            
+            for row in reader:
+                # Process and store the data in the database
+                toko, created = TokoEntry.objects.get_or_create(
+                    name=row['TOKO'],
+                    defaults={'location': row['LOKASI']}
+                )
+                
+                ProductEntry.objects.update_or_create(
+                    name=row['NAMA_PRODUK'],
+                    defaults={
+                        'price': row['HARGA_RETAIL'],
+                        'description': row['KATEGORI'],
+                        'toko': toko
+                    }
+                )
+                
+        messages.success(request, 'Data CSV successfully imported into the database.')
+    except Exception as e:
+        messages.error(request, f'Error processing the CSV file: {e}')
+
     return render(request, 'import_csv.html')
 
 @login_required
