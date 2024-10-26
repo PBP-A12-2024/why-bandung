@@ -2,106 +2,158 @@
 {% block content %}
 <br>
 
-<!-- Tampilkan tombol Add Product hanya jika ada toko terdaftar -->
-{% if toko_entries %}
-<div class="button-container flex justify-center">
-  <a href="{% url 'dashboard_admin:create_product_entry' %}">
-    <button class="btn-add-product">Add New Product</button>
-  </a>
-  {% endif %}
-  
+<!-- Jika tidak ada toko maupun produk di database -->
+{% if not toko_entries %}
+<div class="flex flex-col justify-center items-center min-h-screen">
   <a href="{% url 'dashboard_admin:create_toko_entry' %}">
-    <button class="btn-add">Add New Restaurant</button>
+    <button class="btn-add mb-4">Add New Restaurant</button>
   </a>
+  <p class="text-gray-600">Belum ada Toko dan Produk di database.</p>
 </div>
 
-<br>
+<!-- Jika sudah ada toko di database -->
+{% else %}
+<div class="flex flex-col justify-center items-center mt-16 gap-4">
+  <div class="button-container flex gap-4">
+    <a href="{% url 'dashboard_admin:create_toko_entry' %}">
+      <button class="btn-add">Add New Restaurant</button>
+    </a>
+    <a href="{% url 'dashboard_admin:create_product_entry' %}">
+      <button class="btn-add">Add New Product</button>
+    </a>
+  </div>
 
-{% if not toko_entries %}
-<p>Belum ada data toko pada database.</p>
-{% endif %}
+  <!-- Tombol untuk menampilkan dropdown filter lokasi -->
+  <div class="filter-container flex justify-center gap-4">
+    <button id="toggleDropdown" class="btn-add bg-blue-500 hover:bg-blue-600">
+      Filter by Location
+    </button>
 
-<div class="card-container flex flex-wrap gap-6 justify-start p-4">
+    <!-- Tombol untuk menghapus semua pilihan di dropdown -->
+    <button id="clearSelection" class="btn-add bg-red-500 hover:bg-red-600 hidden">
+      Clear Selection
+    </button>
+
+    <!-- Dropdown Filter Lokasi dengan multiple selection (tersembunyi pada awalnya) -->
+    <select id="locationFilter" class="bg-gray-200 p-2 rounded-lg hidden mt-4" multiple size="4">
+      {% for location in unique_locations %}
+        <option value="{{ location }}">{{ location }}</option>
+      {% endfor %}
+    </select>
+  </div>
+</div>
+
+<!-- Tampilkan daftar toko dan produk jika ada toko di database -->
+<div class="card-container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-start p-4">
   {% for toko_entry in toko_entries %}
-  <div class="relative w-[300px] break-inside-avoid">
-    <div class="absolute top-2 z-10 left-1/2 -translate-x-1/2 flex items-center -space-x-2">
-      <div class="w-[3rem] h-8 bg-gray-200 rounded-md opacity-80 -rotate-90"></div>
-      <div class="w-[3rem] h-8 bg-gray-200 rounded-md opacity-80 -rotate-90"></div>
-    </div>
-
-    <!-- Card for Restaurant -->
-    <div class="relative top-5 shadow-md rounded-lg mb-6 break-inside-avoid flex flex-col border-2" style="border-color: #51abb2ff;">
-      <div class=" text-gray-800 p-5 rounded-t-lg border-b-2 " style="border-color: #51abb2ff;">
-        <h3 class="font-bold text-xl mb-2">{{ toko_entry.name }}</h3>
-        <p class="text-gray-600 location-text">Lokasi: {{ toko_entry.location }}</p>
-      </div>
-      
-      <!-- Product list -->
-      <div class="p-4">
-        <p class="font-semibold text-lg mb-2">Daftar Produk:</p>
-
-        {% if toko_entry.products.exists %}
-        <div class="product-list space-y-4">
-          {% for product_entry in toko_entry.products.all %}
-          <div class="product-item flex justify-between items-center border-t pt-2">
-            <div>
-              <p class="text-lg font-semibold">{{ product_entry.name }}</p>
-              <p class="text-gray-700">{{ product_entry.description }}</p>
-              <span style="background-color: rgb(255, 143, 154);"class="text-sm font-semibold inline-block py-2 px-3 uppercase rounded-full text-white">
-                {{product_entry.price}}
-              </span>
-              {% if product_entry.image %}
-              <img src="{{ product_entry.image.url }}" alt="{{ product_entry.name }}" class="w-16 h-16 rounded-lg mt-2">
-              {% else %}
-              <p class="text-sm text-gray-500">No Image</p>
-              {% endif %}
-            </div>
-
-            <!-- Edit and Delete Product -->
-            <div class="flex space-x-2">
-              <a href="{% url 'dashboard_admin:edit_product' id=product_entry.id %}" class="bg-green-500 hover:bg-green-600 text-white rounded-full p-2 w-10 h-10 transition duration-300 shadow-md">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/>
-                </svg>
-              </a>
-              <a href="{% url 'dashboard_admin:delete_product' id=product_entry.id %}" 
-                class="bg-red-500 hover:bg-red-600 text-white rounded-full p-2 w-10 h-10 transition duration-300 shadow-md flex justify-center items-center">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 20 20" fill="currentColor">
-                    <path fill-rule="evenodd" d="M6 2a1 1 0 00-.894.553L4.382 4H2a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-2.618l-.724-1.447A1 1 0 009 2H6zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z" clip-rule="evenodd" />
-                </svg>
-              </a>
-            </div>
-          </div>
-          {% endfor %}
-        </div>
-        {% else %}
-        <p class="text-gray-500">Belum ada produk dalam toko ini.</p>
-        {% endif %}
-      </div>
+  <div class="bg-white shadow-md rounded-lg overflow-hidden toko-card" data-location="{{ toko_entry.location }}">
+    <div class="p-5 border-b">
+      <h3 class="font-bold text-xl mb-2">{{ toko_entry.name }}</h3>
+      <p class="text-gray-600">Lokasi: {{ toko_entry.location }}</p>
 
       <!-- Edit and Delete Restaurant -->
-      <div class="absolute top-2 right-2 flex flex-col space-y-1 items-center">
-        <!-- Edit Restaurant Button -->
-        <a href="{% url 'dashboard_admin:edit_toko' id=toko_entry.id %}" class="bg-yellow-500 hover:bg-yellow-600 text-white tombol-icon transition duration-300 shadow-md rounded-full p-2">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+      <div class="flex justify-end space-x-2 mt-4">
+        <a href="{% url 'dashboard_admin:edit_toko' id=toko_entry.id %}" class="bg-yellow-500 hover:bg-yellow-600 text-white rounded-full p-2">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-6 w-6">
             <path d="M13.586 3.586a2 2 0 112.828 2.828l-.793.793-2.828-2.828.793-.793zM11.379 5.793L3 14.172V17h2.828l8.38-8.379-2.83-2.828z" />
           </svg>
         </a>
-
-        <!-- Delete Restaurant Button -->
-        <a href="{% url 'dashboard_admin:delete_toko' id=toko_entry.id %}" class="bg-red-500 hover:bg-red-600 text-white tombol-icon transition duration-300 shadow-md">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+        <a href="{% url 'dashboard_admin:delete_toko' id=toko_entry.id %}" class="bg-red-500 hover:bg-red-600 text-white rounded-full p-2">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-6 w-6">
             <path fill-rule="evenodd" d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z" clip-rule="evenodd" />
           </svg>
         </a>
       </div>
     </div>
+    
+    <!-- Product list -->
+    <div class="p-5">
+      <p class="font-semibold text-lg mb-2">Daftar Produk:</p>
+
+      {% if toko_entry.products.exists %}
+      <div class="product-list space-y-4">
+        {% for product_entry in toko_entry.products.all %}
+        <div class="product-item border-t pt-2 flex items-center justify-between">
+          <div class="flex-1">
+            <h4 class="text-lg font-semibold">{{ product_entry.name }}</h4>
+            <p class="text-gray-700">{{ product_entry.description }}</p>
+            <br>
+            <span class="border-t border-b bg-yellow-200 text-gray-600 px-3 py-1 rounded-full">{{ product_entry.price }}</span>
+            <div class="flex gap-4 mt-2">
+              <a href="{% url 'dashboard_admin:edit_product' id=product_entry.id %}" class="bg-yellow-500 hover:bg-yellow-600 text-white rounded-full p-2">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-6 w-6">
+                  <path d="M13.586 3.586a2 2 0 112.828 2.828l-.793.793-2.828-2.828.793-.793zM11.379 5.793L3 14.172V17h2.828l8.38-8.379-2.83-2.828z" />
+                </svg>
+              </a>
+              <a href="{% url 'dashboard_admin:delete_product' id=product_entry.id %}" class="bg-red-500 hover:bg-red-600 text-white rounded-full p-2">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-6 w-6">
+                  <path fill-rule="evenodd" d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z" clip-rule="evenodd" />
+                </svg>
+              </a>
+            </div>
+          </div>
+          {% if product_entry.image %}
+          <img src="{{ product_entry.image }}" alt="{{ product_entry.name }}" class="w-32 h-32 object-cover ml-4 rounded-md">
+          {% else %}
+          <p class="text-gray-500">No Image</p>
+          {% endif %}
+        </div>
+        {% endfor %}
+      </div>
+      {% else %}
+      <p class="text-gray-500">Belum ada produk dalam toko ini.</p>
+      {% endif %}
+    </div>
   </div>
   {% endfor %}
 </div>
+{% endif %}
 
 <br />
 
+<script>
+  // Fungsi untuk memunculkan atau menyembunyikan dropdown filter lokasi
+  document.getElementById('toggleDropdown').addEventListener('click', function() {
+    var dropdown = document.getElementById('locationFilter');
+    dropdown.classList.toggle('hidden');
+    
+    var clearBtn = document.getElementById('clearSelection');
+    clearBtn.classList.toggle('hidden');
+  });
 
+  // Fungsi untuk memfilter toko berdasarkan lokasi yang dipilih
+  function filterTokoByLocation() {
+    var selectedLocations = [];
+    var selectElement = document.getElementById('locationFilter');
+    var selectedOptions = Array.from(selectElement.selectedOptions);
+
+    selectedOptions.forEach(function(option) {
+      selectedLocations.push(option.value.toLowerCase());
+    });
+
+    var tokoCards = document.querySelectorAll('.toko-card');
+
+    tokoCards.forEach(function(card) {
+      var location = card.getAttribute('data-location').toLowerCase();
+
+      if (selectedLocations.length === 0 || selectedLocations.includes(location)) {
+        card.style.display = "block";  // Tampilkan kartu jika cocok dengan filter
+      } else {
+        card.style.display = "none";  // Sembunyikan kartu jika tidak cocok
+      }
+    });
+  }
+
+  // Event listener untuk dropdown filter
+  document.getElementById('locationFilter').addEventListener('change', filterTokoByLocation);
+
+  // Fungsi untuk menghapus pilihan di dropdown (Clear Selection)
+  document.getElementById('clearSelection').addEventListener('click', function() {
+    var selectElement = document.getElementById('locationFilter');
+    selectElement.selectedIndex = -1;  // Deselect semua opsi
+
+    filterTokoByLocation();  // Reset filter untuk menampilkan semua toko
+  });
+</script>
 
 {% endblock content %}

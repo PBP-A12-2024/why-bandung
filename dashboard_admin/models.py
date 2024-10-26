@@ -1,5 +1,6 @@
 from django.db import models
 from django.core.validators import MinValueValidator
+from django.core.exceptions import ValidationError
 import uuid
 
 # Create your models here.
@@ -16,5 +17,5 @@ class ProductEntry(models.Model):
     name = models.CharField(max_length=255)
     price = models.IntegerField(validators=[MinValueValidator(1)])
     description = models.TextField()
-    image = models.ImageField(upload_to='product_images/', blank=True, null=True)
+    image = models.URLField(max_length=500, blank=True, null=True)
     toko = models.ForeignKey(TokoEntry, on_delete=models.CASCADE, related_name='products')
