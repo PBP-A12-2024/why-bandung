@@ -15,7 +15,7 @@
         <h1 class="text-3xl font-semibold">Product List</h1>
     </header>
 
-    <!-- Container untuk konten utama dan sidebar -->
+    <!-- Container for main content and sidebar -->
     <main class="container mx-auto p-6 flex space-x-6">
 
         <!-- Sidebar Filter -->
@@ -23,25 +23,25 @@
             <h2 class="text-lg font-semibold mb-4">Filter Products</h2>
             <form method="get" action="{% url 'main:product_page' %}" class="space-y-4">
                 
-                <!-- Filter Nama Produk -->
+                <!-- Filter Product Name -->
                 <div>
                     <label for="name" class="block text-sm font-medium text-gray-700">Product Name:</label>
                     <input type="text" name="name" id="name" value="{{ request.GET.name }}" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm">
                 </div>
         
-                <!-- Filter Harga Minimum -->
+                <!-- Filter Minimum Price -->
                 <div>
                     <label for="min_price" class="block text-sm font-medium text-gray-700">Min Price:</label>
                     <input type="number" name="min_price" id="min_price" value="{{ request.GET.min_price }}" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm">
                 </div>
         
-                <!-- Filter Harga Maksimum -->
+                <!-- Filter Maximum Price -->
                 <div>
                     <label for="max_price" class="block text-sm font-medium text-gray-700">Max Price:</label>
                     <input type="number" name="max_price" id="max_price" value="{{ request.GET.max_price }}" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm">
                 </div>
                 
-                <!-- Filter Kategori -->
+                <!-- Filter Category -->
                 <div>
                     <label for="category" class="block text-sm font-medium text-gray-700">Category:</label>
                     <select name="category" id="category" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm">
@@ -51,7 +51,7 @@
                         {% endfor %}
                     </select>
                 </div>
-                <!-- Filter Lokasi -->
+                <!-- Filter Location -->
                 <div>
                     <label for="location" class="block text-sm font-medium text-gray-700">Location:</label>
                     <select name="location" id="location" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm">
@@ -62,7 +62,7 @@
                     </select>
                 </div>
         
-                <!-- Filter Toko -->
+                <!-- Filter Store -->
                 <div>
                     <label for="toko" class="block text-sm font-medium text-gray-700">Store:</label>
                     <select name="toko" id="toko" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm">
@@ -73,9 +73,7 @@
                     </select>
                 </div>
         
-                
-        
-                <!-- Tombol Submit Filter -->
+                <!-- Filter Submit Button -->
                 <div class="col-span-full">
                     <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 w-full">Apply Filters</button>
                 </div>
@@ -83,12 +81,12 @@
         </aside>
         
 
-        <!-- Konten produk utama dengan penyesuaian margin kiri dan grid yang lebih fleksibel -->
+        <!-- Main product content with left margin adjustment and flexible grid -->
         <section class="w-full md:w-3/4 ml-auto pl-72">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {% if products %}
                     {% for product in products %}
-                        <div class="product-card bg-white shadow-lg rounded-lg p-4">
+                        <a href="{% url 'main:product_detail' product.id %}" class="product-card bg-white shadow-lg rounded-lg p-4 hover:shadow-xl transition-shadow duration-200">
                             <div class="product-image mb-4">
                                 {% if product.image %}
                                     <img src="{{ product.image.url }}" alt="{{ product.name }}" class="w-full h-48 object-cover rounded">
@@ -103,82 +101,28 @@
                                 <p class="text-green-600 font-semibold"><strong>Price:</strong> Rp. {{ product.price }}</p>
                             </div>
         
-                            <!-- Ulasan Produk -->
+                            <!-- Product Reviews -->
                             <div class="reviews mb-4">
-                                <h3 class="text-lg font-semibold">Reviews:</h3>
-                                <ul class="text-sm text-gray-600 space-y-2 mt-2">
-                                    {% if product.reviews.all %}
-                                        {% for review in product.reviews.all %}
-                                            <li class="border-t pt-2">
-                                                <strong>{{ review.user.username }}</strong> rated it {{ review.rating }}/5
-                                                <p>{{ review.comment }}</p>
-                                                <p class="text-xs text-gray-500">Posted on {{ review.created_at|date:"F j, Y, g:i a" }}</p>
-                                            </li>
-                                        {% endfor %}
+                                <h3 class="text-lg font-semibold">Reviews ({{ product.reviews.count }})</h3>
+                                {% with product.reviews.last as last_review %}
+                                    {% if last_review %}
+                                        <div class="border-t pt-2">
+                                            <strong>{{ last_review.user.username }}</strong> rated it {{ last_review.rating }}/5
+                                            <p>{{ last_review.comment }}</p>
+                                            <p class="text-xs text-gray-500">Posted on {{ last_review.created_at|date:"F j, Y, g:i a" }}</p>
+                                        </div>
                                     {% else %}
                                         <p class="text-gray-500">No reviews yet. Be the first to review!</p>
                                     {% endif %}
-                                </ul>
+                                {% endwith %}
                             </div>
-        
-                            <!-- Formulir Ulasan -->
-                            {% if user.is_authenticated %}
-                                <div class="mt-4">
-                                    <h4 class="text-lg font-semibold mb-2">Add Your Review</h4>
-                                    <form id="ajax-review-form-{{ product.id }}" method="post" action="{% url 'main:add_review' product.id %}" class="space-y-4">
-                                        {% csrf_token %}
-                                        <div>
-                                            <label for="rating" class="block text-sm font-medium text-gray-700">Rating:</label>
-                                            <select name="rating" id="rating" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm">
-                                                <option value="">Select Rating</option>
-                                                <option value="1">1</option>
-                                                <option value="2">2</option>
-                                                <option value="3">3</option>
-                                                <option value="4">4</option>
-                                                <option value="5">5</option>
-                                            </select>
-                                        </div>
-                                        <div>
-                                            <label for="comment" class="block text-sm font-medium text-gray-700">Comment:</label>
-                                            <textarea name="comment" id="comment" rows="3" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm" placeholder="Write your review here..."></textarea>
-                                        </div>
-                                        <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Submit Review</button>
-                                    </form>
-                                </div>
-                            {% else %}
-                                <p class="text-sm text-blue-600"><a href="{% url 'main:product_page' %}" class="underline">Login</a> to leave a review.</p>
-                            {% endif %}
-                        </div>
+                        </a>
                     {% endfor %}
                 {% else %}
                     <p class="text-center text-gray-500">{{ message }}</p>
                 {% endif %}
             </div>
         </section>
-        <script>
-            // Loop through each review form and attach event listeners for AJAX
-            document.querySelectorAll('[id^="ajax-review-form-"]').forEach(function(form) {
-                form.addEventListener('submit', function(e) {
-                    e.preventDefault(); // Mencegah pengiriman formulir default
-                    var xhr = new XMLHttpRequest();
-                    xhr.open('POST', form.action, true);
-                    xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-                    
-                    xhr.onreadystatechange = function() {
-                        if (xhr.readyState == 4 && xhr.status == 200) {
-                            var response = JSON.parse(xhr.responseText);
-                            document.querySelector('.ajax-response').innerText = response.message; // Tampilkan pesan sukses
-                            form.reset(); // Reset formulir setelah sukses
-                            location.reload(); // Reload halaman untuk menampilkan ulasan baru
-                        } else if (xhr.readyState == 4) {
-                            var response = JSON.parse(xhr.responseText);
-                            document.querySelector('.ajax-response').innerText = response.message; // Tampilkan pesan kesalahan
-                        }
-                    };
-        
-                    var formData = new FormData(form);
-                    xhr.send(new URLSearchParams(formData).toString());
-                });
-            });
-        </script>
-        
+    </main>
+</body>
+</html>
