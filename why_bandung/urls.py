@@ -24,6 +24,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('dashboard_admin.urls')),
     path('whatToEat/', include('whatToEat.urls')),
+    path('map/', include('geomapping.urls') )
 ]
 
 if settings.DEBUG:

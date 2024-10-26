@@ -1,0 +1,84 @@
+/* Map Container */
+#map-container {
+    max-height: 500px; /* Set your max height here */
+    width: 100%; /* Full width to fit parent */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: width 0.7s ease; /* Smooth transition */
+    padding-top: 20px;
+    overflow: hidden;
+}
+
+#map-container img {
+    max-height: 100%;
+    width: auto; /* Maintain aspect ratio */
+    transition: transform 0.5s ease; /* Smooth zoom effect */
+    transform-origin: center center;
+}
+
+/* Basic container setup */
+.container {
+    display: flex;
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+
+/* Results container styling */
+#results-container {
+    position: absolute;
+    right: -50%; /* Start off-screen */
+    top: 0;
+    width: 50%; /* Full width for container */
+    height: 100%; /* Full height */
+    background-color: #f9f9f9;
+    overflow-y: auto; /* Enable vertical scrolling */
+    transition: right 0.8s ease; /* Smooth transition for sliding */
+    box-shadow: -4px 0 8px rgba(0, 0, 0, 0.1);
+}
+
+#results-container.active {
+    right: 0; /* Slide into view */
+}
+
+/* Product result item styling */
+.product-item {
+    display: flex;
+    padding: 16px;
+    border-bottom: 1px solid #ddd; /* Divider line */
+}
+
+.product-info {
+    display: flex;
+    flex-direction: column; /* Stack text vertically */
+}
+
+.product-info h3 {
+    font-size: 18px; /* Adjust title size */
+    margin: 0 0 8px; /* Spacing */
+}
+
+.product-info p {
+    font-size: 14px; /* Adjust paragraph size */
+    margin: 4px 0; /* Spacing */
+}
+
+
+#back-button {
+    position: absolute; /* Position it relative to the nearest positioned ancestor */
+    bottom: 16px; /* Distance from the bottom */
+    left: 16px; /* Distance from the left */
+    background-color: #111111; /* Background color (bootstrap primary) */
+    color: white; /* Text color */
+    border: none; /* No border */
+    border-radius: 30px; /* Rounded edges */
+    padding: 10px 20px; /* Padding for the button */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Transition effect for background color */
+}
+
+/* Add hover effect */
+#back-button:hover {
+    background-color: #000000; /* Darker shade on hover */
+}
