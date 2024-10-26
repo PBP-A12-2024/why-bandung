@@ -1,3 +1,4 @@
+import json
 from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib.auth.decorators import login_required
 from dashboard_admin.models import ProductEntry, TokoEntry
@@ -7,8 +8,22 @@ from django.views.decorators.csrf import csrf_exempt
 import csv
 import csv
 from django.shortcuts import render, redirect
-from .models import Product
+from .models import Product, Review
 from django.contrib import messages
+from dashboard.models import JournalEntry
+
+from django.urls import reverse
+from django.http import HttpResponse, HttpResponseRedirect
+from django.core import serializers
+from django.shortcuts import render, redirect  
+from django.contrib import messages
+
+from django.contrib.auth.decorators import login_required
+
+from django.utils.html import strip_tags
+
+from django.views.decorators.csrf import csrf_exempt
+from django.views.decorators.http import require_POST
 
 def product_page(request):
     # Ambil parameter filter dari request
@@ -52,23 +67,64 @@ def product_page(request):
         'all_locations': all_locations,  # Data lokasi
 
     })
+    
+def product_detail(request, product_id):
+    product = get_object_or_404(ProductEntry, id=product_id)  # sesuaikan dengan tipe data
+    return render(request, 'product_detail.html', {'product': product})
+
 
 @login_required
-@csrf_exempt
+@csrf_exempt  # Hanya untuk pengujian, pastikan untuk menghapus ini dalam produksi
 def add_review(request, product_id):
-    product = get_object_or_404(Product, id=product_id)  # Pastikan ini mengacu pada model yang benar
     if request.method == 'POST':
-        form = ReviewForm(request.POST)
-        if form.is_valid():
-            review = form.save(commit=False)
-            review.product = product
-            review.user = request.user
-            review.save()
-            return JsonResponse({'message': 'Review submitted successfully'}, status=200)
-        else:
-            return JsonResponse({'message': 'Form data is invalid'}, status=400)
-    return JsonResponse({'message': 'Invalid request method'}, status=405)
+        try:
+            # Ambil data dari request
+            user = request.user
+            rating = request.POST.get('rating')
+            comment = request.POST.get('comment')
 
+            # Validasi data
+            if not rating or not comment:
+                return JsonResponse({'success': False, 'message': 'Rating and comment are required'}, status=400)
+            
+            # Pastikan rating dalam rentang 1-5
+            rating = int(rating)
+            if rating < 1 or rating > 5:
+                return JsonResponse({'success': False, 'message': 'Rating must be between 1 and 5'}, status=400)
+
+            # Pastikan ProductEntry ditemukan
+            product = ProductEntry.objects.get(id=product_id)
+
+            # Buat atau update ulasan
+            review, created = Review.objects.update_or_create(
+                user=user,
+                product=product,
+                defaults={
+                    'rating': rating,
+                    'comment': comment
+                }
+            )
+            
+            # Respons JSON
+            return JsonResponse({
+                'success': True,
+                'username': user.username,
+                'rating': review.rating,
+                'comment': review.comment,
+                'created_at': review.created_at.strftime('%B %d, %Y, %I:%M %p')
+            })
+        
+        except ProductEntry.DoesNotExist:
+            return JsonResponse({'success': False, 'message': 'Product not found'}, status=404)
+        
+        except ValueError:
+            return JsonResponse({'success': False, 'message': 'Invalid rating value'}, status=400)
+        
+        except Exception as e:
+            print("Error:", e)  # Debug
+            return JsonResponse({'success': False, 'message': 'An error occurred'}, status=500)
+    
+    return JsonResponse({'success': False, 'message': 'Invalid request'}, status=400)
 
 
 def import_csv(request):
@@ -105,3 +161,45 @@ def import_csv(request):
         return redirect('import_csv')
     
     return render(request, 'import_csv.html')
+
+@login_required
+@csrf_exempt
+def edit_review(request, product_id, review_id):
+    try:
+        review = Review.objects.get(id=review_id, product_id=product_id, user=request.user)
+
+        # Load data JSON dari body permintaan
+        data = json.loads(request.body)
+
+        # Update rating dan comment
+        review.rating = data['rating']
+        review.comment = data['comment']
+        review.save()
+
+        return JsonResponse({
+            "success": True,
+            "username": review.user.username,
+            "rating": review.rating,
+            "comment": review.comment
+        })
+    except Review.DoesNotExist:
+        return JsonResponse({"success": False, "message": "Review not found."})
+    except Exception as e:
+        return JsonResponse({"success": False, "message": str(e)})
+
+    
+@login_required
+@csrf_exempt
+def delete_review(request, product_id, review_id):
+    if request.method == 'DELETE':
+        try:
+            review = Review.objects.get(id=review_id, product_id=product_id)
+            review.delete()
+            return JsonResponse({'success': True, 'message': 'Review deleted successfully'})
+        except Review.DoesNotExist:
+            return JsonResponse({'success': False, 'message': 'Review not found'}, status=404)
+    return JsonResponse({'success': False, 'message': 'Invalid request'}, status=400)
+
+def list_reviews(request):
+    reviews = Review.objects.all().values("id", "food_name", "rating", "review_text", "created_at")
+    return JsonResponse(list(reviews), safe=False, status=200)
