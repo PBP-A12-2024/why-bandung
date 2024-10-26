@@ -16,6 +16,7 @@ class TokoEntryForm(ModelForm):
 class ProductEntryForm(ModelForm):
     class Meta:
         model = ProductEntry
+
         fields = ["name", "price", "description", "image", "toko"]
 
     def clean(self):
@@ -25,5 +26,7 @@ class ProductEntryForm(ModelForm):
         # Cek apakah ada toko yang sudah terdaftar
         if not TokoEntry.objects.exists():
             raise forms.ValidationError("Tidak ada toko yang tersedia. Anda harus menambahkan toko sebelum menambahkan produk.")
-
+        
         return cleaned_data
+
+
