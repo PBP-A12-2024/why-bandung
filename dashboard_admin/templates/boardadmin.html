@@ -1,10 +1,6 @@
 {% extends 'base.html' %}
 {% block content %}
 
-<header class="text-center p-6 bg-blue-600 text-white">
-  <h1 class="text-3xl font-semibold">Store & Product List</h1>
-</header>
-
 {% if not toko_entries %}
 <div class="flex flex-col justify-center items-center min-h-screen">
   <a href="{% url 'dashboard_admin:create_toko_entry' %}">
@@ -25,24 +21,30 @@
     </a>
   </div>
 
-  <!-- Tombol untuk menampilkan dropdown filter lokasi -->
   <div class="filter-container flex justify-center gap-4">
-    <button id="toggleDropdown" class="btn-add bg-blue-500 hover:bg-blue-600">
-      Filter by Location
-    </button>
+    <label class="inline-flex items-center cursor-pointer">
+      <input type="checkbox" id="toggleDropdown" class="sr-only peer">
+      <div class="relative w-11 h-6 bg-blue-web peer-focus:outline-none peer-focus:ring-4 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-blue-web"></div>
+      <span class="ms-3 text-sm font-medium text-gray-900 dark:text-gray-600">Filter by Location</span>
+    </label>
+  </div>
 
-    <!-- Tombol untuk menghapus semua pilihan di dropdown -->
-    <button id="clearSelection" class="btn-add bg-red-500 hover:bg-red-600 hidden">
-      Clear Selection
-    </button>
-
+  <div class="flex flex-col justify-center items-center mt-4 gap-4">
     <!-- Dropdown Filter Lokasi dengan multiple selection (tersembunyi pada awalnya) -->
     <select id="locationFilter" class="bg-gray-200 p-2 rounded-lg hidden mt-4" multiple size="4">
       {% for location in unique_locations %}
         <option value="{{ location }}">{{ location }}</option>
       {% endfor %}
     </select>
+
+    <!-- Tombol untuk menghapus semua pilihan di dropdown -->
+    <button id="clearSelection" class="btn-add bg-red-500 hover:bg-red-600 hidden">
+      Clear Location Filter Selection
+    </button>
   </div>
+
+
+
 </div>
 
 
