@@ -7,10 +7,14 @@
 
 .form-style form input:focus, form textarea:focus, form select:focus {
     outline: none;
-    border-color: indigo-900;
-    box-shadow: 0 0 0 3px indigo-900;
+    border-color: #FF5757;
+    box-shadow: 0 0 0 3px #FF5757;
 }
 
 .bg-blue-web{
     background-color: #51ABB3
+}
+
+.bg-red-web{
+    background-color: #FF5757
 }
