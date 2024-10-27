@@ -227,7 +227,7 @@ object-position: center;
 }
 
 .location-text {
-  max-width: 25ch; /* Batasi tampilan teks menjadi maksimal 29 karakter */
+  max-width: 25ch; 
   word-wrap: break-word;
   overflow-wrap: break-word;
   display: block;

@@ -36,7 +36,7 @@ def create_toko_entry(request):
 
 def create_product_entry(request):
     if request.method == "POST":
-        form = ProductEntryForm(request.POST, request.FILES)  # Tambahkan request.FILES untuk menangani file
+        form = ProductEntryForm(request.POST, request.FILES)  
         if form.is_valid():
             try:
                 form.save()
@@ -50,7 +50,6 @@ def create_product_entry(request):
     return render(request, "create_product_entry.html", context)
 
 def show_xml(request):
-    # Serialize data dari model TokoEntry dan ProductEntry
     toko_data = serializers.serialize("xml", TokoEntry.objects.all())
     product_data = serializers.serialize("xml", ProductEntry.objects.all())
 
@@ -86,9 +85,6 @@ def show_xml_produk_by_id(request, id):
     try:
         # Ambil toko berdasarkan id
         product = get_object_or_404(ProductEntry, pk=id)
-
-        # Ambil semua produk yang terkait dengan toko tersebut
-
 
         # Serialize data dari model ProductEntry berdasarkan toko yang diambil
         product_data = serializers.serialize("xml", [product])
@@ -175,7 +171,6 @@ def edit_product(request, id):
     product = get_object_or_404(ProductEntry, pk=id)
 
     # Set ProductEntry sebagai instance dari form
-
     form = ProductEntryForm(request.POST or None, request.FILES or None, instance=product)
 
 

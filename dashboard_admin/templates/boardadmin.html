@@ -80,7 +80,7 @@
             <h4 class="text-lg font-semibold">{{ product_entry.name }}</h4>
             <p class="text-gray-700">{{ product_entry.description }}</p>
             <br>
-            <span class="border-t border-b bg-yellow-200 text-gray-600 px-3 py-1 rounded-full">{{ product_entry.price }}</span>
+            <span class="border-t border-b bg-yellow-200 text-gray-600 px-3 py-1 rounded-full">Rp {{ product_entry.price }}</span>
             <div class="flex gap-4 mt-2">
               <a href="{% url 'dashboard_admin:edit_product' id=product_entry.id %}" class="bg-yellow-500 hover:bg-yellow-600 text-white rounded-full p-2">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-6 w-6">
