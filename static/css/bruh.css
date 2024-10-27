@@ -7,7 +7,7 @@
     align-items: center;
     transition: width 0.7s ease; /* Smooth transition */
     padding-top: 20px;
-    overflow: hidden;
+    overflow: visible;
 }
 
 #map-container img {
@@ -51,13 +51,19 @@
     display: flex;
     padding: 16px;
     border-bottom: 1px solid #ddd; /* Divider line */
+    cursor: pointer;
 }
 
-.product-info {
+.product-info{
     display: flex;
-    flex-direction: column; /* Stack text vertically */
+    flex-direction: column;
 }
 
+.product-details{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
 .product-info h3 {
     font-size: 18px; /* Adjust title size */
     margin: 0 0 8px; /* Spacing */
@@ -68,11 +74,36 @@
     margin: 4px 0; /* Spacing */
 }
 
+.product-text h3 {
+    font-size: 18px; /* Adjust title size */
+    margin: 0 0 8px; /* Spacing */
+}
+
+.product-text p {
+    font-size: 14px; /* Adjust paragraph size */
+    margin: 4px 0; /* Spacing */
+}
+
+
+
+.product-image {
+    width: 100%;
+    max-width: 150px;
+    height: auto; /* Makes the image take the full height of the container */
+    max-height: 150px; /* Adjust this to control the max height */
+    margin-right: 15px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.product-text {
+    display: flex;
+    flex-direction: column;
+}
+
 
 #back-button {
-    position: absolute; /* Position it relative to the nearest positioned ancestor */
-    bottom: 16px; /* Distance from the bottom */
-    left: 16px; /* Distance from the left */
+    margin: 16px;
     background-color: #111111; /* Background color (bootstrap primary) */
     color: white; /* Text color */
     border: none; /* No border */

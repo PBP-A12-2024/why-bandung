@@ -103,10 +103,13 @@
                         productElement.classList.add('product-item');
                         productElement.setAttribute('onclick', `window.location.href='/product/product_page/${product.id}/'`);
                         productElement.innerHTML = `
-                            <div class="product-info">
-                                <h3>${product.name}</h3>
-                                <p>Description: ${product.description}</p>
-                                <p>Price: Rp${product.price}</p>
+                            <div class="product-details">
+                                <img src="${product.image}" alt="${product.name}" class="product-image">
+                                <div class="product-text">
+                                    <h3>${product.name}</h3>
+                                    <p>Description: ${product.description}</p>
+                                    <p>Price: Rp${product.price}</p>
+                                </div>
                             </div>
                         `;
                         productsDiv.appendChild(productElement);
