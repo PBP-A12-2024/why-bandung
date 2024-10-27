@@ -6,7 +6,7 @@
 {% block content %}
 <link rel="stylesheet" href="{% static 'css/style3.css' %}">
 
-<main class="container mx-auto p-6">
+<main class="container mx-auto p-6 mt-16">
     <!-- Tombol Back -->
     <div class="mb-4">
         <a href="javascript:history.back()" class="inline-block bg-gray-300 text-gray-800 px-4 py-2 rounded hover:bg-gray-400">
@@ -18,7 +18,7 @@
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div class="product-image">
                 {% if product.image %}
-                    <img src="{{ product.image.url }}" alt="{{ product.name }}" class="w-full max-w-xs h-auto object-cover rounded-lg shadow-md mx-auto">
+                    <img src="{{ product.image }}" alt="{{ product.name }}" class="w-full max-w-xs h-auto object-cover rounded-lg shadow-md mx-auto">
                 {% else %}
                     <div class="w-full max-w-xs h-48 flex items-center justify-center bg-gray-200 text-gray-500 rounded-lg shadow-md mx-auto">
                         Gambar tidak tersedia
@@ -189,7 +189,7 @@
         const newComment = formData.get('editComment');
     
         try {
-            const response = await fetch(`/product_page/{{ product.id }}/edit-review/${reviewId}/`, {
+            const response = await fetch(`/product/product_page/{{ product.id }}/edit-review/${reviewId}/`, {
                 method: 'POST',
                 headers: {
                     'X-CSRFToken': csrfToken,
@@ -250,7 +250,7 @@
         const csrfToken = document.querySelector('[name=csrfmiddlewaretoken]').value;
     
         try {
-            const response = await fetch(`/product_page/{{ product.id }}/delete-review/${reviewToDelete}/`, {
+            const response = await fetch(`/product/product_page/{{ product.id }}/delete-review/${reviewToDelete}/`, {
                 method: 'DELETE',
                 headers: {
                     'X-CSRFToken': csrfToken,

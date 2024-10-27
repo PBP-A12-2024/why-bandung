@@ -113,7 +113,7 @@ function listenToMouseEvent(e, card) {
                 Like.style.opacity = 0.2;
             }, 500);
             setTimeout(() => {
-                window.location.href = `/product_page/${productId}/`;
+                window.location.href = `${window.location.origin}/product/product_page/${productId}/`;
             }, 1000);
         } else {
             // Jika disliked, tambahkan objek produk ke dismissedCards

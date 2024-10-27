@@ -20,12 +20,11 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 from django.urls import path, include
-from geomapping.views import show_geomap
 
 urlpatterns = [
     path('admintab/', admin.site.urls),
     path('', include('dashboard.urls')),
-    path('', include('product_page.urls')),
+    path('product/', include('product_page.urls')),
     path('admin/', include('dashboard_admin.urls')),
     path('whatToEat/', include('whatToEat.urls')),
     path('map/', include('geomapping.urls') )
