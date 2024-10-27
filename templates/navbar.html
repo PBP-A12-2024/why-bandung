@@ -1,4 +1,4 @@
-<nav class="bg-indigo-600 shadow-lg top-0 left-0 z-50 w-full">
+<nav class="bg-indigo-600 shadow-lg top-0 left-0 z-50 w-full fixed">
   <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
     <div class="flex items-center justify-between h-16">
       <div class="flex items-center">
@@ -16,11 +16,12 @@
       </div>
 
       <div class="hidden md:flex space-x-4 text-white font-bold">
-        <a href="{% url 'dashboard:profile' %}" class="hover:text-white">Search Product</a>
+        <a href="{% url 'main:product_page' %}" class="hover:text-white">Search Product</a>
         <a href="{% url 'dashboard:profile' %}" class="hover:text-white">GeoMapping</a>
-        <a href="{% url 'dashboard:profile' %}" class="hover:text-white">FoodFinder</a>
+        <a href="{% url 'card:WhatToEat' %}" class="hover:text-white">FoodFinder</a>
         {% if user.is_superuser %}
           <a href="{% url 'dashboard_admin:show_main' %}" class="hover:text-white">Admin Menu</a>
+          <a href="{% url 'main:import_csv' %}" class="hover:text-white">Add Database</a>
         {% endif %}
       </div>
 
