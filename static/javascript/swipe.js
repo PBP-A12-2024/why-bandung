@@ -38,10 +38,10 @@ function addCard(product) {
 
     card.innerHTML = `
         <div class="name-box-actual flex justify-between items-center w-full p-4 my-4 overflow-hidden h-[45px]">
-            <div class = "flex justify-center items-center flex-1">
-                <strong class="text-[15px] font-bold">${product.name}</strong>
+            <div class = "flex justify-center items-center flex-1 w-[70%]">
+                <strong class="text-[15px] truncate font-bold">${product.name}</strong>
             </div>
-            <div class="font-semibold text-[12px] mx-2">Rp ${product.price.toLocaleString()}</div>
+            <div class="font-semibold text-[12px] flex-shrink-0 mx-2">Rp ${product.price.toLocaleString()}</div>
         </div>
 
         <div class="img-actual bg-[#FDF6E1ff] size-[252px] flex justify-center items-center p-3 mb-5 rounded-sm">
