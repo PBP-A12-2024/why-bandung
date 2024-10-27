@@ -2,7 +2,8 @@
 {% block content %}
 
 {% if not toko_entries %}
-<div class="flex flex-col justify-center items-center min-h-screen">
+<div class="m-6"><br><br></div>
+<div class="flex flex-col justify-center items-center min-h-screen mt-8">
   <a href="{% url 'dashboard_admin:create_toko_entry' %}">
     <button class="btn-add mb-4">Add New Restaurant</button>
   </a>
@@ -11,7 +12,7 @@
 
 <!-- Jika sudah ada toko di database -->
 {% else %}
-<div class="flex flex-col justify-center items-center mt-4 gap-4">
+<div class="flex flex-col justify-center items-center mt-8 gap-4">
   <div class="button-container flex gap-4">
     <a href="{% url 'dashboard_admin:create_toko_entry' %}">
       <button class="btn-add">Add New Restaurant</button>
