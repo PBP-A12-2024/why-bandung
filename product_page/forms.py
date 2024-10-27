@@ -1,8 +1,7 @@
 from django import forms
-from dashboard.models import JournalEntry
+from .models import Review
 
 class ReviewForm(forms.ModelForm):
     class Meta:
-        model = JournalEntry
-        fields = ['ratings', 'description']
-
+        model = Review
+        fields = ['rating', 'comment']
