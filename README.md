@@ -252,9 +252,14 @@ Developer:
 
 <details>
   <summary>v. Tautan deployment aplikasi</summary>
+  Akun Admin di PWS :
+  Username : admin
+  Password : ikanayam12
+  
+  Tautan Utama :
   <a href="http://karina-maharani31-whybandung.pbp.cs.ui.ac.id/">http://karina-maharani31-whybandung.pbp.cs.ui.ac.id/</a><br>
 
-  Tautan Backup
+  Tautan Backup :
   <a href="http://muhammad-fadhil38-whybandung.pbp.cs.ui.ac.id/">http://muhammad-fadhil38-whybandung.pbp.cs.ui.ac.id/</a><br>
   Berikut adalah tambahan hasil unit test yang dilakukan :
   
