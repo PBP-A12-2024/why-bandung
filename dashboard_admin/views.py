@@ -36,7 +36,7 @@ def create_toko_entry(request):
 
 def create_product_entry(request):
     if request.method == "POST":
-        form = ProductEntryForm(request.POST, request.FILES)  # Tambahkan request.FILES untuk menangani file
+        form = ProductEntryForm(request.POST, request.FILES)  
         if form.is_valid():
             try:
                 form.save()
@@ -49,9 +49,7 @@ def create_product_entry(request):
     context = {'form': form}
     return render(request, "create_product_entry.html", context)
 
-
 def show_xml(request):
-    # Serialize data dari model TokoEntry dan ProductEntry
     toko_data = serializers.serialize("xml", TokoEntry.objects.all())
     product_data = serializers.serialize("xml", ProductEntry.objects.all())
 
@@ -64,6 +62,42 @@ def show_xml(request):
 
     # Return hasil XML gabungan
     return HttpResponse(xml_data, content_type="application/xml")
+
+def show_xml_toko_by_id(request, id):
+    try:
+        # Ambil data toko berdasarkan id
+        toko = get_object_or_404(TokoEntry, pk=id)
+
+        # Serialize data dari model TokoEntry berdasarkan id
+        toko_data = serializers.serialize("xml", [toko])  # serialize toko sebagai list
+
+        # Menghapus deklarasi XML <?xml ... ?> dari hasil serialisasi
+        toko_data = re.sub(r'<\?xml[^>]+\?>', '', toko_data)
+
+        # Return hasil XML dari toko saja
+        xml_data = f'<?xml version="1.0" encoding="UTF-8"?>\n<toko>{toko_data}</toko>'
+        return HttpResponse(xml_data, content_type="application/xml")
+
+    except TokoEntry.DoesNotExist:
+        return HttpResponse("<error>Toko with given ID does not exist.</error>", content_type="application/xml", status=404)
+
+def show_xml_produk_by_id(request, id):
+    try:
+        # Ambil toko berdasarkan id
+        product = get_object_or_404(ProductEntry, pk=id)
+
+        # Serialize data dari model ProductEntry berdasarkan toko yang diambil
+        product_data = serializers.serialize("xml", [product])
+
+        # Menghapus deklarasi XML <?xml ... ?> dari hasil serialisasi
+        product_data = re.sub(r'<\?xml[^>]+\?>', '', product_data)
+
+        # Return hasil XML dari produk saja
+        xml_data = f'<?xml version="1.0" encoding="UTF-8"?>\n<produk>{product_data}</produk>'
+        return HttpResponse(xml_data, content_type="application/xml")
+
+    except TokoEntry.DoesNotExist:
+        return HttpResponse("<error>Toko with given ID does not exist.</error>", content_type="application/xml", status=404)
 
 def show_json(request):
     # Serialize data dari model TokoEntry dan ProductEntry
@@ -82,6 +116,40 @@ def show_json(request):
 
     # Return JSON response
     return JsonResponse(combined_data)
+
+def show_json_toko_by_id(request, id):
+    try:
+        # Ambil data toko berdasarkan id
+        toko = get_object_or_404(TokoEntry, pk=id)
+
+        # Serialize data dari model TokoEntry berdasarkan id
+        toko_data = serializers.serialize("json", [toko])  # serialize toko sebagai list
+
+        # Mengubah string JSON menjadi list of dict agar lebih fleksibel
+        toko_data = json.loads(toko_data)
+
+        # Return hasil JSON dari toko saja
+        return JsonResponse({"toko": toko_data}, safe=False)
+
+    except TokoEntry.DoesNotExist:
+        return JsonResponse({"error": "Toko with given ID does not exist."}, status=404)
+
+def show_json_produk_by_id(request, id):
+    try:
+        # Ambil toko berdasarkan id
+        product = get_object_or_404(ProductEntry, pk=id)
+
+        # Serialize data dari model ProductEntry berdasarkan toko yang diambil
+        product_data = serializers.serialize("json", [product])
+
+        # Mengubah string JSON menjadi list of dict agar lebih fleksibel
+        product_data = json.loads(product_data)
+
+        # Return hasil JSON dari produk saja
+        return JsonResponse({"produk": product_data}, safe=False)
+
+    except TokoEntry.DoesNotExist:
+        return JsonResponse({"error": "Toko with given ID does not exist."}, status=404)
 
 def edit_toko(request, id):
     # Ambil data toko berdasarkan id
@@ -103,7 +171,6 @@ def edit_product(request, id):
     product = get_object_or_404(ProductEntry, pk=id)
 
     # Set ProductEntry sebagai instance dari form
-
     form = ProductEntryForm(request.POST or None, request.FILES or None, instance=product)
 
 
