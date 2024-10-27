@@ -6,7 +6,7 @@
 {% block content %}
 
 
-<div class="container-fluid">
+<div class="container-fluid bg-[#f9f9f9] mt-16 select-none">
     <div class="container" >
         <div id="map-container">
             <img src="https://kudapanpagi.wordpress.com/wp-content/uploads/2021/10/vektor-kota-bandung.png" alt="Bandung Map" usemap="#bandung-map" id="bandung-map">
@@ -80,7 +80,7 @@
                         resultsDiv.appendChild(tokoElement);
                     });
                 } else {
-                    resultsDiv.innerHTML = "<p>No stores found for this location.</p>";
+                    resultsDiv.innerHTML = "<div class='text-center text-lg size-[500px] flex justify-center items-center font-semibold'>No stores found for this location.</div>";
                 }
 
                 document.getElementById('results-container').classList.add('active');
@@ -104,7 +104,7 @@
                         productElement.setAttribute('onclick', `window.location.href='/product/product_page/${product.id}/'`);
                         productElement.innerHTML = `
                             <div class="product-details">
-                                <img src="${product.image}" alt="${product.name}" class="product-image">
+                                <img src="${product.image}" alt="${product.name}" class="product-image select-none">
                                 <div class="product-text">
                                     <h3>${product.name}</h3>
                                     <p>Description: ${product.description}</p>
