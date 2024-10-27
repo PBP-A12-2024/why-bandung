@@ -13,7 +13,7 @@
 
         <div class="p-8 rounded-2xl bg-white shadow">
           <h2 class="text-gray-800 text-center text-2xl font-bold">Sign in</h2>
-          <form class="mt-8 space-y-6" method="POST" action="">
+          <form class="mt-8 space-y-6 form" method="POST" action="">
             {% csrf_token %}
             <div>
               <label class="text-gray-800 text-sm mb-2 block">Username</label>
@@ -50,7 +50,7 @@
             {% endif %}
 
             <div class="!mt-8">
-                <button type="submit" class="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-900 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"> Sign in
+                <button type="submit" class="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-blue-web hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"> Sign in
                 </button>
             </div>
             <p class="text-gray-800 text-sm !mt-8 text-center">Don't have an account? <a href="{% url 'dashboard:register' %}" class="text-blue-600 hover:underline ml-1 whitespace-nowrap font-semibold">Register here</a></p>
