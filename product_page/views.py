@@ -153,6 +153,7 @@ def import_csv(request):
                     defaults={
                         'price': row['HARGA_RETAIL'],
                         'description': row['KATEGORI'],
+                        'image': row['URL'],
                         'toko': toko
                     }
                 )
