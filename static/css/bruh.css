@@ -99,7 +99,7 @@
 .product-text {
     display: flex;
     flex-direction: column;
-}
+} 
 
 
 #back-button {
@@ -107,7 +107,7 @@
     background-color: #111111; /* Background color (bootstrap primary) */
     color: white; /* Text color */
     border: none; /* No border */
-    border-radius: 30px; /* Rounded edges */
+    border-radius: 5px; /* Rounded edges */
     padding: 10px 20px; /* Padding for the button */
     cursor: pointer; /* Pointer cursor on hover */
     transition: background-color 0.3s; /* Transition effect for background color */
