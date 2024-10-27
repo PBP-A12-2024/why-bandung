@@ -65,6 +65,7 @@
     </aside>
 
     <!-- Konten produk utama -->
+<<<<<<< Updated upstream
     <section class="w-full md:w-3/4 ml-auto pl-72 mt-24">
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {% if products %}
@@ -75,6 +76,41 @@
                             <div class="product-image mb-4">
                                 {% if product.image %}
                                     <img src="{{ product.image }}" alt="{{ product.name }}" class="w-full h-48 object-cover rounded">
+=======
+<section class="w-full md:w-3/4 ml-auto pl-72">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {% if products %}
+            {% for product in products %}
+                <!-- Bungkus kotak produk dalam tautan ke halaman detail produk -->
+                <a href="{% url 'main:product_detail' product.id %}" class="block hover:shadow-xl transition">
+                    <div class="product-card bg-white shadow-lg rounded-lg p-4"> <!-- Tambahkan class di sini -->
+                        <div class="product-image mb-4">
+                            {% if product.image %}
+                                <img src="{{ product.image }}" alt="{{ product.name }}" class="w-full h-48 object-cover rounded">
+                            {% else %}
+                                <div class="w-full h-48 flex items-center justify-center bg-gray-200 text-gray-500 rounded">Gambar tidak tersedia</div>
+                            {% endif %}
+                        </div>
+                        <div class="product-info mb-4">
+                            <h2 class="text-2xl font-bold">{{ product.name }}</h2>
+                            <p class="text-gray-700">{{ product.description }}</p>
+                            <p class="text-gray-800"><strong>Toko:</strong> {{ product.toko.name }}</p>
+                            <p class="text-green-600 font-semibold"><strong>Price:</strong> Rp. {{ product.price }}</p>
+                        </div>
+
+                        <!-- Ulasan Produk -->
+                        <div class="reviews mb-4">
+                            <h3 class="text-lg font-semibold">Reviews ({{ product.reviews.count|default:0 }})</h3>
+                            <ul class="text-sm text-gray-600 space-y-2 mt-2">
+                                {% if product.reviews.exists %}
+                                    {% with product.reviews.last as latest_review %}
+                                        <li class="border-t pt-2">
+                                            <strong>{{ latest_review.user.username }}</strong> rated it {{ latest_review.rating }}/5
+                                            <p>{{ latest_review.comment }}</p>
+                                            <p class="text-xs text-gray-500">Posted on {{ latest_review.created_at|date:"F j, Y, g:i a" }}</p>
+                                        </li>
+                                    {% endwith %}
+>>>>>>> Stashed changes
                                 {% else %}
                                     <div class="w-full h-48 flex items-center justify-center bg-gray-200 text-gray-500 rounded">Gambar tidak tersedia</div>
                                 {% endif %}
