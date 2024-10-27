@@ -175,7 +175,9 @@ def edit_product(request, id):
     product = get_object_or_404(ProductEntry, pk=id)
 
     # Set ProductEntry sebagai instance dari form
+
     form = ProductEntryForm(request.POST or None, request.FILES or None, instance=product)
+
 
     if form.is_valid() and request.method == "POST":
         # Simpan form dan kembali ke halaman utama

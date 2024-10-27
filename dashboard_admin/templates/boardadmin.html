@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% block content %}
+
 <br>
 
 <!-- Jika tidak ada toko maupun produk di database -->
@@ -42,6 +43,7 @@
     </select>
   </div>
 </div>
+
 
 <!-- Tampilkan daftar toko dan produk jika ada toko di database -->
 <div class="card-container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-start p-4">
@@ -151,6 +153,7 @@
   document.getElementById('clearSelection').addEventListener('click', function() {
     var selectElement = document.getElementById('locationFilter');
     selectElement.selectedIndex = -1;  // Deselect semua opsi
+
 
     filterTokoByLocation();  // Reset filter untuk menampilkan semua toko
   });
