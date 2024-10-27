@@ -6,7 +6,6 @@
       <div class="flex items-center">
         <a href="/" class="hover:text-white size-[60px]">
           <img src="{% static 'image/logo.png' %}" alt="WhyBandung Logoo" class="object-contain">
-          <!-- <h1 class="text-2xl font-bold text-white silkscreen-bold">WhyBandung?</h1> -->
         </a>
       </div>
 
@@ -16,7 +15,6 @@
         <a href="{% url 'card:WhatToEat' %}" class="hover:text-white">FoodFinder</a>
         {% if user.is_superuser %}
           <a href="{% url 'dashboard_admin:show_main' %}" class="hover:text-white">Admin Menu</a>
-          <!-- <a href="{% url 'main:import_csv' %}" class="hover:text-white">Add New Database</a> -->
         {% endif %}
       </div>
 
