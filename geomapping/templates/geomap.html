@@ -1,7 +1,10 @@
 {% extends 'base.html' %}
 {% load static %}
-{% block content %}
+{% block meta %}
 <link rel="stylesheet" type="text/css" href="{% static 'css/bruh.css' %}">
+{% endblock meta %}
+{% block content %}
+
 
 <div class="container-fluid">
     <div class="container" >
@@ -98,11 +101,15 @@
                     data.forEach(product => {
                         const productElement = document.createElement('div');
                         productElement.classList.add('product-item');
+                        productElement.setAttribute('onclick', `window.location.href='/product/product_page/${product.id}/'`);
                         productElement.innerHTML = `
-                            <div class="product-info">
-                                <h3>${product.p_name}</h3>
-                                <p>Description: ${product.p_description}</p>
-                                <p>Price: Rp${product.p_price}</p>
+                            <div class="product-details">
+                                <img src="${product.image}" alt="${product.name}" class="product-image">
+                                <div class="product-text">
+                                    <h3>${product.name}</h3>
+                                    <p>Description: ${product.description}</p>
+                                    <p>Price: Rp${product.price}</p>
+                                </div>
                             </div>
                         `;
                         productsDiv.appendChild(productElement);

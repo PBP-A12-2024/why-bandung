@@ -18,6 +18,6 @@ def filter_products_by_toko(request):
     toko_id = request.GET.get('toko_id', None)
     if toko_id:
         # Retrieve products for the specified TokoEntry
-        products = ProductEntry.objects.filter(p_toko__name=toko_id).values('id', 'name', 'price', 'description')  # Adjust based on your model fields
+        products = ProductEntry.objects.filter(toko__name=toko_id).values('id', 'name', 'price', 'description', 'image')  # Adjust based on your model fields
         return JsonResponse(list(products), safe=False)
     return JsonResponse([], safe=False)
