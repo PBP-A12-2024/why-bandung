@@ -1,0 +1,236 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}{{ product.name }} - Product Detail{% endblock %}
+
+{% block content %}
+<header class="text-center p-6 bg-blue-600 text-white">
+    <h1 class="text-3xl font-semibold">{{ product.name }}</h1>
+</header>
+<main class="container mx-auto p-6">
+    <!-- Tombol Back -->
+    <div class="mb-4">
+        <a href="javascript:history.back()" class="inline-block bg-gray-200 text-gray-700 px-4 py-2 rounded hover:bg-gray-300">
+            &larr; Back
+        </a>
+    </div>
+<main class="container mx-auto p-6">
+    <div class="product-detail bg-white shadow-lg rounded-lg p-4">
+        <div class="product-image mb-4">
+            {% if product.image %}
+                <img src="{{ product.image.url }}" alt="{{ product.name }}" class="w-full h-auto object-cover rounded">
+            {% else %}
+                <div class="w-full h-48 flex items-center justify-center bg-gray-200 text-gray-500 rounded">Gambar tidak tersedia</div>
+            {% endif %}
+        </div>
+        
+        <div class="product-info mb-4">
+            <h2 class="text-2xl font-bold">{{ product.name }}</h2>
+            <p class="text-gray-700">{{ product.description }}</p>
+            <p class="text-gray-800"><strong>Toko:</strong> {{ product.toko.name }}</p>
+            <p class="text-green-600 font-semibold"><strong>Price:</strong> Rp. {{ product.price }}</p>
+        </div>
+
+<!-- Ulasan Produk -->
+<div class="reviews mb-6">
+    <h3 class="text-xl font-bold text-gray-800">Customer Reviews</h3>
+    <ul class="text-sm text-gray-700 mt-4 space-y-3">
+        {% if product.reviews.all %}
+            {% for review in product.reviews.all %}
+            <li class="border-t pt-3" data-review-id="{{ review.id }}">
+                <div class="flex items-center">
+                    <strong class="mr-2">{{ review.user.username }}</strong>
+                    <span class="text-yellow-500">{{ review.rating }}⭐</span>
+                </div>
+                <p class="mt-1">{{ review.comment }}</p>
+                <p class="text-xs text-gray-400">Posted on {{ review.created_at|date:"M d, Y, g:i A" }}</p>
+                
+                {% if user == review.user %}
+                    <button onclick="showEditForm({{ review.id }}, '{{ review.rating }}', '{{ review.comment }}')" class="text-blue-600 hover:underline text-sm">Edit</button>
+                    <button onclick="deleteReview({{ review.id }})" class="text-red-600 hover:underline text-sm ml-3">Delete</button>
+                {% endif %}
+                
+                <!-- Form Edit Ulasan -->
+                <div id="editForm-{{ review.id }}" class="hidden mt-4">
+                    <form class="editReviewForm" onsubmit="submitEdit(event, {{ review.id }})">
+                        <label for="editRating-{{ review.id }}" class="block text-sm font-medium text-gray-800">Rating:</label>
+                        <select name="editRating" id="editRating-{{ review.id }}" required class="mt-2 w-full rounded border border-gray-300 shadow-sm focus:ring-blue-500">
+                            <option value="">Choose your rating</option>
+                            {% for i in "12345" %}
+                                <option value="{{ i }}">{{ i }}</option>
+                            {% endfor %}
+                        </select>
+                        <label for="editComment-{{ review.id }}" class="block text-sm font-medium text-gray-800 mt-2">Review:</label>
+                        <textarea name="editComment" id="editComment-{{ review.id }}" rows="3" class="mt-2 w-full rounded border border-gray-300 shadow-sm focus:ring-blue-500" required></textarea>
+                        <button type="submit" class="bg-blue-500 text-white px-5 py-2 rounded-md shadow hover:bg-blue-600 mt-2">Update Review</button>
+                    </form>
+                </div>
+            </li>
+            {% endfor %}
+        {% else %}
+            <p class="text-gray-500">No reviews yet. Be the first to add yours!</p>
+        {% endif %}
+    </ul>
+</div>
+
+
+{% if user.is_authenticated %}
+    <form id="reviewForm" method="post" action="{% url 'main:add_review' product.id %}" class="space-y-5 mt-5">
+        {% csrf_token %}
+        <div>
+            <label for="rating" class="block text-sm font-medium text-gray-800">Rating:</label>
+            <select name="rating" id="rating" required class="mt-2 w-full rounded border border-gray-300 shadow-sm focus:ring-blue-500">
+                <option value="">Choose your rating</option>
+                {% for i in "12345" %}
+                    <option value="{{ i }}">{{ i }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <div>
+            <label for="comment" class="block text-sm font-medium text-gray-800">Review:</label>
+            <textarea name="comment" id="comment" rows="3" class="mt-2 w-full rounded border border-gray-300 shadow-sm focus:ring-blue-500" placeholder="Share your experience..." required></textarea>
+        </div>
+        <button type="submit" id="submitReview" class="bg-blue-500 text-white px-5 py-2 rounded-md shadow hover:bg-blue-600">Submit Your Review</button>
+    </form>
+{% else %}
+    <p class="text-sm text-gray-700">Please <a href="{% url 'main:product_page' %}" class="underline text-blue-600">log in</a> to leave a review.</p>
+{% endif %}
+
+<script>
+    // Fungsi untuk menambahkan review ke DOM
+    function addReviewToDOM(review) {
+        const reviewsList = document.querySelector('.reviews ul');
+        const reviewItem = document.createElement('li');
+        reviewItem.classList.add('border-t', 'pt-3');
+        reviewItem.setAttribute('data-review-id', review.id);
+
+        reviewItem.innerHTML = `
+            <strong>${review.username}</strong> rated it ${review.rating}/5
+            <p>${review.comment}</p>
+            <p class="text-xs text-gray-500">Posted on ${review.created_at}</p>
+            <button onclick="editReview(${review.id})" class="text-blue-600 hover:underline text-sm">Edit</button>
+            <button onclick="deleteReview(${review.id})" class="text-red-600 hover:underline text-sm ml-3">Delete</button>
+        `;
+        
+        reviewsList.prepend(reviewItem);
+    }
+
+    // Mengirimkan review baru
+    document.getElementById('reviewForm').addEventListener('submit', async function(event) {
+        event.preventDefault();
+
+        const form = event.target;
+        const formData = new FormData(form);
+        const csrfToken = form.querySelector('[name=csrfmiddlewaretoken]').value;
+
+        try {
+            const response = await fetch(form.action, {
+                method: 'POST',
+                headers: {
+                    'X-CSRFToken': csrfToken,
+                    'X-Requested-With': 'XMLHttpRequest',
+                },
+                body: formData
+            });
+
+            const result = await response.json();
+
+            if (result.success) {
+                addReviewToDOM(result);  // Tambahkan review ke DOM
+                form.reset();
+            } else {
+                alert(result.message || 'Something went wrong. Please try again.');
+            }
+        } catch (error) {
+            console.error('Error:', error);
+            alert('An error occurred while submitting the review.');
+        }
+    });
+
+    function showEditForm(reviewId, currentRating, currentComment) {
+        // Tampilkan form edit
+        const editForm = document.getElementById(`editForm-${reviewId}`);
+        editForm.classList.toggle('hidden');
+    
+        // Mengisi data rating dan komentar ke dalam form edit
+        document.getElementById(`editRating-${reviewId}`).value = currentRating;
+        document.getElementById(`editComment-${reviewId}`).value = currentComment;
+    }
+    
+    async function submitEdit(event, reviewId) {
+        event.preventDefault(); // Mencegah pengiriman form default
+    
+        const form = event.target;
+        const formData = new FormData(form);
+        const csrfToken = document.querySelector('[name=csrfmiddlewaretoken]').value;
+        
+        const newRating = formData.get('editRating');
+        const newComment = formData.get('editComment');
+    
+        try {
+            const response = await fetch(`/product_page/{{ product.id }}/edit-review/${reviewId}/`, {
+                method: 'POST',
+                headers: {
+                    'X-CSRFToken': csrfToken,
+                    'X-Requested-With': 'XMLHttpRequest',
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ rating: newRating, comment: newComment })
+            });
+    
+            const result = await response.json();
+    
+            if (result.success) {
+                const reviewItem = document.querySelector(`li[data-review-id="${reviewId}"]`);
+                reviewItem.querySelector('strong').innerText = `${result.username} rated it ${result.rating}/5`;
+                reviewItem.querySelector('p').innerText = result.comment;
+    
+                // Sembunyikan form setelah sukses
+                const editForm = document.getElementById(`editForm-${reviewId}`);
+                editForm.classList.add('hidden');
+            } else {
+                alert(result.message || 'Something went wrong. Please try again.');
+            }
+        } catch (error) {
+            console.error('Error:', error);
+            alert('An error occurred while editing the review.');
+        }
+    }
+    
+
+    // Fungsi untuk menghapus review
+    async function deleteReview(reviewId) {
+        const csrfToken = document.querySelector('[name=csrfmiddlewaretoken]').value;
+    
+        if (confirm('Are you sure you want to delete this review?')) {
+            try {
+                const response = await fetch(`/product_page/{{ product.id }}/delete-review/${reviewId}/`, {
+                    method: 'DELETE',
+                    headers: {
+                        'X-CSRFToken': csrfToken,
+                        'X-Requested-With': 'XMLHttpRequest',
+                    }
+                });
+    
+                const result = await response.json();
+    
+                console.log("Delete response:", result); // Debugging line
+    
+                if (result.success) {
+                    const reviewItem = document.querySelector(`li[data-review-id="${reviewId}"]`);
+                    reviewItem.remove();  // Hapus elemen review dari DOM
+                } else {
+                    alert(result.message || 'Something went wrong. Please try again.');
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                alert('An error occurred while deleting the review.');
+            }
+        }
+    }
+    
+</script>
+
+
+                    
+{% endblock %}
