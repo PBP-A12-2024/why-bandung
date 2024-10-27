@@ -6,24 +6,31 @@
 <script src="https://cdn.jsdelivr.net/npm/dompurify@3.1.7/dist/purify.min.js"></script>
 {% endblock meta %}
 {% block content %}
-<div class="relative font-sans before:absolute before:w-full before:h-full before:inset-0 before:bg-black before:opacity-50 before:z-10 pt-16">
-    <img src="https://readymadeui.com/cardImg.webp" alt="Banner Image" class="absolute inset-0 w-full h-full object-cover"/>
+<div class="relative font-sans pt-32 before:absolute before:w-full before:h-full before:inset-0 before:bg-black before:opacity-50 before:z-10">
+  <img src="{% static 'image/mainbanner.png' %}" alt="Banner Image" class="absolute inset-0 w-full h-full object-cover"/>
 
-    <div class="min-h-[350px] relative z-50 h-full max-w-6xl mx-auto flex flex-col justify-center items-center text-center text-white p-6">
-      <h2 class="sm:text-4xl text-2xl font-bold mb-6">Find the best culinary destination</h2>
+  <div class="min-h-[350px] relative z-20 h-full max-w-6xl mx-auto flex flex-col justify-center items-center text-center text-white py-6">
+    <img src="{% static 'image/logo.png' %}" alt="WhyBandung Logoo" class="h-32 object-contain">
+    <br>
+    <h2 class="sm:text-4xl text-2xl font-bold mb-6">Find The Best Culinary Destination</h2>
 
-      <div class="flex rounded-full border-2 border-blue-500 overflow-hidden max-w-md mx-auto font-[sans-serif] mt-4">
-        <input type="email" placeholder="Regency or Menu... "
-          class="w-full outline-none bg-white text-blue-500 text-sm px-5 py-3" />
-        <button type='button' class="flex items-center justify-center bg-blue-500 hover:bg-blue-600 px-6">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192.904 192.904" width="18px" class="fill-white">
-            <path
-              d="m190.707 180.101-47.078-47.077c11.702-14.072 18.752-32.142 18.752-51.831C162.381 36.423 125.959 0 81.191 0 36.422 0 0 36.423 0 81.193c0 44.767 36.422 81.187 81.191 81.187 19.688 0 37.759-7.049 51.831-18.751l47.079 47.078a7.474 7.474 0 0 0 5.303 2.197 7.498 7.498 0 0 0 5.303-12.803zM15 81.193C15 44.694 44.693 15 81.191 15c36.497 0 66.189 29.694 66.189 66.193 0 36.496-29.692 66.187-66.189 66.187C44.693 147.38 15 117.689 15 81.193z">
-            </path>
-          </svg>
-        </button>
-      </div>
+    <div class="flex overflow-hidden mx-auto font-[sans-serif]">
+      <form method="get" action="{% url 'main:product_page' %}" class="flex items-center max-w-sm mx-auto">   
+          <label for="name" class="sr-only">Search</label>
+          <div class="relative w-full">
+              <input type="text" name="name" id="name" value="{{ request.GET.name }}" 
+                     class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-0 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" 
+                     placeholder="Search food name..." required />
+          </div>
+          <button type="submit" class="p-2.5 ms-2 text-sm font-medium text-white bg-blue-700 rounded-lg border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+              <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
+              </svg>
+              <span class="sr-only">Search</span>
+          </button>
+      </form>
     </div>
+  </div>
 </div>
 
 <div class="overflow-hidden my-12">
@@ -31,20 +38,16 @@
     {% include 'carousel.html' %}
 </div>
 
-<div class="grid md:grid-cols-3 gap-6 min-h-[164px] py-8 p-16 bg-gradient-to-r from-blue-700 to-blue-400 font-sans overflow-hidden">
-    <div class="md:col-span-2">
-      <h1 class="text-3xl font-bold text-white">A new way to find delicacies</h1>
-      <p class="text-base text-gray-200 mt-4">Try our automatic card recommendation</p>
+<div class="grid md:grid-cols-3 gap-6 min-h-[164px] py-8 p-16 font-sans overflow-hidden bg-cover bg-center" style="background-image: url('{% static "image/foodfinder.png" %}');">
+  <div class="md:col-span-1 bg-red-web bg-opacity-80 p-6 rounded-lg">
+    <h1 class="text-3xl font-bold text-white">A New Way to Find Delicacies</h1>
+    <p class="text-base text-gray-200 mt-4">Try Our Automatic Card Recommendation</p>
 
-      <a href="">
-        <button type="button" class="py-3 px-6 text-sm font-semibold bg-white text-blue-600 hover:bg-slate-100 rounded-md mt-8">Get Started</button>
-      </a>
-    </div>
-
-    <div class="relative max-md:hidden">
-      <img src="https://readymadeui.com/readymadeui_banner2.webp" alt="Banner Image"
-        class="w-full right-4 top-[-13px] md:absolute skew-x-[-16deg] rotate-2 object-cover" />
-    </div>
+    <a href="{% url 'card:WhatToEat' %}">
+      <button type="button" class="py-3 px-6 text-sm font-semibold bg-white text-red-web hover:bg-slate-100 rounded-md mt-8">Try FoodFinder</button>
+    </a>
+  </div>
 </div>
+
 
 {% endblock content %}

@@ -1,0 +1,1082 @@
+[
+  {
+    "KODE_PRODUK": "BSL01",
+    "NAMA_PRODUK": "Bolu Susu Original",
+    "KATEGORI": "Makanan Ringan",
+    "TOKO": "Bolu Susu Lembang",
+    "HARGA_RETAIL": 37000,
+    "LOKASI": "Lembang",
+    "URL": "https://bolulembang.co.id/wp-content/uploads/2019/08/Original.webp"
+  },
+  {
+    "KODE_PRODUK": "BSL02",
+    "NAMA_PRODUK": "Pancake Susu Lembang Cokelat",
+    "KATEGORI": "Makanan Ringan",
+    "TOKO": "Bolu Susu Lembang",
+    "HARGA_RETAIL": 25000,
+    "LOKASI": "Lembang",
+    "URL": "https://bolulembang.co.id/wp-content/uploads/2021/12/Pancake-Cokelat.webp"
+  },
+  {
+    "KODE_PRODUK": "BSL03",
+    "NAMA_PRODUK": "Bolu Susu Tiramisu",
+    "KATEGORI": "Makanan Ringan",
+    "TOKO": "Bolu Susu Lembang",
+    "HARGA_RETAIL": 37000,
+    "LOKASI": "Lembang",
+    "URL": "https://bolulembang.co.id/wp-content/uploads/2023/03/Tiramisu.webp"
+  },
+  {
+    "KODE_PRODUK": "BSL04",
+    "NAMA_PRODUK": "Bolu Susu Original Mini Pack",
+    "KATEGORI": "Makanan Ringan",
+    "TOKO": "Bolu Susu Lembang",
+    "HARGA_RETAIL": 19000,
+    "LOKASI": "Lembang",
+    "URL": "https://bolulembang.co.id/wp-content/uploads/2022/08/Mini-Pack-Original-768x768.jpg"
+  },
+  {
+    "KODE_PRODUK": "BSL05",
+    "NAMA_PRODUK": "Bolu Susu Red Velvet",
+    "KATEGORI": "Makanan Ringan",
+    "TOKO": "Bolu Susu Lembang",
+    "HARGA_RETAIL": 37000,
+    "LOKASI": "Lembang",
+    "URL": "https://bolulembang.co.id/wp-content/uploads/2021/12/Redvelvet.webp"
+  },
+  {
+    "KODE_PRODUK": "KRS01",
+    "NAMA_PRODUK": "Pisang Bolen Isi 6 Bollen Pisang Keju Spesial",
+    "KATEGORI": "Makanan Ringan",
+    "TOKO": "Kartika Sari",
+    "HARGA_RETAIL": 42000,
+    "LOKASI": "Babakan Ciamis",
+    "URL": "https://thumbor.sirclocdn.com/unsafe/960x1120/filters:format(webp):quality(60)/web-order.kartikasari.com/media/catalog/product/cache/bf089eb7f3ac5b3c4dae87511e80451a/e/7/e7f0d13e-d061-4d78-b4e1-b04b83ffc0df.jpg"
+  },
+  {
+    "KODE_PRODUK": "KRS02",
+    "NAMA_PRODUK": "Pisang Bolen Isi 6 Bollen Pisang Keju Coklat",
+    "KATEGORI": "Makanan Ringan",
+    "TOKO": "Kartika Sari",
+    "HARGA_RETAIL": 45000,
+    "LOKASI": "Babakan Ciamis",
+    "URL": "https://thumbor.sirclocdn.com/unsafe/960x1120/filters:format(webp):quality(60)/web-order.kartikasari.com/media/catalog/product/cache/bf089eb7f3ac5b3c4dae87511e80451a/1/4/142ef302-c7c7-4995-adae-0ee9d68af3a1.jpg"
+  },
+  {
+    "KODE_PRODUK": "KRS03",
+    "NAMA_PRODUK": "Bagelen Butter Toples",
+    "KATEGORI": "Makanan Ringan",
+    "TOKO": "Kartika Sari",
+    "HARGA_RETAIL": 60000,
+    "LOKASI": "Babakan Ciamis",
+    "URL": "https://thumbor.sirclocdn.com/unsafe/960x1120/filters:format(webp):quality(60)/web-order.kartikasari.com/media/catalog/product/cache/bf089eb7f3ac5b3c4dae87511e80451a/b/a/bagelen-butter-ples-160-gr.jpg"
+  },
+  {
+    "KODE_PRODUK": "KRS04",
+    "NAMA_PRODUK": "Brownies Panggang Original",
+    "KATEGORI": "Makanan Ringan",
+    "TOKO": "Kartika Sari",
+    "HARGA_RETAIL": 92000,
+    "LOKASI": "Babakan Ciamis",
+    "URL": "https://thumbor.sirclocdn.com/unsafe/600x600/filters:format(webp):quality(60)/web-order.kartikasari.com/media/catalog/product/cache/bf089eb7f3ac5b3c4dae87511e80451a/k/s/ks_mp_brownies_almond.jpg"
+  },
+  {
+    "KODE_PRODUK": "KRS05",
+    "NAMA_PRODUK": "Kartika Toast Marchies Chocolate Stick",
+    "KATEGORI": "Makanan Ringan",
+    "TOKO": "Kartika Sari",
+    "HARGA_RETAIL": 15000,
+    "LOKASI": "Babakan Ciamis",
+    "URL": "https://thumbor.sirclocdn.com/unsafe/960x1120/filters:format(webp):quality(60)/web-order.kartikasari.com/media/catalog/product/cache/bf089eb7f3ac5b3c4dae87511e80451a/m/a/marchies_new_1.jpg"
+  },
+  {
+    "KODE_PRODUK": "KRS06",
+    "NAMA_PRODUK": "Bagelen Mocha",
+    "KATEGORI": "Makanan Ringan",
+    "TOKO": "Kartika Sari",
+    "HARGA_RETAIL": 70000,
+    "LOKASI": "Babakan Ciamis",
+    "URL": "https://thumbor.sirclocdn.com/unsafe/960x1120/filters:format(webp):quality(60)/web-order.kartikasari.com/media/catalog/product/cache/bf089eb7f3ac5b3c4dae87511e80451a/m/p/mp_bagelen_mocha_ks_180g-04-04.jpg"
+  },
+  {
+    "KODE_PRODUK": "KRS07",
+    "NAMA_PRODUK": "Bagelen Cheese",
+    "KATEGORI": "Makanan Ringan",
+    "TOKO": "Kartika Sari",
+    "HARGA_RETAIL": 65000,
+    "LOKASI": "Babakan Ciamis",
+    "URL": "https://thumbor.sirclocdn.com/unsafe/960x1120/filters:format(webp):quality(60)/web-order.kartikasari.com/media/catalog/product/cache/bf089eb7f3ac5b3c4dae87511e80451a/b/a/bagelen-keju-273-gr.jpg"
+  },
+  {
+    "KODE_PRODUK": "BHK01",
+    "NAMA_PRODUK": "Bandrek",
+    "KATEGORI": "Minuman",
+    "TOKO": "Bandrek Bajigur H Kodir",
+    "HARGA_RETAIL": 5000,
+    "LOKASI": "Bandung Wetan",
+    "URL": "https://img.kurio.network/Bd3GJZsYNq-aaxyLs1Lw1Me-ZO4=/1200x1200/filters:quality(80)/https://kurio-img.kurioapps.com/20/11/26/1a4ca544-9380-4bad-9971-249739acb514.jpeg"
+  },
+  {
+    "KODE_PRODUK": "BHK02",
+    "NAMA_PRODUK": "Bajigur",
+    "KATEGORI": "Minuman",
+    "TOKO": "Bandrek Bajigur H Kodir",
+    "HARGA_RETAIL": 5000,
+    "LOKASI": "Bandung Wetan",
+    "URL": "https://img.kurio.network/MfZT_9wEDvG19iSzsV9jG0nYZng=/1200x1200/filters:quality(80)/https://kurio-img.kurioapps.com/20/11/26/82bdc977-d694-49da-a681-69f4eda04764.jpg"
+  },
+  {
+    "KODE_PRODUK": "BHK03",
+    "NAMA_PRODUK": "Aneka Gorengan",
+    "KATEGORI": "Makanan Ringan",
+    "TOKO": "Bandrek Bajigur H Kodir",
+    "HARGA_RETAIL": 1500,
+    "LOKASI": "Bandung Wetan",
+    "URL": "https://images.tokopedia.net/img/cache/700/VqbcmM/2024/1/30/8bb0cb83-7973-4509-913c-f8a29bb3cfc5.jpg"
+  },
+  {
+    "KODE_PRODUK": "GNK01",
+    "NAMA_PRODUK": "Sidat/Unagi Asap Gulai",
+    "KATEGORI": "Makanan Berat",
+    "TOKO": "Gang Nikmat",
+    "HARGA_RETAIL": 45000,
+    "LOKASI": "Bandung Wetan",
+    "URL": "https://i.imgur.com/WGLv1k0.png"
+  },
+  {
+    "KODE_PRODUK": "GNK02",
+    "NAMA_PRODUK": "Air Kelapa",
+    "KATEGORI": "Minuman",
+    "TOKO": "Gang Nikmat",
+    "HARGA_RETAIL": 10000,
+    "LOKASI": "Bandung Wetan",
+    "URL": "https://i.imgur.com/IdiYenm.png"
+  },
+  {
+    "KODE_PRODUK": "MCK01",
+    "NAMA_PRODUK": "Mie Kocok Polos",
+    "KATEGORI": "Makanan Berat",
+    "TOKO": "Mie Kocok Cepay",
+    "HARGA_RETAIL": 26000,
+    "LOKASI": "Cicendo",
+    "URL": "https://i.imgur.com/1UgAFd5.png"
+  },
+  {
+    "KODE_PRODUK": "MCK02",
+    "NAMA_PRODUK": "Mie Kocok Spesial Tulang",
+    "KATEGORI": "Makanan Berat",
+    "TOKO": "Mie Kocok Cepay",
+    "HARGA_RETAIL": 44000,
+    "LOKASI": "Cicendo",
+    "URL": "https://i.imgur.com/XSBU5Th.png"
+  },
+  {
+    "KODE_PRODUK": "MCK03",
+    "NAMA_PRODUK": "Kerupuk Kulit",
+    "KATEGORI": "Makanan Ringan",
+    "TOKO": "Mie Kocok Cepay",
+    "HARGA_RETAIL": 20000,
+    "LOKASI": "Cicendo",
+    "URL": "https://i0.wp.com/halalmui.org/wp-content/uploads/2022/09/2022-09-01-Kerupuk-Kulit-Kenali-Bahaya-dan-Potensi-Haramnya.jpg"
+  },
+  {
+    "KODE_PRODUK": "BBT01",
+    "NAMA_PRODUK": "Bolu Bakar Roombutter",
+    "KATEGORI": "Makanan Ringan",
+    "TOKO": "Bolu Bakar Tunggal",
+    "HARGA_RETAIL": 54000,
+    "LOKASI": "Buahbatu",
+    "URL": "https://images.tokopedia.net/img/cache/900/VqbcmM/2024/2/15/da402d4e-0441-4c20-afa6-37adbb31049e.jpg"
+  },
+  {
+    "KODE_PRODUK": "BBT02",
+    "NAMA_PRODUK": "Bolu Bakar Keju",
+    "KATEGORI": "Makanan Ringan",
+    "TOKO": "Bolu Bakar Tunggal",
+    "HARGA_RETAIL": 54000,
+    "LOKASI": "Buahbatu",
+    "URL": "https://images.tokopedia.net/img/cache/900/VqbcmM/2022/10/3/ce70e51d-03b3-4da2-8151-d4b71a6b734b.jpg"
+  },
+  {
+    "KODE_PRODUK": "BBT03",
+    "NAMA_PRODUK": "Bolu Bakar Coklat",
+    "KATEGORI": "Makanan Ringan",
+    "TOKO": "Bolu Bakara Tunggal",
+    "HARGA_RETAIL": 54000,
+    "LOKASI": "Buahbatu",
+    "URL": "https://images.tokopedia.net/img/cache/900/VqbcmM/2022/10/3/cf8d8d02-1cb3-47fe-a738-fcc1865f7ac1.jpg"
+  },
+  {
+    "KODE_PRODUK": "BBT04",
+    "NAMA_PRODUK": "Bolu Bakar Kacang Coklat",
+    "KATEGORI": "Makanan Ringan",
+    "TOKO": "Bolu Bakar Tunggl",
+    "HARGA_RETAIL": 54000,
+    "LOKASI": "Buahbatu",
+    "URL": "https://images.tokopedia.net/img/cache/900/VqbcmM/2022/10/3/ac0f8ff1-b09f-4764-be75-e90a12bba3d4.jpg"
+  },
+  {
+    "KODE_PRODUK": "BBT05",
+    "NAMA_PRODUK": "Bolu Bakar Strawberry",
+    "KATEGORI": "Makanan Ringan",
+    "TOKO": "Bolu Bakar Tunggal",
+    "HARGA_RETAIL": 47000,
+    "LOKASI": "Buahbatu",
+    "URL": "https://images.tokopedia.net/img/cache/900/VqbcmM/2022/10/3/8037389d-3a46-4db8-91fc-a0a24986a9ef.jpg"
+  },
+  {
+    "KODE_PRODUK": "DSA01",
+    "NAMA_PRODUK": "Hakau Udang",
+    "KATEGORI": "Makanan Ringan",
+    "TOKO": "Dimsum 9 Ayam",
+    "HARGA_RETAIL": 23000,
+    "LOKASI": "Cicendo",
+    "URL": "https://i.imgur.com/xubXH0q.png"
+  },
+  {
+    "KODE_PRODUK": "DSA02",
+    "NAMA_PRODUK": "Bakpao 9 Ayam",
+    "KATEGORI": "Makanan Ringan",
+    "TOKO": "Dimsum 9 Ayam",
+    "HARGA_RETAIL": 21000,
+    "LOKASI": "Cicendo",
+    "URL": "https://i.imgur.com/NvrYcJo.png"
+  },
+  {
+    "KODE_PRODUK": "DSA03",
+    "NAMA_PRODUK": "Siu Mai 9 Ayam",
+    "KATEGORI": "Makanan Ringan",
+    "TOKO": "Dimsum 9 Ayam",
+    "HARGA_RETAIL": 22000,
+    "LOKASI": "CIcendo",
+    "URL": "https://i.imgur.com/hvRUvHs.png"
+  },
+  {
+    "KODE_PRODUK": "GNO01",
+    "NAMA_PRODUK": "Gepuk Daging",
+    "KATEGORI": "Makanan Berat",
+    "TOKO": "Gepuk Nyonya Ong",
+    "HARGA_RETAIL": 20000,
+    "LOKASI": "Sukajadi",
+    "URL": "https://images.tokopedia.net/img/cache/900/VqbcmM/2023/2/14/a4dd2d36-588c-4051-9640-7d9443c618aa.jpg"
+  },
+  {
+    "KODE_PRODUK": "GNO02",
+    "NAMA_PRODUK": "Gepuk Daging Pedas",
+    "KATEGORI": "Makanan Berat",
+    "TOKO": "Gepuk Nyonya Ong",
+    "HARGA_RETAIL": 20000,
+    "LOKASI": "Sukajadi",
+    "URL": "https://images.tokopedia.net/img/cache/900/VqbcmM/2023/2/14/0e94b392-394b-4fc6-9c5b-6fba3cd8e1ea.jpg"
+  },
+  {
+    "KODE_PRODUK": "GNO03",
+    "NAMA_PRODUK": "Gepuk Ayam Original",
+    "KATEGORI": "Makanan Berat",
+    "TOKO": "Gepuk Nyonya Ong",
+    "HARGA_RETAIL": 17500,
+    "LOKASI": "Sukajadi",
+    "URL": "https://images.tokopedia.net/img/cache/900/VqbcmM/2023/2/14/6ccf1892-830f-4582-9a22-64c00a5fbaba.jpg"
+  },
+  {
+    "KODE_PRODUK": "GNO04",
+    "NAMA_PRODUK": "Gepuk Ayam Pedas",
+    "KATEGORI": "Makanan Berat",
+    "TOKO": "Gepuk Nyonya Ong",
+    "HARGA_RETAIL": 17500,
+    "LOKASI": "Sukajadi",
+    "URL": "https://images.tokopedia.net/img/cache/900/VqbcmM/2023/2/14/8219b3fc-6e70-4705-8963-6edeae93c409.jpg"
+  },
+  {
+    "KODE_PRODUK": "GNO05",
+    "NAMA_PRODUK": "Gepuk Daging Asin",
+    "KATEGORI": "Makanan Berat",
+    "TOKO": "Gepuk Nyonya Ong",
+    "HARGA_RETAIL": 20000,
+    "LOKASI": "Sukajadi",
+    "URL": "https://images.tokopedia.net/img/cache/700/VqbcmM/2022/7/16/539b3268-9556-415d-9246-67ee1e37f362.jpg"
+  },
+  {
+    "KODE_PRODUK": "KBJ01",
+    "NAMA_PRODUK": "Kue Balok Original",
+    "KATEGORI": "Makanan Ringan",
+    "TOKO": "Kue Balok Jayagiri",
+    "HARGA_RETAIL": 2000,
+    "LOKASI": "Coblong",
+    "URL": "https://awsimages.detik.net.id/community/media/visual/2018/11/24/7295f3be-d0b8-4524-bebf-eb1a3937a4c5.jpeg?w=554"
+  },
+  {
+    "KODE_PRODUK": "KBJ02",
+    "NAMA_PRODUK": "Kue Balok Cokelat",
+    "KATEGORI": "Makanan Ringan",
+    "TOKO": "Kue Balok Jayagiri",
+    "HARGA_RETAIL": 5000,
+    "LOKASI": "Coblong",
+    "URL": "https://i.imgur.com/k8rN3di.png"
+  },
+  {
+    "KODE_PRODUK": "KBJ03",
+    "NAMA_PRODUK": "Kue Balok Nutella",
+    "KATEGORI": "Makanan Ringan",
+    "TOKO": "Kue Balok Jayagiri",
+    "HARGA_RETAIL": 5000,
+    "LOKASI": "Coblong",
+    "URL": "https://i.gojekapi.com/darkroom/gofood-indonesia/v2/images/uploads/71d71db0-e927-42bf-9ba1-e73b3b0786d0_c81d4125-4513-4ad6-a67c-0f8df09b7ec3_Go-Resto_20181030_140011.jpg"
+  },
+  {
+    "KODE_PRODUK": "KBJ04",
+    "NAMA_PRODUK": "Kue Balok Strawberry",
+    "KATEGORI": "Makanan Ringan",
+    "TOKO": "Kue Balok Jayagiri",
+    "HARGA_RETAIL": 3000,
+    "LOKASI": "Coblong",
+    "URL": "https://id-test-11.slatic.net/p/aa58400d49c1e1dd7593f889af6e541f.jpg"
+  },
+  {
+    "KODE_PRODUK": "MBA01",
+    "NAMA_PRODUK": "Mie Ayam Polos",
+    "KATEGORI": "Makanan berat",
+    "TOKO": "Mie Baso Akung",
+    "HARGA_RETAIL": 16000,
+    "LOKASI": "Lengkong",
+    "URL": "https://assets-pergikuliner.com/yxByF8HNlaFQCptpQWaxu15c-ng=/312x0/smart/https://assets-pergikuliner.com/uploads/image/picture/2432281/picture-1645356758.jpg"
+  },
+  {
+    "KODE_PRODUK": "MBA02",
+    "NAMA_PRODUK": "Mie Ayam Baso",
+    "KATEGORI": "Makanan Berat",
+    "TOKO": "Mie Baso Akung",
+    "HARGA_RETAIL": 31000,
+    "LOKASI": "Lengkong",
+    "URL": "https://cdn.linkumkm.id/library/1/1/3/6/2/0/113620_512x351.jpeg"
+  },
+  {
+    "KODE_PRODUK": "WEO01",
+    "NAMA_PRODUK": "Nasi Tutug Kriuk",
+    "KATEGORI": "Makanan Berat",
+    "TOKO": "Waroeng Ethnic",
+    "HARGA_RETAIL": 42000,
+    "LOKASI": "Cidadap",
+    "URL": "https://radarlebong.disway.id/upload/1717fa9a8a0aa408569693ad95d1167b.jpeg"
+  },
+  {
+    "KODE_PRODUK": "WOE02",
+    "NAMA_PRODUK": "Nasi Tutug Oncom",
+    "KATEGORI": "Makanan Berat",
+    "TOKO": "Waroeng Ethnic",
+    "HARGA_RETAIL": 42000,
+    "LOKASI": "Cidadap",
+    "URL": "https://img.okezone.com/content/2023/08/13/298/2863568/resep-nasi-tutug-oncom-ala-chef-devina-cocok-untuk-perayaan-hut-ke-78-ri-Z2HEhnyLNO.jpg"
+  },
+  {
+    "KODE_PRODUK": "WOE03",
+    "NAMA_PRODUK": "Nasi Timbel Ayam",
+    "KATEGORI": "Makanan Berat",
+    "TOKO": "Waroeng Ethnic",
+    "HARGA_RETAIL": 69600,
+    "LOKASI": "Cidadap",
+    "URL": "https://asset-a.grid.id/crop/0x0:0x0/x/photo/2022/08/04/jangan-sampai-ketinggalan-mengha-20220804075607.jpg"
+  },
+  {
+    "KODE_PRODUK": "CSC01",
+    "NAMA_PRODUK": "Paket Oseng Baso",
+    "KATEGORI": "Makanan Berat",
+    "TOKO": "Coop Space",
+    "HARGA_RETAIL": 20000,
+    "LOKASI": "Cidadap",
+    "URL": "https://i.gojekapi.com/darkroom/gofood-indonesia/v2/images/uploads/a3ab48ce-9ea5-4fe0-8d51-ba58336270b8_8fce0fac-5118-4204-9362-7bc03a893572.jpg?auto=format"
+  },
+  {
+    "KODE_PRODUK": "CSC02",
+    "NAMA_PRODUK": "Paket Bento Tori Ball",
+    "KATEGORI": "Makanan Berat",
+    "TOKO": "Coop Space",
+    "HARGA_RETAIL": 18500,
+    "LOKASI": "Cidadap",
+    "URL": "https://i.gojekapi.com/darkroom/gofood-indonesia/v2/images/uploads/2065e227-c7eb-4474-858f-42ff476d24a6_e6f8754d-57fa-45aa-a910-26ad64a7183b.jpg?auto=format"
+  },
+  {
+    "KODE_PRODUK": "KLM01",
+    "NAMA_PRODUK": "Lontong Telor",
+    "KATEGORI": "Makanan Berat",
+    "TOKO": "Kedai Lontong Medan Ka' Zahra",
+    "HARGA_RETAIL": 22000,
+    "LOKASI": "Coblong",
+    "URL": "https://awsimages.detik.net.id/community/media/visual/2023/08/29/resep-lontong-sayur-sederhana.jpeg?w=1200"
+  },
+  {
+    "KODE_PRODUK": "KLM02",
+    "NAMA_PRODUK": "Kopi Susu Sidikalang",
+    "KATEGORI": "Minuman",
+    "TOKO": "Kedai Lontong Medan Ka' Zahra",
+    "HARGA_RETAIL": 15000,
+    "LOKASI": "Coblong",
+    "URL": "https://blue.kumparan.com/image/upload/fl_progressive,fl_lossy,c_fill,q_auto:best,w_640/v1539761402/f0bfrgrnhkfmjxgtsfzx.jpg"
+  },
+  {
+    "KODE_PRODUK": "KLM03",
+    "NAMA_PRODUK": "Lontong Medan biasa",
+    "KATEGORI": "Makanan Berat",
+    "TOKO": "Kedai Lontong Medan Ka' Zahra",
+    "HARGA_RETAIL": 18000,
+    "LOKASI": "Coblong",
+    "URL": "https://assets-pergikuliner.com/6cPtqzeMZcRy4CAVNEX0Vs1ht8A=/624x0/smart/filters:no_upscale()/https://assets-pergikuliner.com/uploads/image/picture/878402/picture-1523071032.jpg"
+  },
+  {
+    "KODE_PRODUK": "RBB01",
+    "NAMA_PRODUK": "Roti Bakar Keju Serut",
+    "KATEGORI": "Makanan Ringan",
+    "TOKO": "Roti Bakar Big Boss",
+    "HARGA_RETAIL": 31000,
+    "LOKASI": "Coblong",
+    "URL": "https://i.gojekapi.com/darkroom/gofood-indonesia/v2/images/uploads/41bad697-9478-4279-b7ed-32c3ad301c33_Go-Biz_20240131_000840.jpeg"
+  },
+  {
+    "KODE_PRODUK": "RBB02",
+    "NAMA_PRODUK": "Pisang bakar",
+    "KATEGORI": "Makanan Ringan",
+    "TOKO": "Roti Bakar Big Boss",
+    "HARGA_RETAIL": 15000,
+    "LOKASI": "Coblong",
+    "URL": "https://i.gojekapi.com/darkroom/gofood-indonesia/v2/images/uploads/d49ee1ff-730e-4ebe-8f5f-190f2000cfdd_Go-Biz_20230303_082828.jpeg?auto=format"
+  },
+  {
+    "KODE_PRODUK": "WNS01",
+    "NAMA_PRODUK": "Baso Aci Jando",
+    "KATEGORI": "Makanan Ringan",
+    "TOKO": "Warung Na Sabiya",
+    "HARGA_RETAIL": 24000,
+    "LOKASI": "Mandajalita",
+    "URL": "https://i.gojekapi.com/darkroom/gofood-indonesia/v2/images/uploads/b77bc965-6d9a-4ef1-b467-349e85be76f0_Go-Biz_20220712_181458.jpeg?auto=format"
+  },
+  {
+    "KODE_PRODUK": "WNS02",
+    "NAMA_PRODUK": "Nasi bento asin cumi",
+    "KATEGORI": "Makanan Berat",
+    "TOKO": "Warung Na Sabiya",
+    "HARGA_RETAIL": 33000,
+    "LOKASI": "Mandajalita",
+    "URL": "https://i.gojekapi.com/darkroom/gofood-indonesia/v2/images/uploads/d1d5f1ff-38a8-4839-a20c-77631a6ea4f8_Go-Biz_20221022_165519.jpeg?auto=format"
+  },
+  {
+    "KODE_PRODUK": "WNS03",
+    "NAMA_PRODUK": "Nasi Goreng Jando",
+    "KATEGORI": "Makanan Berat",
+    "TOKO": "Warung Na Sabiya",
+    "HARGA_RETAIL": 27000,
+    "LOKASI": "Mandajalita",
+    "URL": "https://i.gojekapi.com/darkroom/gofood-indonesia/v2/images/uploads/df369c14-8ba0-446d-a3d0-08b7a4411f83_Go-Biz_20221214_181446.jpeg?auto=format"
+  },
+  {
+    "KODE_PRODUK": "DNJ01",
+    "NAMA_PRODUK": "Juice Alpukat",
+    "KATEGORI": "Minuman",
+    "TOKO": "Dunia Juice",
+    "HARGA_RETAIL": 21000,
+    "LOKASI": "Mandajalita",
+    "URL": "https://i.gojekapi.com/darkroom/gofood-indonesia/v2/images/uploads/2ed72c8a-dd15-4976-8ed8-77ce01069006_Go-Biz_20210826_043650.jpeg?auto=format"
+  },
+  {
+    "KODE_PRODUK": "DNJ02",
+    "NAMA_PRODUK": "Cappucino Cincau",
+    "KATEGORI": "Minuman",
+    "TOKO": "Dunia Juice",
+    "HARGA_RETAIL": 9000,
+    "LOKASI": "Mandajalita",
+    "URL": "https://i0.wp.com/resepkoki.id/wp-content/uploads/2021/04/Resep-Cappuccino-Cincau.jpg?fit=500%2C624&ssl=1"
+  },
+  {
+    "KODE_PRODUK": "KLK01",
+    "NAMA_PRODUK": "Tropical Peach Ice",
+    "KATEGORI": "Minuman",
+    "TOKO": "Kolaseu Koffie",
+    "HARGA_RETAIL": 30000,
+    "LOKASI": "Buah Batu",
+    "URL": "https://i.gojekapi.com/darkroom/gofood-indonesia/v2/images/uploads/3ddcf786-c716-4e25-920e-83ae81d0a5c5_Go-Biz_20210203_133412.jpeg?auto=format"
+  },
+  {
+    "KODE_PRODUK": "KLK02",
+    "NAMA_PRODUK": "Raspberry tea",
+    "KATEGORI": "Minuman",
+    "TOKO": "Kolaseu Koffie",
+    "HARGA_RETAIL": 27000,
+    "LOKASI": "Buah Batu",
+    "URL": "https://i.gojekapi.com/darkroom/gofood-indonesia/v2/images/uploads/36a21e20-a53c-4088-a3e7-bec8dc5da7d7_Go-Biz_20210203_133532.jpeg?auto=format"
+  },
+  {
+    "KODE_PRODUK": "KLK03",
+    "NAMA_PRODUK": "Flat white",
+    "KATEGORI": "Minuman",
+    "TOKO": "Kolaseu Koffie",
+    "HARGA_RETAIL": 25000,
+    "LOKASI": "Buah Batu",
+    "URL": "https://i.imgur.com/TBzDBa1.png"
+  },
+  {
+    "KODE_PRODUK": "SNC01",
+    "NAMA_PRODUK": "Chocolate Naan",
+    "KATEGORI": "Makanan Ringan",
+    "TOKO": "Snack Attack & Coffee by Hangry",
+    "HARGA_RETAIL": 27000,
+    "LOKASI": "Buah Batu",
+    "URL": "https://i.gojekapi.com/darkroom/gofood-indonesia/v2/images/uploads/39e6e659-9cfb-4bd5-8b85-1e8a15dc9229_20220411235141-s58y4a3o.jpg?auto=format"
+  },
+  {
+    "KODE_PRODUK": "SNC02",
+    "NAMA_PRODUK": "Chicken Kofta Bites",
+    "KATEGORI": "Makanan Ringan",
+    "TOKO": "Snack Attack & Coffee by Hangry",
+    "HARGA_RETAIL": 19000,
+    "LOKASI": "Buah Batu",
+    "URL": "https://i.gojekapi.com/darkroom/gofood-indonesia/v2/images/uploads/8c22b248-ad1b-4449-8864-7ee5c981dd7c_20220411235138-nerrsd8u.jpg?auto=format"
+  },
+  {
+    "KODE_PRODUK": "SNC03",
+    "NAMA_PRODUK": "Bite Size Chicken Samosa",
+    "KATEGORI": "Makanan Ringan",
+    "TOKO": "Snack Attack & Coffee by Hangry",
+    "HARGA_RETAIL": 18000,
+    "LOKASI": "Buah Batu",
+    "URL": "https://i.gojekapi.com/darkroom/gofood-indonesia/v2/images/uploads/bd8ccf20-d62c-4243-b9c7-bd37a876f856_1729064240587_Bite%20Size%20Chicken%20Samosa%203%20pcs%20%20tebus%20murah1.png?auto=format"
+  },
+  {
+    "KODE_PRODUK": "SR01",
+    "NAMA_PRODUK": "Tofu Ramen",
+    "KATEGORI": "Makanan Berat",
+    "TOKO": "Shifu Ramen",
+    "HARGA_RETAIL": 16000,
+    "LOKASI": "Cibiru",
+    "URL": "https://i.gojekapi.com/darkroom/gofood-indonesia/v2/images/uploads/bd646942-7aab-4ed1-84eb-01975487b5d4_menu-item-image_1683613863975.jpg?auto=format"
+  },
+  {
+    "KODE_PRODUK": "SR02",
+    "NAMA_PRODUK": "Sausage Ramen",
+    "KATEGORI": "Makanan Berat",
+    "TOKO": "Shifu Ramen",
+    "HARGA_RETAIL": 19000,
+    "LOKASI": "Cibiru",
+    "URL": "https://i.gojekapi.com/darkroom/gofood-indonesia/v2/images/uploads/210e0d18-b620-4a0e-8847-bab1daf245f4_menu-item-image_1683614037604.jpg?auto=format"
+  },
+  {
+    "KODE_PRODUK": "SR03",
+    "NAMA_PRODUK": "Ekado Ramen",
+    "KATEGORI": "Makanan Berat",
+    "TOKO": "Shifu Ramen",
+    "HARGA_RETAIL": 20000,
+    "LOKASI": "Cibiru",
+    "URL": "https://i.gojekapi.com/darkroom/gofood-indonesia/v2/images/uploads/0ad376c6-ea63-47f5-ad33-9642e312eca6_menu-item-image_1683614890217.jpg?auto=format"
+  },
+  {
+    "KODE_PRODUK": "SR04",
+    "NAMA_PRODUK": "Chikhua Long",
+    "KATEGORI": "Makanan Ringan",
+    "TOKO": "Shifu Ramen",
+    "HARGA_RETAIL": 8000,
+    "LOKASI": "Cibiru",
+    "URL": "https://i.gojekapi.com/darkroom/gofood-indonesia/v2/images/uploads/7dee8f00-3620-4642-905b-d8adf61df31b_menu-item-image_1683615591399.jpg?auto=format"
+  },
+  {
+    "KODE_PRODUK": "SR05",
+    "NAMA_PRODUK": "Crabstick",
+    "KATEGORI": "Makanan Ringan",
+    "TOKO": "Shifu Ramen",
+    "HARGA_RETAIL": 6000,
+    "LOKASI": "Cibiru",
+    "URL": "https://i.gojekapi.com/darkroom/gofood-indonesia/v2/images/uploads/ecb22e29-4386-4da3-8715-48212bbedaf6_menu-item-image_1675068160045.jpg?auto=format"
+  },
+  {
+    "KODE_PRODUK": "SB01",
+    "NAMA_PRODUK": "Nasi Timbel",
+    "KATEGORI": "Makanan Berat",
+    "TOKO": "Sambal Balaraja",
+    "HARGA_RETAIL": 5000,
+    "LOKASI": "Cileunyu",
+    "URL": "https://i.gojekapi.com/darkroom/gofood-indonesia/v2/images/uploads/7eeeff8e-0c54-471e-8c58-aaa5628c3a0d_Go-Biz_20201030_191337.jpeg?auto=format"
+  },
+  {
+    "KODE_PRODUK": "SB02",
+    "NAMA_PRODUK": "Nasi Bakar",
+    "KATEGORI": "Makanan Berat",
+    "TOKO": "Sambal Balaraja",
+    "HARGA_RETAIL": 6000,
+    "LOKASI": "Cileunyu",
+    "URL": "https://i.gojekapi.com/darkroom/gofood-indonesia/v2/images/uploads/31f77c19-8534-46e4-b86b-90bd0cf63445_Go-Biz_20201030_191214.jpeg?auto=format"
+  },
+  {
+    "KODE_PRODUK": "SB03",
+    "NAMA_PRODUK": "Ayam Kampung Bakar / Potong",
+    "KATEGORI": "Makanan Berat",
+    "TOKO": "Sambal Balaraja",
+    "HARGA_RETAIL": 70000,
+    "LOKASI": "Cileunyu",
+    "URL": "https://i.gojekapi.com/darkroom/gofood-indonesia/v2/images/uploads/9a993199-e547-42cc-a4e5-ea09dfea8ad1_Go-Biz_20230206_194209.jpeg?auto=format"
+  },
+  {
+    "KODE_PRODUK": "SB04",
+    "NAMA_PRODUK": "Bebek Penyet Kemangi",
+    "KATEGORI": "Makanan Berat",
+    "TOKO": "Sambal Balaraja",
+    "HARGA_RETAIL": 25000,
+    "LOKASI": "Cileunyu",
+    "URL": "https://i.gojekapi.com/darkroom/gofood-indonesia/v2/images/uploads/a90b8e9c-f910-4050-91e4-95f257793785_Go-Biz_20220629_123735.jpeg?auto=format"
+  },
+  {
+    "KODE_PRODUK": "SB05",
+    "NAMA_PRODUK": "Pepes Ayam Muda",
+    "KATEGORI": "Makanan Berat",
+    "TOKO": "Sambal Balaraja",
+    "HARGA_RETAIL": 15000,
+    "LOKASI": "Cileunyu",
+    "URL": "https://i.gojekapi.com/darkroom/gofood-indonesia/v2/images/uploads/4e5b029e-1536-4689-9f83-050fed70b488_Go-Biz_20201030_191431.jpeg?auto=format"
+  },
+  {
+    "KODE_PRODUK": "TQ01",
+    "NAMA_PRODUK": "Tahu Kuning Stick/panjang Susu",
+    "KATEGORI": "Makanan Ringan",
+    "TOKO": "Tahu Qeju",
+    "HARGA_RETAIL": 7000,
+    "LOKASI": "Bandung Kulon",
+    "URL": "https://i.gojekapi.com/darkroom/gofood-indonesia/v2/images/uploads/69766a92-b066-45be-a996-a511b307bd0e_Go-Biz_20230516_154444.jpeg?auto=format"
+  },
+  {
+    "KODE_PRODUK": "TQ02",
+    "NAMA_PRODUK": "Tahu Kotak Kuning Qeju",
+    "KATEGORI": "Makanan Ringan",
+    "TOKO": "Tahu Qeju",
+    "HARGA_RETAIL": 5000,
+    "LOKASI": "Bandung Kulon",
+    "URL": "https://i.gojekapi.com/darkroom/gofood-indonesia/v2/images/uploads/db12ab26-2303-4d45-a246-d30b596082b5_Go-Biz_20230516_155238.jpeg?auto=format"
+  },
+  {
+    "KODE_PRODUK": "TQ03",
+    "NAMA_PRODUK": "Basreng Goreng",
+    "KATEGORI": "Makanan Ringan",
+    "TOKO": "Tahu Qeju",
+    "HARGA_RETAIL": 6000,
+    "LOKASI": "Bandung Kulon",
+    "URL": "https://i.gojekapi.com/darkroom/gofood-indonesia/v2/images/uploads/8747bc28-e894-47c1-b67e-fb4b2ac80148_92ad7395-7349-4b06-a0cc-021b03d8f975_Go-Biz_20200209_222418.jpeg"
+  },
+  {
+    "KODE_PRODUK": "TQ04",
+    "NAMA_PRODUK": "Karedok Basreng",
+    "KATEGORI": "Makanan Ringan",
+    "TOKO": "Tahu Qeju",
+    "HARGA_RETAIL": 8000,
+    "LOKASI": "Bandung Kulon",
+    "URL": "https://i.gojekapi.com/darkroom/gofood-indonesia/v2/images/uploads/22e09a04-970d-4cb6-bcd9-589635323270_Go-Biz_20210629_192827.jpeg"
+  },
+  {
+    "KODE_PRODUK": "TQ05",
+    "NAMA_PRODUK": "Pop Ice Drink",
+    "KATEGORI": "Minuman",
+    "TOKO": "Tahu Qeju",
+    "HARGA_RETAIL": 5000,
+    "LOKASI": "Bandung Kulon",
+    "URL": "https://images.tokopedia.net/img/cache/700/VqbcmM/2023/8/1/a5d2217d-90e3-41f7-a32f-3079de01ae03.jpg"
+  },
+  {
+    "KODE_PRODUK": "MNK01",
+    "NAMA_PRODUK": "Martabak Kacang Cokelat Keju",
+    "KATEGORI": "Makanan Ringan",
+    "TOKO": "Martabak Nikmat Andir",
+    "HARGA_RETAIL": 115000,
+    "LOKASI": "Andir",
+    "URL": "https://images.tokopedia.net/img/cache/700/VqbcmM/2023/2/17/25d08ea1-0370-4467-8542-e7ba2cb6df6e.jpg"
+  },
+  {
+    "KODE_PRODUK": "MNK02",
+    "NAMA_PRODUK": "Martabak Tipis Kacang",
+    "KATEGORI": "Makanan Ringan",
+    "TOKO": "Martabak Nikmat Andir",
+    "HARGA_RETAIL": 60000,
+    "LOKASI": "Andir",
+    "URL": "https://i.gojekapi.com/darkroom/gofood-indonesia/v2/images/uploads/982f4f96-fa70-40b1-9115-e0fb7114c4ec_Go-Biz_20210203_180449.jpeg?auto=format"
+  },
+  {
+    "KODE_PRODUK": "MNK03",
+    "NAMA_PRODUK": "Martabak Pandan Jagung Keju",
+    "KATEGORI": "Makanan Ringan",
+    "TOKO": "Martabak Nikmat Andir",
+    "HARGA_RETAIL": 175000,
+    "LOKASI": "Andir",
+    "URL": "https://i.gojekapi.com/darkroom/gofood-indonesia/v2/images/uploads/8ec499ff-6b97-4f0d-9ebe-9ae26e1ae2d9_Go-Biz_20210210_123324.jpeg?auto=format"
+  },
+  {
+    "KODE_PRODUK": "MNK04",
+    "NAMA_PRODUK": "Martabak Nutella",
+    "KATEGORI": "Makanan Ringan",
+    "TOKO": "Martabak Nikmat Andir",
+    "HARGA_RETAIL": 160000,
+    "LOKASI": "Andir",
+    "URL": "https://akcdn.detik.net.id/visual/2020/02/17/dcf4b153-b45a-47ae-8474-a3875bcf3cd5_11.jpeg?w=480&q=90"
+  },
+  {
+    "KODE_PRODUK": "MNK05",
+    "NAMA_PRODUK": "Martabak Tiramisu Keju",
+    "KATEGORI": "Makanan Ringan",
+    "TOKO": "Martabak Nikmat Andir",
+    "HARGA_RETAIL": 150000,
+    "LOKASI": "Andir",
+    "URL": "https://i.gojekapi.com/darkroom/gofood-indonesia/v2/images/uploads/bfee47ca-7c7d-4138-a16e-bf4cc7497e26_69ae454a-e7f3-4ae7-b5a0-c4a79fc7e85b_Go-Biz_20200412_094144.jpeg"
+  },
+  {
+    "KODE_PRODUK": "CH01",
+    "NAMA_PRODUK": "Mie Char Siu",
+    "KATEGORI": "Makanan Berat",
+    "TOKO": "Cafe Hongkonger",
+    "HARGA_RETAIL": 37000,
+    "LOKASI": "Bojongloa Kidul",
+    "URL": "https://img-global.cpcdn.com/recipes/7bfb1cdfb75fd885/680x482cq70/mie-ayam-charsiu-foto-resep-utama.jpg"
+  },
+  {
+    "KODE_PRODUK": "CH02",
+    "NAMA_PRODUK": "Samcan Panggang",
+    "KATEGORI": "Makanan Ringan",
+    "TOKO": "Cafe Hongkonger",
+    "HARGA_RETAIL": 54000,
+    "LOKASI": "Bojongloa Kidul",
+    "URL": "https://img-global.cpcdn.com/recipes/0fb84b07cfebf652/680x482cq70/siobak-asin-babi-panggang-asin-samcan-panggang-foto-resep-utama.jpg"
+  },
+  {
+    "KODE_PRODUK": "CH03",
+    "NAMA_PRODUK": "Mie Samcan",
+    "KATEGORI": "Makanan Berat",
+    "TOKO": "Cafe Hongkonger",
+    "HARGA_RETAIL": 39000,
+    "LOKASI": "Bojongloa Kidul",
+    "URL": "https://assets-pergikuliner.com/uploads/image/picture/1141711/picture-1541648504.jpg"
+  },
+  {
+    "KODE_PRODUK": "CH04",
+    "NAMA_PRODUK": "Nasi Goreng Yangzhou",
+    "KATEGORI": "Makanan Berat",
+    "TOKO": "Cafe Hongkonger",
+    "HARGA_RETAIL": 40000,
+    "LOKASI": "Bojongloa Kidul",
+    "URL": "https://nnc-media.netralnews.com/IMG-Netral-News-User-31-K1VA23ZPES.jpg"
+  },
+  {
+    "KODE_PRODUK": "TC01",
+    "NAMA_PRODUK": "Vietnam Drip",
+    "KATEGORI": "Minumann",
+    "TOKO": "Teduh Coffee",
+    "HARGA_RETAIL": 20000,
+    "LOKASI": "Cinambo",
+    "URL": "https://www.tawanrestaurant.com/wp-content/uploads/2024/04/VIETNAM-DRIP.jpg"
+  },
+  {
+    "KODE_PRODUK": "TC02",
+    "NAMA_PRODUK": "Coffee Beer",
+    "KATEGORI": "Minumann",
+    "TOKO": "Teduh Coffee",
+    "HARGA_RETAIL": 30000,
+    "LOKASI": "Cinambo",
+    "URL": "https://filebroker-cdn.lazada.co.id/kf/Sb1b9ebe0521b4707a2bfd7fdd0039cd5v.jpg"
+  },
+  {
+    "KODE_PRODUK": "TC03",
+    "NAMA_PRODUK": "Japanese Iced Coffee",
+    "KATEGORI": "Minumann",
+    "TOKO": "Teduh Coffee",
+    "HARGA_RETAIL": 23000,
+    "LOKASI": "Cinambo",
+    "URL": "https://assets.bonappetit.com/photos/5ed15bbd47fac4e56a3f1f07/1:1/w_1969,h_1969,c_limit/Basically-Iced-Coffee.jpg"
+  },
+  {
+    "KODE_PRODUK": "TC04",
+    "NAMA_PRODUK": "Ice Matcha",
+    "KATEGORI": "Minuman",
+    "TOKO": "Teduh Coffee",
+    "HARGA_RETAIL": 28000,
+    "LOKASI": "Cinambo",
+    "URL": "https://cdn.loveandlemons.com/wp-content/uploads/2023/06/iced-matcha-latte.jpg"
+  },
+  {
+    "KODE_PRODUK": "CB01",
+    "NAMA_PRODUK": "Paket Crisbar",
+    "KATEGORI": "Makanan Berat",
+    "TOKO": "Ayam Crisbar",
+    "HARGA_RETAIL": 23000,
+    "LOKASI": "Rancasari",
+    "URL": "https://i.gojekapi.com/darkroom/gofood-indonesia/v2/images/uploads/5ea85d6f-9df6-4e16-bcca-5ac607084672_Go-Biz_20220830_143117.jpeg"
+  },
+  {
+    "KODE_PRODUK": "CB02",
+    "NAMA_PRODUK": "Paket Crisbee",
+    "KATEGORI": "Makanan Berat",
+    "TOKO": "Ayam Crisbar",
+    "HARGA_RETAIL": 23000,
+    "LOKASI": "Rancasari",
+    "URL": "https://www.blibli.com/friends-backend/wp-content/uploads/2023/12/B1200017-3-Paket-Nikmat-Crisbar-1024x538.jpg"
+  },
+  {
+    "KODE_PRODUK": "CB03",
+    "NAMA_PRODUK": "Paket Spicy",
+    "KATEGORI": "Makanan Berat",
+    "TOKO": "Ayam Crisbar",
+    "HARGA_RETAIL": 23000,
+    "LOKASI": "Rancasari",
+    "URL": "https://i.gojekapi.com/darkroom/gofood-indonesia/v2/images/uploads/860a89be-124d-49b1-9cac-ab258c103206_181306_ed6d364b_Nikmat_Spicy_ft._Mood_Booster_Drinks.png"
+  },
+  {
+    "KODE_PRODUK": "JB01",
+    "NAMA_PRODUK": "Cranberry Cheese Bread",
+    "KATEGORI": "Makanan Ringan",
+    "TOKO": "Jess Bakery",
+    "HARGA_RETAIL": 20000,
+    "LOKASI": "Gedebage",
+    "URL": "https://i.gojekapi.com/darkroom/gofood-indonesia/v2/images/uploads/3dee2501-0cfe-48d7-b645-2cf87ea01c0b_Go-Biz_20200823_202632.jpeg?auto=format"
+  },
+  {
+    "KODE_PRODUK": "JB02",
+    "NAMA_PRODUK": "Blunder Coklat Dan N Blunder Keju",
+    "KATEGORI": "Makanan Ringan",
+    "TOKO": "Jess Bakery",
+    "HARGA_RETAIL": 17000,
+    "LOKASI": "Gedebage",
+    "URL": "https://i.gojekapi.com/darkroom/gofood-indonesia/v2/images/uploads/cd931ee3-e366-4dd9-899a-70c5585d334f_Go-Biz_20200819_171328.jpeg?auto=format"
+  },
+  {
+    "KODE_PRODUK": "JB03",
+    "NAMA_PRODUK": "Spaghetti Brulee",
+    "KATEGORI": "Makanan Berat",
+    "TOKO": "Jess Bakery",
+    "HARGA_RETAIL": 45000,
+    "LOKASI": "Gedebage",
+    "URL": "https://img.kurio.network/QIK5VYVHfd01ZA2A9aJ_cIU2zkk=/320x320/filters:quality(80)/https://kurio-img.kurioapps.com/20/08/16/2de67440-415a-40b3-a886-77e4256bcabe.jpg"
+  },
+  {
+    "KODE_PRODUK": "DA01",
+    "NAMA_PRODUK": "Nasi Goreng Hongkong",
+    "KATEGORI": "Makanan Berat",
+    "TOKO": "Daoci",
+    "HARGA_RETAIL": 20000,
+    "LOKASI": "Arcamanik",
+    "URL": "https://i.gojekapi.com/darkroom/gofood-indonesia/v2/images/uploads/93548746-8948-479f-b08e-c3a873c1fe89_Go-Biz_20220618_162428.jpeg?auto=format"
+  },
+  {
+    "KODE_PRODUK": "DA02",
+    "NAMA_PRODUK": "Bakmie Super Komplit",
+    "KATEGORI": "Makanan Berat",
+    "TOKO": "Daoci",
+    "HARGA_RETAIL": 30000,
+    "LOKASI": "Arcamanik",
+    "URL": "https://i.gojekapi.com/darkroom/gofood-indonesia/v2/images/uploads/b7455021-0820-462e-a27b-2490dc398b38_Go-Biz_20221012_134758.jpeg"
+  },
+  {
+    "KODE_PRODUK": "DA03",
+    "NAMA_PRODUK": "Kwetiau Goreng Spesial",
+    "KATEGORI": "Makanan Berat",
+    "TOKO": "Daoci",
+    "HARGA_RETAIL": 24000,
+    "LOKASI": "Arcamanik",
+    "URL": "https://asset.kompas.com/crops/1g9P4L73NLmOshdRUptmBe_oQgQ=/0x0:698x465/750x500/data/photo/2020/12/07/5fce3837c4f6d.jpg"
+  },
+  {
+    "KODE_PRODUK": "MO01",
+    "NAMA_PRODUK": "Sirloin Steak",
+    "KATEGORI": "Makanan Berat",
+    "TOKO": "Mokopi Cafè",
+    "HARGA_RETAIL": 24000,
+    "LOKASI": "Kiaracondong",
+    "URL": "https://www.wholesomeyum.com/wp-content/uploads/2022/04/wholesomeyum-Sirloin-Steak-Recipe-8.jpg"
+  },
+  {
+    "KODE_PRODUK": "MO02",
+    "NAMA_PRODUK": "Brown Sugar Coffee",
+    "KATEGORI": "Minumann",
+    "TOKO": "Mokopi Cafè",
+    "HARGA_RETAIL": 16000,
+    "LOKASI": "Kiaracondong",
+    "URL": "https://kaylaskitchandfix.com/wp-content/uploads/2023/06/BrownSugarShakenEspresso2.jpg"
+  },
+  {
+    "KODE_PRODUK": "MO03",
+    "NAMA_PRODUK": "Mazagran",
+    "KATEGORI": "Minumann",
+    "TOKO": "Mokopi Cafè",
+    "HARGA_RETAIL": 21000,
+    "LOKASI": "Kiaracondong",
+    "URL": "https://cafesdobrasilclub.com.br/wp-content/uploads/2024/01/Mazagran-Coffee-and-Lemons-1.jpg"
+  },
+  {
+    "KODE_PRODUK": "MGC01",
+    "NAMA_PRODUK": "Ice Caramel Machiato",
+    "KATEGORI": "Minumann",
+    "TOKO": "Morning Glory Coffee",
+    "HARGA_RETAIL": 35000,
+    "LOKASI": "Antapani",
+    "URL": "https://i0.wp.com/basicswithbails.com/wp-content/uploads/2024/05/copycat-iced-caramel-macchiato.jpg"
+  },
+  {
+    "KODE_PRODUK": "MGC02",
+    "NAMA_PRODUK": "Frapuccino Mocha",
+    "KATEGORI": "Minumann",
+    "TOKO": "Morning Glory Coffee",
+    "HARGA_RETAIL": 35000,
+    "LOKASI": "Antapani",
+    "URL": "https://lemonsandzest.com/wp-content/uploads/2021/01/Mocha-Frappuccino-12.jpg"
+  },
+  {
+    "KODE_PRODUK": "MGC03",
+    "NAMA_PRODUK": "Hazelnut Cremebulee",
+    "KATEGORI": "Minumann",
+    "TOKO": "Morning Glory Coffee",
+    "HARGA_RETAIL": 35000,
+    "LOKASI": "Antapani",
+    "URL": "https://i.imgur.com/mBA4e8j.png"
+  },
+  {
+    "KODE_PRODUK": "MGC04",
+    "NAMA_PRODUK": "Magic",
+    "KATEGORI": "Minumann",
+    "TOKO": "Morning Glory Coffee",
+    "HARGA_RETAIL": 30000,
+    "LOKASI": "Antapani",
+    "URL": "https://cdn.prod.website-files.com/601c754a55080701de75c6b6/63c1a1a76701be114dcb1d3c_mjO0oIrrvfpCOEAldf48zNxkyeycLZJdbxIbkvOgHnyQW4lOHUBl9f3o0ternKqmV63XIYGl7wVHRimvg84x9m1r99ntgBDwShfO9OUUbL7ll4_mnlD5z-nR7U3pLhp2nMmlB_IhdfQQgYDgOxj7IJlws92GciXe_FIDseQ6G-24f7gkr2IY8mSFYpXHRw.png"
+  },
+  {
+    "KODE_PRODUK": "RL01",
+    "NAMA_PRODUK": "Stockyard Sirloin Angus 200 Days Grain fed, 200g",
+    "KATEGORI": "Makanan Berat",
+    "TOKO": "The 18th Restaurant and Lounge",
+    "HARGA_RETAIL": 350000,
+    "LOKASI": "Batununggal",
+    "URL": "https://theblackfarmer.com/wp-content/uploads/1970/01/classic-beef-sirloin-steak-grilled-to-a-perfect-medium-rare-with-a-beautiful-sear-served-on-a-white-ceramic-plate-with-a-side-of-garlic-butter-and-roasted-vegetables.webp"
+  },
+  {
+    "KODE_PRODUK": "RL02",
+    "NAMA_PRODUK": "Grass Fed Mulwarra Ribeye, 200g",
+    "KATEGORI": "Makanan Berat",
+    "TOKO": "The 18th Restaurant and Lounge",
+    "HARGA_RETAIL": 275000,
+    "LOKASI": "Batununggal",
+    "URL": "https://sherwood.b-cdn.net/wp-content/uploads/2021/03/ribeye-steak-with-arugula-and-tomatoes-TGJGA99-scaled-e1616872672863-1024x1024.jpg"
+  },
+  {
+    "KODE_PRODUK": "RL03",
+    "NAMA_PRODUK": "Prime Tomahawk 550g",
+    "KATEGORI": "Makanan Berat",
+    "TOKO": "The 18th Restaurant and Lounge",
+    "HARGA_RETAIL": 595000,
+    "LOKASI": "Batununggal",
+    "URL": "https://www.allenbrothers.com/dam/AB/catalog/images/product/prime_tomahawk_ribeye.jpg"
+  },
+  {
+    "KODE_PRODUK": "RL04",
+    "NAMA_PRODUK": "Mulwarra Lamb Rack, 350g",
+    "KATEGORI": "Makanan Berat",
+    "TOKO": "The 18th Restaurant and Lounge",
+    "HARGA_RETAIL": 250000,
+    "LOKASI": "Batununggal",
+    "URL": "https://i.imgur.com/TJjbDv1.png"
+  },
+  {
+    "KODE_PRODUK": "RL05",
+    "NAMA_PRODUK": "Grilled Chicken Sashlik, 400g",
+    "KATEGORI": "Makanan Berat",
+    "TOKO": "The 18th Restaurant and Lounge",
+    "HARGA_RETAIL": 210000,
+    "LOKASI": "Batununggal",
+    "URL": "https://i.ytimg.com/vi/VIuRZRftGbA/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLCwNjBH_xhB3m5BKk-QzSN-Olw3nA"
+  },
+  {
+    "KODE_PRODUK": "FB01",
+    "NAMA_PRODUK": "Vitello Tonnato",
+    "KATEGORI": "Makanan Ringan",
+    "TOKO": "Fresco Bandung",
+    "HARGA_RETAIL": 125000,
+    "LOKASI": "Cicendo",
+    "URL": "https://www.fattoincasadabenedetta.it/wp-content/uploads/2022/02/Vitello-tonnato_step-32.png"
+  },
+  {
+    "KODE_PRODUK": "FB02",
+    "NAMA_PRODUK": "Beef Carpaccio",
+    "KATEGORI": "Makanan Ringan",
+    "TOKO": "Fresco Bandung",
+    "HARGA_RETAIL": 115000,
+    "LOKASI": "Cicendo",
+    "URL": "https://www.seriouseats.com/thmb/VgVaMsNZog6fWU79Ottu-iw3CLc=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/SEA-italian-easy-beef-carpaccio-recipe-hero-01-e4153bc58c19429085be0e525888a37a.jpg"
+  },
+  {
+    "KODE_PRODUK": "FB03",
+    "NAMA_PRODUK": "Bruschetta",
+    "KATEGORI": "Makanan Ringan",
+    "TOKO": "Fresco Bandung",
+    "HARGA_RETAIL": 85000,
+    "LOKASI": "Cicendo",
+    "URL": "https://natashaskitchen.com/wp-content/uploads/2020/07/Tomato-Bruschetta-Recipe-7.jpg"
+  },
+  {
+    "KODE_PRODUK": "VSH01",
+    "NAMA_PRODUK": "Triple Decker",
+    "KATEGORI": "Makanan Berat",
+    "TOKO": "Vincero Social House",
+    "HARGA_RETAIL": 50000,
+    "LOKASI": "Sumur Bandung",
+    "URL": "https://bigycloud.relationshop.net/RSData/recipe/20231004134851_soblavski2s_smashburger400x400.jpg"
+  },
+  {
+    "KODE_PRODUK": "VSH02",
+    "NAMA_PRODUK": "Burger Ayam Geprek",
+    "KATEGORI": "Makanan Berat",
+    "TOKO": "Vincero Social House",
+    "HARGA_RETAIL": 48000,
+    "LOKASI": "Sumur Bandung",
+    "URL": "https://www.recipetineats.com/uploads/2017/07/Chicken-Burgers-4.jpg"
+  },
+  {
+    "KODE_PRODUK": "VSH03",
+    "NAMA_PRODUK": "Cumi ala Vincero",
+    "KATEGORI": "Makanan Berat",
+    "TOKO": "Vincero Social House",
+    "HARGA_RETAIL": 170000,
+    "LOKASI": "Sumur Bandung",
+    "URL": "https://images.squarespace-cdn.com/content/v1/5e97657484a38d5d61649b09/1595537456393-X5KZ1FYRDM304SNMPNUX/20200430_162358-2.jpg"
+  },
+  {
+    "KODE_PRODUK": "VSH04",
+    "NAMA_PRODUK": "Beef ala Vincero",
+    "KATEGORI": "Makanan Berat",
+    "TOKO": "Vincero Social House",
+    "HARGA_RETAIL": 195000,
+    "LOKASI": "Sumur Bandung",
+    "URL": "https://jacquisfoodfetish.com.au/wp-content/uploads/2016/08/048.jpg"
+  },
+  {
+    "KODE_PRODUK": "SKM01",
+    "NAMA_PRODUK": "Magic",
+    "KATEGORI": "Minumann",
+    "TOKO": "Sukma Coffee",
+    "HARGA_RETAIL": 25000,
+    "LOKASI": "Regol",
+    "URL": "https://glamadelaide.com.au/wp-content/uploads/2023/05/Magic-Coffee.jpg"
+  },
+  {
+    "KODE_PRODUK": "SKM02",
+    "NAMA_PRODUK": "Coffee Beer",
+    "KATEGORI": "Minumann",
+    "TOKO": "Sukma Coffee",
+    "HARGA_RETAIL": 20000,
+    "LOKASI": "Regol",
+    "URL": "https://mastheadbrewingco.com/wp-content/uploads/2017/01/Coffee-Stout.jpg"
+  },
+  {
+    "KODE_PRODUK": "SKM03",
+    "NAMA_PRODUK": "Long Black",
+    "KATEGORI": "Minumann",
+    "TOKO": "Sukma Coffee",
+    "HARGA_RETAIL": 23000,
+    "LOKASI": "Regol",
+    "URL": "https://i.imgur.com/hUKv5mr.png"
+  },
+  {
+    "KODE_PRODUK": "SKM04",
+    "NAMA_PRODUK": "Affogato",
+    "KATEGORI": "Minumann",
+    "TOKO": "Sukma Coffee",
+    "HARGA_RETAIL": 28000,
+    "LOKASI": "Regol",
+    "URL": "https://www.lotusbiscoff.com/sites/default/files/styles/image_style_1_1_square_xl/public/2023-01/BISCOFF%20AFFOGATO-340%201x1.jpg?h=b044a8f9&itok=5MjUt1wh"
+  }
+]
