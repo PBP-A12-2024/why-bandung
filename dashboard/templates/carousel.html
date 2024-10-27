@@ -4,18 +4,16 @@
             <div class="{% if forloop.first %}block{% else %}hidden{% endif %} duration-700 ease-in-out grid grid-cols-1 md:grid-cols-3 gap-4" data-carousel-item>
                 {% for product in product_chunk %}
                     {% if product %}
-                        <div class="bg-gray-50 shadow-md overflow-hidden rounded-lg cursor-pointer hover:-translate-y-2 transition-all relative">
-                            <a href="{% url 'main:product_page' %}"></a>
-                                <div class="w-full h-[260px] p-4 overflow-hidden mx-auto aspect-w-16 aspect-h-8">
-                                    <img src="{{ product.image}}" alt="{{ product.name }}" class="h-full w-full object-contain" />
-                                </div>
-                                <div class="p-6 bg-white">
-                                    <h3 class="text-lg font-bold text-gray-800">{{ product.name }}</h3>
-                                    <h4 class="text-lg text-gray-800 font-bold mt-2">{{ product.price }}</h4>
-                                    <h4 class="text-lg text-gray-800 font-bold mt-2">{{ product.store }}</h4>
-                                </div>
-                            </a>
-                        </div>
+                        <!-- Make the entire card clickable by wrapping all content inside <a> -->
+                        <a href="{% url 'main:product_detail' product.id %}" class="block bg-gray-50 shadow-md overflow-hidden rounded-lg cursor-pointer hover:-translate-y-2 transition-all relative">
+                            <div class="w-full h-[260px] p-4 overflow-hidden mx-auto aspect-w-16 aspect-h-8">
+                                <img src="{{ product.image }}" alt="{{ product.name }}" class="h-full w-full object-cover" />
+                            </div>
+                            <div class="p-6 bg-white">
+                                <h3 class="text-lg font-bold text-gray-800">{{ product.name }}</h3>
+                                <h4 class="text-lg text-gray-800 font-bold mt-2">{{ product.store }}</h4>
+                            </div>
+                        </a>
                     {% endif %}
                 {% endfor %}
             </div>

@@ -27,7 +27,7 @@ urlpatterns = [
     path('product/', include('product_page.urls')),
     path('admin/', include('dashboard_admin.urls')),
     path('whatToEat/', include('whatToEat.urls')),
-    path('map/', include('geomapping.urls') )
+    path('geomap/', include('geomapping.urls')),
 ]
 
 if settings.DEBUG:
