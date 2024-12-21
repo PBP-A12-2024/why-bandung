@@ -7,6 +7,13 @@ from django.urls import reverse
 from django.core.exceptions import ValidationError
 import re
 import json
+from django.views.decorators.csrf import csrf_exempt
+from django.http import JsonResponse
+from rest_framework import viewsets
+from .serializer import TokoEntrySerializer, ProductEntrySerializer
+from rest_framework.decorators import action, api_view
+from rest_framework.response import Response
+from rest_framework.views import APIView
 
 def show_main(request):
     toko_entries = TokoEntry.objects.all()
@@ -117,6 +124,16 @@ def show_json(request):
     # Return JSON response
     return JsonResponse(combined_data)
 
+def all_toko_json(request):
+    toko_list = TokoEntry.objects.all()
+    data = [toko.to_json() for toko in toko_list]
+    return JsonResponse({'toko': data})
+
+def all_product_json(request):
+    product_list = ProductEntry.objects.all()
+    data = [product.to_json() for product in product_list]
+    return JsonResponse({'products': data})
+
 def show_json_toko_by_id(request, id):
     try:
         # Ambil data toko berdasarkan id
@@ -192,3 +209,168 @@ def delete_product(request, id):
     product.delete()
     return HttpResponseRedirect(reverse('dashboard_admin:show_main'))
 
+class TokoEntryViewSet(viewsets.ModelViewSet):
+    queryset = TokoEntry.objects.all()
+    serializer_class = TokoEntrySerializer
+
+class ProductEntryViewSet(viewsets.ModelViewSet):
+    queryset = ProductEntry.objects.all()
+    serializer_class = ProductEntrySerializer
+
+    @action(detail=True, methods=['get'])
+    def products_for_toko(self, request, pk=None):
+        toko = self.get_object()
+        products = toko.products.all()
+        serializer = ProductEntrySerializer(products, many=True)
+        return Response(serializer.data)
+    
+class ProductsForTokoView(APIView):
+    def get(self, request, toko_id, format=None):
+        products = ProductEntry.objects.filter(toko__id=toko_id)
+        serializer = ProductEntrySerializer(products, many=True)
+        return Response(serializer.data)
+    
+@api_view(['GET'])
+def products_for_toko_json(request, toko_id):
+    try:
+        # Mengambil semua produk berdasarkan toko_id
+        products = ProductEntry.objects.filter(toko_id=toko_id)
+        serializer = ProductEntrySerializer(products, many=True)
+        return Response(serializer.data)
+    except ProductEntry.DoesNotExist:
+        return Response({'error': 'Products not found for this store'}, status=404)
+    
+@api_view(['POST'])
+def create_product_flutter(request):
+    if request.method == 'POST':
+        data = request.data
+        try:
+            product = ProductEntry.objects.create(
+                name=data['name'],
+                price=data['price'],
+                description=data['description'],
+                image=data['image'],
+                toko_id=data['toko'],
+            )
+            product.save()
+            return Response({'status': 'success', 'message': 'Product added successfully!'}, status=201)
+        except Exception as e:
+            return Response({'status': 'error', 'message': str(e)}, status=400)
+        
+@api_view(['POST'])
+def create_restaurant_flutter(request):
+    if request.method == 'POST':
+        data = request.data
+        try:
+            # Buat restoran baru
+            restaurant = TokoEntry.objects.create(
+                name=data['name'],
+                location=data['location'],
+            )
+            restaurant.save()
+            # Return data restoran yang baru dibuat
+            return Response({
+                'status': 'success',
+                'message': 'Restaurant added successfully!',
+                'restaurant': restaurant.to_json(),  # Kirim data restoran sebagai respons
+            }, status=201)
+        except Exception as e:
+            return Response({'status': 'error', 'message': str(e)}, status=400)
+        
+@api_view(['GET'])
+def get_products_by_toko(request, toko_id):
+    try:
+        print(f"Fetching products for toko_id: {toko_id}")
+        # Fetch the products for the given toko_id (restaurant)
+        products = ProductEntry.objects.filter(toko_id=toko_id)
+        
+        # Serialize the data
+        serializer = ProductEntrySerializer(products, many=True)
+        
+        # Return the serialized data
+        return Response(serializer.data, status=200)
+    
+    except ProductEntry.DoesNotExist:
+        return Response({"message": "No products found for this restaurant."}, status=404)
+    
+@csrf_exempt
+def delete_toko_flutter(request, id):
+    if request.method == 'DELETE':
+        try:
+            # Ambil data restoran berdasarkan ID
+            toko = get_object_or_404(TokoEntry, id=id)
+            toko.delete()  # Hapus dari database
+            return JsonResponse({'message': 'Restoran berhasil dihapus'}, status=200)
+        except TokoEntry.DoesNotExist:
+            return JsonResponse({'error': 'Restoran tidak ditemukan'}, status=404)
+    else:
+        return JsonResponse({'error': 'Metode tidak diizinkan'}, status=405)
+    
+@csrf_exempt
+def update_toko_flutter(request, id):
+    if request.method == 'PUT':
+        try:
+            toko = get_object_or_404(TokoEntry, id=id)
+            data = json.loads(request.body)
+
+            # Update fields
+            toko.name = data.get('name', toko.name)
+            toko.location = data.get('location', toko.location)
+            toko.save()
+
+            return JsonResponse({
+                'message': 'Restoran berhasil diperbarui',
+                'id': toko.id,
+                'name': toko.name,
+                'location': toko.location,
+            }, status=200)
+        except TokoEntry.DoesNotExist:
+            return JsonResponse({'error': 'Restoran tidak ditemukan'}, status=404)
+        except Exception as e:
+            return JsonResponse({'error': str(e)}, status=400)
+    else:
+        return JsonResponse({'error': 'Metode tidak diizinkan'}, status=405)
+    
+@csrf_exempt
+def delete_product_flutter(request, id):
+    if request.method == 'DELETE':
+        try:
+            product = get_object_or_404(ProductEntry, id=id)
+            product.delete()
+            return JsonResponse({'message': 'Product deleted successfully'}, status=200)
+        except ProductEntry.DoesNotExist:
+            return JsonResponse({'error': 'Product not found'}, status=404)
+    else:
+        return JsonResponse({'error': 'Method not allowed'}, status=405)
+
+@csrf_exempt
+def update_product_flutter(request, id):
+    if request.method == 'PUT':
+        try:
+            product = get_object_or_404(ProductEntry, id=id)
+            data = json.loads(request.body)
+
+            # Update fields
+            product.name = data.get('name', product.name)
+            product.price = data.get('price', product.price)
+            product.description = data.get('description', product.description)
+            product.image = data.get('image', product.image)
+            product.toko_id = data.get('toko_id', product.toko_id)
+            product.save()
+
+            return JsonResponse({'message': 'Product updated successfully'}, status=200)
+        except ProductEntry.DoesNotExist:
+            return JsonResponse({'error': 'Product not found'}, status=404)
+        except Exception as e:
+            return JsonResponse({'error': str(e)}, status=400)
+    else:
+        return JsonResponse({'error': 'Method not allowed'}, status=405)
+
+@api_view(['GET'])
+def get_all_toko_names(request):
+    try:
+        toko_list = TokoEntry.objects.all()
+        toko_data = [{"id": toko.id, "name": toko.name} for toko in toko_list]
+        return JsonResponse({"toko_list": toko_data}, status=200)
+    except Exception as e:
+        return JsonResponse({"error": str(e)}, status=500)
